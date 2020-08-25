@@ -1,0 +1,40 @@
+diff --git a/axi_dma/data/axi_dma.tcl b/axi_dma/data/axi_dma.tcl
+index 6590765..9422f7f 100644
+--- a/axi_dma/data/axi_dma.tcl
++++ b/axi_dma/data/axi_dma.tcl
+@@ -124,6 +124,8 @@ proc generate {drv_handle} {
+     } else {
+                 generate_clk_nodes $drv_handle $axiethernetfound $tx_chan $rx_chan
+     }
++
++    add_rdai_node $dma_ip $dma_count
+ }
+ 
+ proc add_dma_channel {drv_handle parent_node xdma addr mode devid} {
+@@ -290,3 +292,26 @@ proc get_connected_ip {drv_handle dma_pin} {
+         get_connected_ip $connected_ip $dma_pin
+     }
+ }
++
++proc add_rdai_node {dma_ip num_channels} {
++    set is_overlay [get_property CONFIG.dt_overlay [get_os]]
++    if {$is_overlay} {
++        set parent_node "overlay2"
++    } else {
++        set parent_node "amba_pl"
++    }
++    set rdai_node [add_or_get_dt_node -n "rdai" -p $parent_node]
++    for {set n 0} {$n <= $num_channels} {incr n} {
++        if {$n == 0} {
++            set dma_channels "$dma_ip 0"
++        } else {
++            append dma_channels " &$dma_ip $n"
++        }
++    }
++    hsi::utils::add_new_dts_param $rdai_node "compatible" "rdai,axi-dma" stringlist
++    hsi::utils::add_new_dts_param $rdai_node "dmas" $dma_channels reference
++    hsi::utils::add_new_dts_param $rdai_node "dma-names" "dma_tx dma_rx" stringlist
++    if { [info exists $::env(RDAI_DEVICE_VLNV)] } {
++        hsi::utils::add_new_dts_param $rdai_node "rdai,vlnv" [format $::env(RDAI_DEVICE_VLNV)] string
++    }
++}

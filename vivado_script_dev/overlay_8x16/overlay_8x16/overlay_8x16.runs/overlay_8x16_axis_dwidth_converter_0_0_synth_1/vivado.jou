@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Aug 18 21:24:57 2020
+# Process ID: 26646
+# Current directory: /home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/overlay_8x16_axis_dwidth_converter_0_0_synth_1
+# Command line: vivado -log overlay_8x16_axis_dwidth_converter_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source overlay_8x16_axis_dwidth_converter_0_0.tcl
+# Log file: /home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/overlay_8x16_axis_dwidth_converter_0_0_synth_1/overlay_8x16_axis_dwidth_converter_0_0.vds
+# Journal file: /home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/overlay_8x16_axis_dwidth_converter_0_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source overlay_8x16_axis_dwidth_converter_0_0.tcl -notrace

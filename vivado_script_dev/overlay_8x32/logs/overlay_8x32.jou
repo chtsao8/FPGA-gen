@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Aug 17 18:32:21 2020
+# Process ID: 18227
+# Current directory: /home/charles/tmp/vivado_script_dev/overlay_8x32
+# Command line: vivado -mode gui -source overlay_8x32.tcl -journal logs/overlay_8x32.jou -log logs/overlay_8x32.log
+# Log file: /home/charles/tmp/vivado_script_dev/overlay_8x32/logs/overlay_8x32.log
+# Journal file: /home/charles/tmp/vivado_script_dev/overlay_8x32/logs/overlay_8x32.jou
+#-----------------------------------------------------------
+start_gui
+source overlay_8x32.tcl
+update_compile_order -fileset sources_1
+open_run impl_1

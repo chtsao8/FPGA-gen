@@ -1,0 +1,314 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Aug 18 21:29:50 2020
+# Process ID: 27833
+# Current directory: /home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1
+# Command line: vivado -log overlay_8x16_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source overlay_8x16_wrapper.tcl
+# Log file: /home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/overlay_8x16_wrapper.vds
+# Journal file: /home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source overlay_8x16_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/charles/Documents/2020_REU/vivado_script_dev/ips'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/charles/Xilinx/Vivado/Vivado/2020.1/data/ip'.
+Command: synth_design -top overlay_8x16_wrapper -part xczu7ev-ffvc1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 27907
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2717.801 ; gain = 11.801 ; free physical = 9116 ; free virtual = 11542
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'overlay_8x16_wrapper' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/hdl/overlay_8x16_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'overlay_8x16' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/synth/overlay_8x16.v:13]
+INFO: [Synth 8-6157] synthesizing module 'overlay_8x16_addone_8x16_0_0' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/.Xil/Vivado-27833-charles-XPS-13-9370/realtime/overlay_8x16_addone_8x16_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'overlay_8x16_addone_8x16_0_0' (1#1) [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/.Xil/Vivado-27833-charles-XPS-13-9370/realtime/overlay_8x16_addone_8x16_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'overlay_8x16_axi_dma_0_0' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/.Xil/Vivado-27833-charles-XPS-13-9370/realtime/overlay_8x16_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'overlay_8x16_axi_dma_0_0' (2#1) [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/.Xil/Vivado-27833-charles-XPS-13-9370/realtime/overlay_8x16_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'overlay_8x16_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/synth/overlay_8x16.v:199]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'overlay_8x16_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/synth/overlay_8x16.v:199]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'overlay_8x16_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/synth/overlay_8x16.v:199]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'overlay_8x16_axi_dma_0_0' has 94 connections declared, but only 91 given [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/synth/overlay_8x16.v:199]
+INFO: [Synth 8-6157] synthesizing module 'overlay_8x16_axis_dwidth_converter_0_0' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/.Xil/Vivado-27833-charles-XPS-13-9370/realtime/overlay_8x16_axis_dwidth_converter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'overlay_8x16_axis_dwidth_converter_0_0' (3#1) [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/.Xil/Vivado-27833-charles-XPS-13-9370/realtime/overlay_8x16_axis_dwidth_converter_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_tkeep' of module 'overlay_8x16_axis_dwidth_converter_0_0' is unconnected for instance 'axis_dwidth_converter_0' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/synth/overlay_8x16.v:291]
+WARNING: [Synth 8-7023] instance 'axis_dwidth_converter_0' of module 'overlay_8x16_axis_dwidth_converter_0_0' has 12 connections declared, but only 11 given [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/synth/overlay_8x16.v:291]
+INFO: [Synth 8-6157] synthesizing module 'overlay_8x16_axis_dwidth_converter_1_0' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/.Xil/Vivado-27833-charles-XPS-13-9370/realtime/overlay_8x16_axis_dwidth_converter_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'overlay_8x16_axis_dwidth_converter_1_0' (4#1) [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/.Xil/Vivado-27833-charles-XPS-13-9370/realtime/overlay_8x16_axis_dwidth_converter_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'overlay_8x16_proc_sys_reset_0_0' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/.Xil/Vivado-27833-charles-XPS-13-9370/realtime/overlay_8x16_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'overlay_8x16_proc_sys_reset_0_0' (5#1) [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/.Xil/Vivado-27833-charles-XPS-13-9370/realtime/overlay_8x16_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'overlay_8x16_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/synth/overlay_8x16.v:315]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'overlay_8x16_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/synth/overlay_8x16.v:315]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'overlay_8x16_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/synth/overlay_8x16.v:315]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'overlay_8x16_proc_sys_reset_0_0' has 10 connections declared, but only 7 given [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/synth/overlay_8x16.v:315]
+INFO: [Synth 8-6157] synthesizing module 'overlay_8x16_smartconnect_0_0' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/.Xil/Vivado-27833-charles-XPS-13-9370/realtime/overlay_8x16_smartconnect_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'overlay_8x16_smartconnect_0_0' (6#1) [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/.Xil/Vivado-27833-charles-XPS-13-9370/realtime/overlay_8x16_smartconnect_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'overlay_8x16_smartconnect_1_0' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/.Xil/Vivado-27833-charles-XPS-13-9370/realtime/overlay_8x16_smartconnect_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'overlay_8x16_smartconnect_1_0' (7#1) [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/.Xil/Vivado-27833-charles-XPS-13-9370/realtime/overlay_8x16_smartconnect_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'overlay_8x16_smartconnect_1_0' is unconnected for instance 'smartconnect_1' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/synth/overlay_8x16.v:425]
+WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'overlay_8x16_smartconnect_1_0' is unconnected for instance 'smartconnect_1' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/synth/overlay_8x16.v:425]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'overlay_8x16_smartconnect_1_0' is unconnected for instance 'smartconnect_1' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/synth/overlay_8x16.v:425]
+WARNING: [Synth 8-7023] instance 'smartconnect_1' of module 'overlay_8x16_smartconnect_1_0' has 60 connections declared, but only 57 given [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/synth/overlay_8x16.v:425]
+INFO: [Synth 8-6157] synthesizing module 'overlay_8x16_xlconcat_0_0' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ip/overlay_8x16_xlconcat_0_0/synth/overlay_8x16_xlconcat_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_3_xlconcat' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+	Parameter IN0_WIDTH bound to: 1 - type: integer 
+	Parameter IN1_WIDTH bound to: 1 - type: integer 
+	Parameter IN2_WIDTH bound to: 1 - type: integer 
+	Parameter IN3_WIDTH bound to: 1 - type: integer 
+	Parameter IN4_WIDTH bound to: 1 - type: integer 
+	Parameter IN5_WIDTH bound to: 1 - type: integer 
+	Parameter IN6_WIDTH bound to: 1 - type: integer 
+	Parameter IN7_WIDTH bound to: 1 - type: integer 
+	Parameter IN8_WIDTH bound to: 1 - type: integer 
+	Parameter IN9_WIDTH bound to: 1 - type: integer 
+	Parameter IN10_WIDTH bound to: 1 - type: integer 
+	Parameter IN11_WIDTH bound to: 1 - type: integer 
+	Parameter IN12_WIDTH bound to: 1 - type: integer 
+	Parameter IN13_WIDTH bound to: 1 - type: integer 
+	Parameter IN14_WIDTH bound to: 1 - type: integer 
+	Parameter IN15_WIDTH bound to: 1 - type: integer 
+	Parameter IN16_WIDTH bound to: 1 - type: integer 
+	Parameter IN17_WIDTH bound to: 1 - type: integer 
+	Parameter IN18_WIDTH bound to: 1 - type: integer 
+	Parameter IN19_WIDTH bound to: 1 - type: integer 
+	Parameter IN20_WIDTH bound to: 1 - type: integer 
+	Parameter IN21_WIDTH bound to: 1 - type: integer 
+	Parameter IN22_WIDTH bound to: 1 - type: integer 
+	Parameter IN23_WIDTH bound to: 1 - type: integer 
+	Parameter IN24_WIDTH bound to: 1 - type: integer 
+	Parameter IN25_WIDTH bound to: 1 - type: integer 
+	Parameter IN26_WIDTH bound to: 1 - type: integer 
+	Parameter IN27_WIDTH bound to: 1 - type: integer 
+	Parameter IN28_WIDTH bound to: 1 - type: integer 
+	Parameter IN29_WIDTH bound to: 1 - type: integer 
+	Parameter IN30_WIDTH bound to: 1 - type: integer 
+	Parameter IN31_WIDTH bound to: 1 - type: integer 
+	Parameter dout_width bound to: 2 - type: integer 
+	Parameter NUM_PORTS bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_3_xlconcat' (8#1) [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'overlay_8x16_xlconcat_0_0' (9#1) [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ip/overlay_8x16_xlconcat_0_0/synth/overlay_8x16_xlconcat_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'overlay_8x16_zynq_ultra_ps_e_0_0' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/.Xil/Vivado-27833-charles-XPS-13-9370/realtime/overlay_8x16_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'overlay_8x16_zynq_ultra_ps_e_0_0' (10#1) [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/.Xil/Vivado-27833-charles-XPS-13-9370/realtime/overlay_8x16_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'saxigp0_bid' of module 'overlay_8x16_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/synth/overlay_8x16.v:487]
+WARNING: [Synth 8-7071] port 'saxigp0_rid' of module 'overlay_8x16_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/synth/overlay_8x16.v:487]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'overlay_8x16_zynq_ultra_ps_e_0_0' has 83 connections declared, but only 81 given [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/synth/overlay_8x16.v:487]
+INFO: [Synth 8-6155] done synthesizing module 'overlay_8x16' (11#1) [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/synth/overlay_8x16.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'overlay_8x16_wrapper' (12#1) [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/hdl/overlay_8x16_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2761.707 ; gain = 55.707 ; free physical = 9180 ; free virtual = 11607
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2777.551 ; gain = 71.551 ; free physical = 9175 ; free virtual = 11602
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2777.551 ; gain = 71.551 ; free physical = 9175 ; free virtual = 11602
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2777.551 ; gain = 0.000 ; free physical = 9168 ; free virtual = 11595
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ip/overlay_8x16_zynq_ultra_ps_e_0_0/overlay_8x16_zynq_ultra_ps_e_0_0/overlay_8x16_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'overlay_8x16_i/zynq_ultra_ps_e_0'
+WARNING: [Vivado 12-584] No ports matched ''. [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ip/overlay_8x16_zynq_ultra_ps_e_0_0/overlay_8x16_zynq_ultra_ps_e_0_0/overlay_8x16_zynq_ultra_ps_e_0_0_in_context.xdc:2]
+Finished Parsing XDC File [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ip/overlay_8x16_zynq_ultra_ps_e_0_0/overlay_8x16_zynq_ultra_ps_e_0_0/overlay_8x16_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'overlay_8x16_i/zynq_ultra_ps_e_0'
+Parsing XDC File [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ip/overlay_8x16_proc_sys_reset_0_0/overlay_8x16_proc_sys_reset_0_0/overlay_8x16_proc_sys_reset_0_0_in_context.xdc] for cell 'overlay_8x16_i/proc_sys_reset_0'
+Finished Parsing XDC File [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ip/overlay_8x16_proc_sys_reset_0_0/overlay_8x16_proc_sys_reset_0_0/overlay_8x16_proc_sys_reset_0_0_in_context.xdc] for cell 'overlay_8x16_i/proc_sys_reset_0'
+Parsing XDC File [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ip/overlay_8x16_smartconnect_0_0/overlay_8x16_smartconnect_0_0/overlay_8x16_smartconnect_0_0_in_context.xdc] for cell 'overlay_8x16_i/smartconnect_0'
+Finished Parsing XDC File [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ip/overlay_8x16_smartconnect_0_0/overlay_8x16_smartconnect_0_0/overlay_8x16_smartconnect_0_0_in_context.xdc] for cell 'overlay_8x16_i/smartconnect_0'
+Parsing XDC File [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ip/overlay_8x16_smartconnect_1_0/overlay_8x16_smartconnect_1_0/overlay_8x16_smartconnect_1_0_in_context.xdc] for cell 'overlay_8x16_i/smartconnect_1'
+Finished Parsing XDC File [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ip/overlay_8x16_smartconnect_1_0/overlay_8x16_smartconnect_1_0/overlay_8x16_smartconnect_1_0_in_context.xdc] for cell 'overlay_8x16_i/smartconnect_1'
+Parsing XDC File [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ip/overlay_8x16_axi_dma_0_0/overlay_8x16_axi_dma_0_0/overlay_8x16_axi_dma_0_0_in_context.xdc] for cell 'overlay_8x16_i/axi_dma_0'
+Finished Parsing XDC File [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ip/overlay_8x16_axi_dma_0_0/overlay_8x16_axi_dma_0_0/overlay_8x16_axi_dma_0_0_in_context.xdc] for cell 'overlay_8x16_i/axi_dma_0'
+Parsing XDC File [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ip/overlay_8x16_axis_dwidth_converter_0_0/overlay_8x16_axis_dwidth_converter_0_0/overlay_8x16_axis_dwidth_converter_0_0_in_context.xdc] for cell 'overlay_8x16_i/axis_dwidth_converter_0'
+Finished Parsing XDC File [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ip/overlay_8x16_axis_dwidth_converter_0_0/overlay_8x16_axis_dwidth_converter_0_0/overlay_8x16_axis_dwidth_converter_0_0_in_context.xdc] for cell 'overlay_8x16_i/axis_dwidth_converter_0'
+Parsing XDC File [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ip/overlay_8x16_axis_dwidth_converter_1_0/overlay_8x16_axis_dwidth_converter_1_0/overlay_8x16_axis_dwidth_converter_1_0_in_context.xdc] for cell 'overlay_8x16_i/axis_dwidth_converter_1'
+Finished Parsing XDC File [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ip/overlay_8x16_axis_dwidth_converter_1_0/overlay_8x16_axis_dwidth_converter_1_0/overlay_8x16_axis_dwidth_converter_1_0_in_context.xdc] for cell 'overlay_8x16_i/axis_dwidth_converter_1'
+Parsing XDC File [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ip/overlay_8x16_addone_8x16_0_0/overlay_8x16_addone_8x16_0_0/overlay_8x16_addone_8x16_0_0_in_context.xdc] for cell 'overlay_8x16_i/addone_8x16_0'
+Finished Parsing XDC File [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.srcs/sources_1/bd/overlay_8x16/ip/overlay_8x16_addone_8x16_0_0/overlay_8x16_addone_8x16_0_0/overlay_8x16_addone_8x16_0_0_in_context.xdc] for cell 'overlay_8x16_i/addone_8x16_0'
+Parsing XDC File [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2880.238 ; gain = 0.000 ; free physical = 9074 ; free virtual = 11506
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2880.238 ; gain = 0.000 ; free physical = 9074 ; free virtual = 11506
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2880.238 ; gain = 174.238 ; free physical = 9142 ; free virtual = 11579
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2880.238 ; gain = 174.238 ; free physical = 9142 ; free virtual = 11579
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for overlay_8x16_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for overlay_8x16_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for overlay_8x16_i/proc_sys_reset_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for overlay_8x16_i/xlconcat_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for overlay_8x16_i/smartconnect_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for overlay_8x16_i/smartconnect_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for overlay_8x16_i/axi_dma_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for overlay_8x16_i/axis_dwidth_converter_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for overlay_8x16_i/axis_dwidth_converter_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for overlay_8x16_i/addone_8x16_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2880.238 ; gain = 174.238 ; free physical = 9142 ; free virtual = 11579
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 2880.238 ; gain = 174.238 ; free physical = 9143 ; free virtual = 11577
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 2880.238 ; gain = 174.238 ; free physical = 9133 ; free virtual = 11569
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 3350.785 ; gain = 644.785 ; free physical = 8538 ; free virtual = 10975
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 3350.785 ; gain = 644.785 ; free physical = 8538 ; free virtual = 10975
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:01:02 . Memory (MB): peak = 3369.816 ; gain = 663.816 ; free physical = 8536 ; free virtual = 10973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:01:05 . Memory (MB): peak = 3375.754 ; gain = 669.754 ; free physical = 8531 ; free virtual = 10972
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:01:05 . Memory (MB): peak = 3375.754 ; gain = 669.754 ; free physical = 8531 ; free virtual = 10972
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:01:05 . Memory (MB): peak = 3375.754 ; gain = 669.754 ; free physical = 8531 ; free virtual = 10972
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:01:05 . Memory (MB): peak = 3375.754 ; gain = 669.754 ; free physical = 8531 ; free virtual = 10972
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:01:05 . Memory (MB): peak = 3375.754 ; gain = 669.754 ; free physical = 8531 ; free virtual = 10972
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:01:05 . Memory (MB): peak = 3375.754 ; gain = 669.754 ; free physical = 8531 ; free virtual = 10972
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------------------------------+----------+
+|      |BlackBox name                          |Instances |
++------+---------------------------------------+----------+
+|1     |overlay_8x16_addone_8x16_0_0           |         1|
+|2     |overlay_8x16_axi_dma_0_0               |         1|
+|3     |overlay_8x16_axis_dwidth_converter_0_0 |         1|
+|4     |overlay_8x16_axis_dwidth_converter_1_0 |         1|
+|5     |overlay_8x16_proc_sys_reset_0_0        |         1|
+|6     |overlay_8x16_smartconnect_0_0          |         1|
+|7     |overlay_8x16_smartconnect_1_0          |         1|
+|8     |overlay_8x16_zynq_ultra_ps_e_0_0       |         1|
++------+---------------------------------------+----------+
+
+Report Cell Usage: 
++------+-------------------------------------+------+
+|      |Cell                                 |Count |
++------+-------------------------------------+------+
+|1     |overlay_8x16_addone_8x16_0           |     1|
+|2     |overlay_8x16_axi_dma_0               |     1|
+|3     |overlay_8x16_axis_dwidth_converter_0 |     1|
+|4     |overlay_8x16_axis_dwidth_converter_1 |     1|
+|5     |overlay_8x16_proc_sys_reset_0        |     1|
+|6     |overlay_8x16_smartconnect_0          |     1|
+|7     |overlay_8x16_smartconnect_1          |     1|
+|8     |overlay_8x16_zynq_ultra_ps_e_0       |     1|
++------+-------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:01:05 . Memory (MB): peak = 3375.754 ; gain = 669.754 ; free physical = 8531 ; free virtual = 10972
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:57 . Memory (MB): peak = 3375.754 ; gain = 567.066 ; free physical = 8569 ; free virtual = 11010
+Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:01:05 . Memory (MB): peak = 3375.762 ; gain = 669.754 ; free physical = 8569 ; free virtual = 11010
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3375.762 ; gain = 0.000 ; free physical = 8563 ; free virtual = 11004
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3409.441 ; gain = 0.000 ; free physical = 8575 ; free virtual = 11016
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+40 Infos, 18 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:25 . Memory (MB): peak = 3421.410 ; gain = 1295.059 ; free physical = 8706 ; free virtual = 11147
+INFO: [Common 17-1381] The checkpoint '/home/charles/Documents/2020_REU/vivado_script_dev/overlay_8x16/overlay_8x16/overlay_8x16.runs/synth_1/overlay_8x16_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file overlay_8x16_wrapper_utilization_synth.rpt -pb overlay_8x16_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 18 21:31:34 2020...

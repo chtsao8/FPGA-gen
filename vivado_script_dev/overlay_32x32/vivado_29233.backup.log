@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Aug 18 17:29:12 2020
+# Process ID: 29233
+# Current directory: /home/charles/Documents/2020_REU/vivado_script_dev/overlay_32x32
+# Command line: vivado .
+# Log file: /home/charles/Documents/2020_REU/vivado_script_dev/overlay_32x32/vivado.log
+# Journal file: /home/charles/Documents/2020_REU/vivado_script_dev/overlay_32x32/vivado.jou
+#-----------------------------------------------------------
+start_gui
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 18 17:29:34 2020...
