@@ -1,3 +1,18 @@
+# Author: Charles Tsao
+###############################################################################
+# Usage
+#------------------------------------------------------------------------------
+# $> python3 bitstream_generator.py -c CONFIG.JSON -o OUTPUT_NAME -m VIVADO_MODE
+#
+# This script outputs OUTPUT_NAME.tcl, which runs vivado to generate:
+#       a config["name"] device overlay directory is created
+#       a "logs" directory containing vivado run details
+#       a "handoff" directory which contains:
+#           - directories of different config["name"] containing:
+#               - config["name"].bit
+#               - config["name"].xsa
+###############################################################################
+
 from mako.template import Template
 import argparse
 import json
@@ -25,7 +40,7 @@ args = parser.parse_args()
 ################################################################
 if args.config == None or args.output == None:
     print("Please specify a configuration file and output filepath.")
-    print("usage: bitstream_generator.py [-h] [ls-c CONFIG] [-o OUTPUT] [-m MODE]")
+    print("usage: bitstream_generator.py [-h] [-c CONFIG] [-o OUTPUT] [-m MODE]")
     sys.exit(1)
 if str(args.config)[-4:] != "json":
     print("Config file must be in .json format.")
@@ -1099,8 +1114,8 @@ add_files -norecurse ${design}/${design}.srcs/sources_1/bd/${design}/hdl/${desig
 launch_runs impl_1 -to_step write_bitstream -jobs 6
 wait_on_run impl_1
 set_property pfm_name {} [get_files -all {${design}/${design}.srcs/sources_1/bd/${design}/${design}.bd}]
-write_hw_platform -fixed -include_bit -force -file ${handoff}/${design}.xsa
-file copy -force ${design}/${design}.runs/impl_1/${design}_wrapper.bit ${handoff}/${design}.bit
+write_hw_platform -fixed -include_bit -force -file ${handoff}/${design}_handoff/${design}.xsa
+file copy -force ${design}/${design}.runs/impl_1/${design}_wrapper.bit ${handoff}/${design}_handoff/${design}.bit
 '''
 )
 
@@ -1124,8 +1139,15 @@ file copy -force ${design}/${design}.runs/impl_1/${design}_wrapper.bit ${handoff
   sys.stdout = original_stdout # Reset the standard output to its original value
   print(".tcl file successfully generated!")
 
-  run_msg = Template('Generating bitstream for ${object}...')
-  print(run_msg.render(object=design_name))
+  run_msg = Template('Generating bitstream for ${name}...')
+  print(run_msg.render(name=design_name))
+
+  handoff_gen = Template('''mkdir -p ${handoff}
+                            mkdir -p ${handoff}/${name}_handoff''')
+  os.system(handoff_gen.render(handoff = vivado_handoff_dir,
+                               name    = design_name
+                               ))
+  os.system("mkdir -p logs")
 
   vivado_call = Template('vivado -mode ${mode} -source output.tcl -journal logs/test.jou -log logs/test.log')
   os.system(vivado_call.render(mode=vivado_mode))

@@ -7,7 +7,7 @@
 			{ "name" : "in_0", "width" : 8 }
 	  ],
 	  "xcel_ip_output"		: { "name" : "out", "width" : 16 },
-	  "xcel_rdai_vlnv"		: "VLNV used for RDAI tagging",
+	  "xcel_rdai_vlnv"		: "addone_8x16",
 	  "xlnx_chip_part"		: "part number for the FPGA chip",
 	  "xlnx_board_part"		: "board part number",
 	  "vivado_user_ip_repo" : "../ips",

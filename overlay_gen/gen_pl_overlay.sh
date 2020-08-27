@@ -83,7 +83,7 @@ fi
 # Generate Device Tree Source for PL
 if [ -d $OUTPUT_DIR ]; then rm -rf $OUTPUT_DIR; fi
 mkdir -p $OUTPUT_DIR
-RDAI_DEVICE_VLNV="$DEVICE_VLNV" xsct dt_overlay.tcl $HANDOFF_FILE psu_cortexa53_0 work/device-tree-xlnx $OUTPUT_DIR
+RDAI_DEVICE_VLNV="$DEVICE_VLNV" xsct dt_overlay.tcl $HANDOFF_FILE psu_cortexa53_0 work/device-tree-xlnx $OUTPUT_DIR #read env variable to xsct
 
 # Retarget AXI DMA Driver
 sed -r 's/(.*)compatible.*=.*rdai,axi-dma.*;/\1compatible = "rdai,axi-dma";\n\1rdai,device-vlnv = "'"$DEVICE_VLNV"'";/1' < ${OUTPUT_DIR}/pl.dtsi > ${OUTPUT_DIR}/pl_aha.dtsi
