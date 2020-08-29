@@ -18,6 +18,7 @@ import argparse
 import json
 import sys
 import os
+from termcolor import colored
 
 ################################################################
 # Flags:
@@ -39,11 +40,11 @@ args = parser.parse_args()
 ################################################################
 if args.config == None or args.output == None:
     print("Please specify a configuration file and output filepath.")
-    print("usage: bitstream_generator.py [-h] [-c CONFIG] [-o OUTPUT] [-m MODE]")
+    print(colored("usage: bitstream_generator.py [-h] [-c CONFIG] [-o OUTPUT] [-m MODE]", "green"))
     sys.exit(1)
 if str(args.config)[-4:] != "json":
     print("Config file must be in .json format.")
-    print("usage: bitstream_generator.py [-h] [-c CONFIG] [-o OUTPUT] [-m MODE]")
+    print(colored("usage: bitstream_generator.py [-h] [-c CONFIG] [-o OUTPUT] [-m MODE]", "green"))
     sys.exit(1)
 else:
     config_init = open(args.config, "r")
@@ -51,7 +52,7 @@ else:
 
 if str(args.output)[-3:] != "tcl":
     print("Output file must be in .tcl format.")
-    print("usage: bitstream_generator.py [-h] [-c CONFIG] [-o OUTPUT] [-m MODE]")
+    print(colored("usage: bitstream_generator.py [-h] [-c CONFIG] [-o OUTPUT] [-m MODE]", "green"))
     sys.exit(1)
 
 if str(args.mode) == "gui":
@@ -64,7 +65,7 @@ elif args.mode == None:
     print("Vivado running in GUI mode by default (specify mode with -m)")
     vivado_mode = "gui"
 else:
-    print("Invalid argument for mode. Valid modes are 'gui' or 'batch'.")
+    print(colored("Invalid argument for mode. Valid modes are 'gui' or 'batch'.", "red"))
     sys.exit(1)
 
 ################################################################
