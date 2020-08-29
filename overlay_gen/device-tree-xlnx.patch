@@ -11,11 +11,12 @@ index 6590765..9422f7f 100644
  }
  
  proc add_dma_channel {drv_handle parent_node xdma addr mode devid} {
-@@ -290,3 +292,26 @@ proc get_connected_ip {drv_handle dma_pin} {
+@@ -290,3 +292,25 @@ proc get_connected_ip {drv_handle dma_pin} {
          get_connected_ip $connected_ip $dma_pin
      }
  }
 +
++global env
 +proc add_rdai_node {dma_ip num_channels} {
 +    set is_overlay [get_property CONFIG.dt_overlay [get_os]]
 +    if {$is_overlay} {
@@ -34,7 +35,6 @@ index 6590765..9422f7f 100644
 +    hsi::utils::add_new_dts_param $rdai_node "compatible" "rdai,axi-dma" stringlist
 +    hsi::utils::add_new_dts_param $rdai_node "dmas" $dma_channels reference
 +    hsi::utils::add_new_dts_param $rdai_node "dma-names" "dma_tx dma_rx" stringlist
-+    if { [info exists $::env(RDAI_DEVICE_VLNV)] } {
-+        hsi::utils::add_new_dts_param $rdai_node "rdai,vlnv" [format $::env(RDAI_DEVICE_VLNV)] string
-+    }
++    hsi::utils::add_new_dts_param $rdai_node "rdai,device-vlnv" [format $::env(RDAI_DEVICE_VLNV)] string
 +}
++

@@ -28,7 +28,6 @@ import os
 
 parser = argparse.ArgumentParser()
 
-#-db DATABSE -u USERNAME -p PASSWORD -size 20
 parser.add_argument("-c", "--config", help="Specifies the configuration filepath.")
 parser.add_argument("-o", "--output", help="Specifies the output filepath.")
 parser.add_argument("-m", "--mode", help="Specifies usage of Vivado GUI")
@@ -45,6 +44,7 @@ if args.config == None or args.output == None:
 if str(args.config)[-4:] != "json":
     print("Config file must be in .json format.")
     print("usage: bitstream_generator.py [-h] [-c CONFIG] [-o OUTPUT] [-m MODE]")
+    sys.exit(1)
 else:
     config_init = open(args.config, "r")
     config = json.loads(config_init.read())
