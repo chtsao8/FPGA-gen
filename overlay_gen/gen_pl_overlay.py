@@ -114,8 +114,8 @@ gen_xsct_call= Template("xsct dt_overlay.tcl ${HANDOFF_FILE} psu_cortexa53_0 wor
 os.system(gen_xsct_call.render(DEVICE_VLNV=DEVICE_VLNV, OUTPUT_DIR=OUTPUT_DIR, HANDOFF_FILE=HANDOFF_FILE))
 
 # Create PL Device Tree Overlay
-gen_dtbo = Template("${DTC} -O dtb -o ${OUTPUT_HANDOFF}/pl.dtbo -b 0 -@ ${OUTPUT_DIR}/pl.dtsi")
-os.system(gen_dtbo.render(DTC=DTC, OUTPUT_HANDOFF=OUTPUT_HANDOFF, OUTPUT_DIR=OUTPUT_DIR))
+gen_dtbo = Template("${DTC} -O dtb -o ${OUTPUT_HANDOFF}/${NAME}_handoff/pl.dtbo -b 0 -@ ${OUTPUT_DIR}/pl.dtsi")
+os.system(gen_dtbo.render(DTC=DTC, OUTPUT_HANDOFF=OUTPUT_HANDOFF, OUTPUT_DIR=OUTPUT_DIR, NAME=VIVADO_PROJECT_NAME))
 
 ###############################################################################################
 # Generate Packaged Bitstream
@@ -134,7 +134,7 @@ sys.stdout = original_stdout # Reset the standard output to its original value
 with zipfile.ZipFile(HANDOFF_FILE) as zf:
     zf.extract(VIVADO_PROJECT_NAME + ".bit", OUTPUT_DIR)
 
-bootgen_call = Template("bootgen -image bootgen_script.bif -arch zynqmp -o ${OUTPUT_HANDOFF}/${NAME}.bit.bin -w")
+bootgen_call = Template("bootgen -image bootgen_script.bif -arch zynqmp -o ${OUTPUT_HANDOFF}/${NAME}_handoff/${NAME}.bit.bin -w")
 os.system(bootgen_call.render(OUTPUT_HANDOFF=OUTPUT_HANDOFF,NAME=VIVADO_PROJECT_NAME))
 os.system("rm -rf bootgen_script.bif")
 
