@@ -5,7 +5,7 @@
 # $> python3 gen_ip.py -c CONFIG.JSON -o OUTPUT_NAME
 #
 # This script outputs OUTPUT_NAME.tcl, which runs vivado_hls to generate:
-#       a config["name"] device overlay directory is created
+#       a config["name"] project directory is created
 ###############################################################################
 
 from mako.template import Template
@@ -95,6 +95,8 @@ config_export ${'\\ '.rstrip()}
 # Synthesize design (generate HDL)
 csynth_design
 
+# Export IP
+export_design
   '''
   )
 
