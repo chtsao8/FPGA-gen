@@ -75,7 +75,7 @@ DMA_PORT_WIDTH = 32
 design_name = config["config"]["name"]
 vivado_version = config["config"]["vivado_version"]
 ip_dir = config["config"]["vivado_user_ip_repo"]
-ip_vlnv = config["config"]["xcel_ip_vlnv"]
+ip_vlnv = config["config"]["xcel_ip_vlnv"]["name"]
 vivado_handoff_dir = config["config"]["vivado_handoff_dir"]
 
 num_inputs = len(config["config"]["xcel_ip_inputs"])
@@ -1150,8 +1150,8 @@ file copy -force ${design}/${design}.runs/impl_1/${design}_wrapper.bit ${handoff
                                ))
   os.system("mkdir -p logs")
 
-  vivado_call = Template('vivado -mode ${mode} -source output.tcl -journal logs/test.jou -log logs/test.log')
-  os.system(vivado_call.render(mode=vivado_mode))
+  vivado_call = Template('vivado -mode ${mode} -source ${tcl} -journal logs/test.jou -log logs/test.log')
+  os.system(vivado_call.render(mode=vivado_mode, output=str(args.output)))
   
   config_init.close()
   print("All done!")

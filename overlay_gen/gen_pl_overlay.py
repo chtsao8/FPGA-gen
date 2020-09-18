@@ -49,7 +49,7 @@ if str(args.handoff)[-3:] != "xsa":
     sys.exit(1)
 
 HANDOFF_FILE        = str(args.handoff)
-DEVICE_VLNV         = config["config"]["xcel_rdai_vlnv"]
+DEVICE_VLNV         = config["config"]["xcel_rdai_vlnv"]["name"]
 VIVADO_PROJECT_NAME = config["config"]["name"]
 OUTPUT_DIR = "work/output"
 

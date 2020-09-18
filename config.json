@@ -2,15 +2,17 @@
   "config" : {
 	  "version"				: "2020.1",
 	  "name"				: "overlay_8x16",
-	  "xcel_ip_vlnv"		: "addone_8x16",
+	  "xcel_ip_vlnv"		: {"name" : "addone_8x16", "library" : "lib" , "vendor" : "ven", "version" : "version"},
+	  "xcel_top_fn"			: "unoptimized_conv_3_3",
+	  "xcel_clock_period"	: "5",
 	  "xcel_ip_inputs"		: [
 			{ "name" : "in_0", "width" : 8 }
 	  ],
 	  "xcel_ip_output"		: { "name" : "out", "width" : 16 },
-	  "xcel_rdai_vlnv"		: "addone_8x16",
+	  "xcel_rdai_vlnv"		: {"name" : "addone_8x16", "library" : "lib" , "vendor" : "ven", "version" : "version"},
 	  "xlnx_chip_part"		: "part number for the FPGA chip",
-	  "xlnx_board_part"		: "board part number",
-	  "vivado_user_ip_repo" : "../ips",
+	  "xlnx_board_part"		: "{xc7k160tfbg484-2}",
+	  "vivado_user_ip_repo" : "/home/charles/Documents/2020_REU/FPGA-gen/ips",
 	  "vivado_version"		: "2020.1",
 	  "vivado_handoff_dir"	: "/home/charles/Documents/2020_REU/FPGA-gen/handoff"
   }
