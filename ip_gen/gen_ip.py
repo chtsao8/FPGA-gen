@@ -97,6 +97,7 @@ csynth_design
 
 # Export IP
 export_design
+exit
   '''
   )
 
