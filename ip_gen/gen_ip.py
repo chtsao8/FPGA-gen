@@ -5,7 +5,7 @@
 # $> python3 gen_ip.py -c CONFIG.JSON -o OUTPUT_NAME
 #
 # This script outputs OUTPUT_NAME.tcl, which runs vivado_hls to generate:
-#       a config["name"] project directory is created
+#       a config["name"] project directory
 ###############################################################################
 
 from mako.template import Template
@@ -19,25 +19,27 @@ from termcolor import colored
 # Flags:
 #    -c: configuration file specification
 #    -o: output file specification
+#    -i: clockwork src path
 ################################################################
 
 parser = argparse.ArgumentParser()
 
 parser.add_argument("-c", "--config", help="Specifies the configuration filepath.")
 parser.add_argument("-o", "--output", help="Specifies the output filepath.")
+parser.add_argument("-i", "--clockwork", help="Specifies the clockwork source filepath.") 
 
 args = parser.parse_args()
 
 ################################################################
 # Argument Logic
 ################################################################
-if args.config == None or args.output == None:
-    print("Please specify a configuration file and output filepath.")
-    print(colored("usage: gen_ip.py [-h] [-c CONFIG] [-o OUTPUT]", "green"))
+if args.config == None or args.output == None or args.clockwork == None:
+    print("Please specify a configuration file, output filepath, and clockwork source directory.")
+    print(colored("usage: gen_ip.py [-h] [-c CONFIG] [-o OUTPUT] [-i CLOCKWORK]", "green"))
     sys.exit(1)
 if str(args.config)[-4:] != "json":
     print("Config file must be in .json format.")
-    print(colored("usage: gen_ip.py [-h] [-c CONFIG] [-o OUTPUT]", "green"))
+    print(colored("usage: gen_ip.py [-h] [-c CONFIG] [-o OUTPUT] [-i CLOCKWORK]", "green"))
     sys.exit(1)
 else:
     config_init = open(args.config, "r")
@@ -45,13 +47,13 @@ else:
 
 if str(args.output)[-3:] != "tcl":
     print("Output file must be in .tcl format.")
-    print(colored("usage: gen_ip.py [-h] [-c CONFIG] [-o OUTPUT]", "green"))
+    print(colored("usage: gen_ip.py [-h] [-c CONFIG] [-o OUTPUT] [-i CLOCKWORK]", "green"))
     sys.exit(1)
 
 proj_name          = config["config"]["name"]
 ip_name            = config["config"]["xcel_ip_vlnv"]["name"]
 top_level_function = config["config"]["xcel_top_fn"]
-part_number        = config["config"]["xlnx_board_part"]
+part_number        = config["config"]["xlnx_chip_part"]
 clk_period         = config["config"]["xcel_clock_period"]
 ip_library         = config["config"]["xcel_ip_vlnv"]["library"]
 ip_vendor          = config["config"]["xcel_ip_vlnv"]["vendor"]
@@ -73,7 +75,7 @@ open_project -reset ${PRJ_NAME}
 set_top ${TOP_LEVEL_FUNCTION}
 
 # Add design files
-add_files bin/${TOP_LEVEL_FUNCTION}.cpp -cflags "-I ../../ -std=c++11 -D__VIVADO_SYNTH__"
+add_files bin/${TOP_LEVEL_FUNCTION}.cpp -cflags "-I ${CLOCKWORK_SRC} -I bin/ -std=c++11 -D__VIVADO_SYNTH__"
 
 # Open and configure a new solution
 open_solution "${PRJ_NAME}"
@@ -103,6 +105,7 @@ exit
 
   print(printer.render(PRJ_NAME           = proj_name,
                        TOP_LEVEL_FUNCTION = top_level_function,
+                       CLOCKWORK_SRC      = str(args.clockwork),
                        PART_NUMBER        = part_number,
                        CLOCK_PERIOD       = clk_period,
                        IP_DESCRIPTION     = ip_name,

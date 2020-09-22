@@ -49,7 +49,13 @@ if str(args.handoff)[-3:] != "xsa":
     sys.exit(1)
 
 HANDOFF_FILE        = str(args.handoff)
-DEVICE_VLNV         = config["config"]["xcel_rdai_vlnv"]["name"]
+vlnv                = config["config"]["xcel_rdai_vlnv"]
+device_vlnv_gen     = Template('${ip_vendor}:${ip_library}:${ip_name}:${ip_version}')
+DEVICE_VLNV         = device_vlnv_gen.render(ip_vendor  = vlnv["vendor"],
+                                             ip_library = vlnv["library"],
+                                             ip_name    = vlnv["name"],
+                                             ip_version = vlnv["version"]
+                                            )
 VIVADO_PROJECT_NAME = config["config"]["name"]
 OUTPUT_DIR = "work/output"
 

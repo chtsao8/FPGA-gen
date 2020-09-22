@@ -74,8 +74,11 @@ else:
 DMA_PORT_WIDTH = 32
 design_name = config["config"]["name"]
 vivado_version = config["config"]["vivado_version"]
-ip_dir = config["config"]["vivado_user_ip_repo"]
-ip_vlnv = config["config"]["xcel_ip_vlnv"]["name"]
+ip_dir  = config["config"]["vivado_user_ip_repo"]
+ip_name = config["config"]["xcel_ip_vlnv"]["name"]
+ip_lib  = config["config"]["xcel_ip_vlnv"]["library"]
+ip_vend = config["config"]["xcel_ip_vlnv"]["vendor"]
+ip_ver  = config["config"]["xcel_ip_vlnv"]["version"]
 vivado_handoff_dir = config["config"]["vivado_handoff_dir"]
 
 num_inputs = len(config["config"]["xcel_ip_inputs"])
@@ -101,10 +104,10 @@ DMA_S2MM = "[get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]"
 DMA_MM2S = "[get_bd_intf_pins axi_dma_0/M_AXIS_MM2S]"
 DWIDTH0_S_AXIS = "[get_bd_intf_pins axis_dwidth_converter_0/S_AXIS]"
 DWIDTH1_S_AXIS = "[get_bd_intf_pins axis_dwidth_converter_1/S_AXIS]"
-xcel_arg_1_in = "[get_bd_intf_pins " + ip_vlnv + "_0/arg_1]"
+xcel_arg_1_in = "[get_bd_intf_pins " + ip_name + "_0/arg_1]"
 
 gen_io_connect = Template('''\n
-  connect_bd_intf_net -intf_net ${ip_vlnv}_0_arg_0 [get_bd_intf_pins ${ip_vlnv}_0/arg_0] ${xcel_arg0_out}
+  connect_bd_intf_net -intf_net ${ip_name}_0_arg_0 [get_bd_intf_pins ${ip_name}_0/arg_0] ${xcel_arg0_out}
   connect_bd_intf_net -intf_net axi_dma_0_M_AXIS_MM2S ${dma_MM2S_in} ${dma_MM2S_out}''')
 
 DWIDTH_M_CONNECT = Template("\n  connect_bd_intf_net -intf_net axis_dwidth_converter_${num}_M_AXIS ${dwidth_in} [get_bd_intf_pins axis_dwidth_converter_${num}/M_AXIS]")
@@ -114,7 +117,7 @@ gen_dwidth_port = Template(" [get_bd_pins axis_dwidth_converter_${num}/${type}]"
 if input_size != DMA_PORT_WIDTH and output_size == DMA_PORT_WIDTH:
   dwidth_converter_0 = gen_dwidth_converter.render(in_size=input_size>>3, out_size=4, num=0)
   dwidth_converter_1 = ""
-  io_connect = gen_io_connect.render(ip_vlnv=ip_vlnv, xcel_arg0_out=DMA_S2MM, 
+  io_connect = gen_io_connect.render(ip_name=ip_name, xcel_arg0_out=DMA_S2MM, 
                                      dma_MM2S_in=DMA_MM2S, dma_MM2S_out=DWIDTH0_S_AXIS)
   dwidth_connect0 = DWIDTH_M_CONNECT.render(dwidth_in=xcel_arg_1_in, num=0)
   dwidth_connect1 = ""
@@ -125,7 +128,7 @@ if input_size != DMA_PORT_WIDTH and output_size == DMA_PORT_WIDTH:
 elif input_size == DMA_PORT_WIDTH and output_size != DMA_PORT_WIDTH:
   dwidth_converter_0 = gen_dwidth_converter.render(in_size=4, out_size=output_size>>3, num=0)
   dwidth_converter_1 = ""
-  io_connect = gen_io_connect.render(ip_vlnv=ip_vlnv, xcel_arg0_out=DWIDTH0_S_AXIS, 
+  io_connect = gen_io_connect.render(ip_name=ip_name, xcel_arg0_out=DWIDTH0_S_AXIS, 
                                      dma_MM2S_in=xcel_arg_1_in, dma_MM2S_out=DMA_MM2S)
   dwidth_connect0 = DWIDTH_M_CONNECT.render(dwidth_in=DMA_S2MM, num=0)
   dwidth_connect1 = ""
@@ -136,7 +139,7 @@ elif input_size == DMA_PORT_WIDTH and output_size != DMA_PORT_WIDTH:
 elif input_size != DMA_PORT_WIDTH and output_size != DMA_PORT_WIDTH:
   dwidth_converter_0 = gen_dwidth_converter.render(in_size=input_size>>3, out_size=4, num=0)
   dwidth_converter_1 = gen_dwidth_converter.render(in_size=4, out_size=output_size>>3, num=1)
-  io_connect = gen_io_connect.render(ip_vlnv=ip_vlnv, xcel_arg0_out=DWIDTH1_S_AXIS, 
+  io_connect = gen_io_connect.render(ip_name=ip_name, xcel_arg0_out=DWIDTH1_S_AXIS, 
                                      dma_MM2S_in=DMA_MM2S, dma_MM2S_out=DWIDTH0_S_AXIS)
   dwidth_connect0 = DWIDTH_M_CONNECT.render(dwidth_in=xcel_arg_1_in, num=0)
   dwidth_connect1 = DWIDTH_M_CONNECT.render(dwidth_in=DMA_S2MM, num=1)
@@ -147,7 +150,7 @@ elif input_size != DMA_PORT_WIDTH and output_size != DMA_PORT_WIDTH:
 else:
   dwidth_converter_0 = ""
   dwidth_converter_1 = ""
-  io_connect = gen_io_connect.render(ip_vlnv=ip_vlnv, xcel_arg0_out=DMA_S2MM, 
+  io_connect = gen_io_connect.render(ip_name=ip_name, xcel_arg0_out=DMA_S2MM, 
                                      dma_MM2S_in=xcel_arg_1_in, dma_MM2S_out=DMA_MM2S)
   dwidth_connect0 = ""
   dwidth_connect1 = ""
@@ -273,7 +276,7 @@ ${'################################################################'}
 set bCheckIPs 1
 if { $bCheckIPs == 1 } {
    set list_check_ips "${'\\ '.rstrip()}
-aha:halide_hardware:${ip_vlnv}:1.0${'\\ '.rstrip()}
+${ip_vendor}:${ip_library}:${ip_name}:${ip_version}${'\\ '.rstrip()}
 xilinx.com:ip:axi_dma:7.1${'\\ '.rstrip()}\
 ${ip_dwidth_converter}
 xilinx.com:ip:proc_sys_reset:5.0${'\\ '.rstrip()}
@@ -344,8 +347,8 @@ proc create_root_design { parentCell } {
 
   # Create ports
 
-  # Create instance: ${ip_vlnv}_0, and set properties
-  set ${ip_vlnv}_0 [ create_bd_cell -type ip -vlnv aha:halide_hardware:${ip_vlnv}:1.0 ${ip_vlnv}_0 ]
+  # Create instance: ${ip_name}_0, and set properties
+  set ${ip_name}_0 [ create_bd_cell -type ip -vlnv ${ip_vendor}:${ip_library}:${ip_name}:${ip_version} ${ip_name}_0 ]
 
   # Create instance: axi_dma_0, and set properties
   set axi_dma_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0 ]
@@ -1072,9 +1075,9 @@ proc create_root_design { parentCell } {
   connect_bd_net -net axi_dma_0_mm2s_introut [get_bd_pins axi_dma_0/mm2s_introut] [get_bd_pins xlconcat_0/In0]
   connect_bd_net -net axi_dma_0_s2mm_introut [get_bd_pins axi_dma_0/s2mm_introut] [get_bd_pins xlconcat_0/In1]
   connect_bd_net -net proc_sys_reset_0_interconnect_aresetn [get_bd_pins proc_sys_reset_0/interconnect_aresetn] [get_bd_pins smartconnect_0/aresetn] [get_bd_pins smartconnect_1/aresetn]
-  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins ${ip_vlnv}_0/ap_rst_n] [get_bd_pins axi_dma_0/axi_resetn]${dwidth0_rst}${dwidth1_rst} [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins ${ip_name}_0/ap_rst_n] [get_bd_pins axi_dma_0/axi_resetn]${dwidth0_rst}${dwidth1_rst} [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
   connect_bd_net -net xlconcat_0_dout [get_bd_pins xlconcat_0/dout] [get_bd_pins zynq_ultra_ps_e_0/pl_ps_irq0]
-  connect_bd_net -net zynq_ultra_ps_e_0_pl_clk0 [get_bd_pins ${ip_vlnv}_0/ap_clk] [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/m_axi_sg_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk]${dwidth0_clk}${dwidth1_clk} [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins smartconnect_0/aclk] [get_bd_pins smartconnect_1/aclk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins zynq_ultra_ps_e_0/saxihpc0_fpd_aclk]
+  connect_bd_net -net zynq_ultra_ps_e_0_pl_clk0 [get_bd_pins ${ip_name}_0/ap_clk] [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/m_axi_sg_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk]${dwidth0_clk}${dwidth1_clk} [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins smartconnect_0/aclk] [get_bd_pins smartconnect_1/aclk] [get_bd_pins zynq_ultra_ps_e_0/maxihpm0_fpd_aclk] [get_bd_pins zynq_ultra_ps_e_0/pl_clk0] [get_bd_pins zynq_ultra_ps_e_0/saxihpc0_fpd_aclk]
   connect_bd_net -net zynq_ultra_ps_e_0_pl_resetn0 [get_bd_pins proc_sys_reset_0/ext_reset_in] [get_bd_pins zynq_ultra_ps_e_0/pl_resetn0]
 
   # Create address segments
@@ -1123,7 +1126,10 @@ file copy -force ${design}/${design}.runs/impl_1/${design}_wrapper.bit ${handoff
   print(printer.render(design              = design_name,
                        version             = vivado_version,
                        dir                 = ip_dir,
-                       ip_vlnv             = ip_vlnv,
+                       ip_vendor           = ip_vend,
+                       ip_library          = ip_lib,
+                       ip_name             = ip_name,
+                       ip_version          = ip_ver,
                        ip_dwidth_converter = ip_dwidth_converter,
                        dwidth_converter_0  = dwidth_converter_0,
                        dwidth_converter_1  = dwidth_converter_1,
@@ -1151,7 +1157,7 @@ file copy -force ${design}/${design}.runs/impl_1/${design}_wrapper.bit ${handoff
   os.system("mkdir -p logs")
 
   vivado_call = Template('vivado -mode ${mode} -source ${tcl} -journal logs/test.jou -log logs/test.log')
-  os.system(vivado_call.render(mode=vivado_mode, output=str(args.output)))
+  os.system(vivado_call.render(mode=vivado_mode, tcl=str(args.output)))
   
   config_init.close()
   print("All done!")
