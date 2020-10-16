@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="conv_3_3_smartconnect_1_0_synth_1" LaunchDir="/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.runs/conv_3_3_smartconnect_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="conv_3_3_axi_dma_0_0_synth_1" LaunchDir="/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.runs/conv_3_3_axi_dma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="conv_3_3_smartconnect_0_0_synth_1" LaunchDir="/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.runs/conv_3_3_smartconnect_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="conv_3_3_proc_sys_reset_0_0_synth_1" LaunchDir="/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.runs/conv_3_3_proc_sys_reset_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="conv_3_3_axis_dwidth_converter_1_0_synth_1" LaunchDir="/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.runs/conv_3_3_axis_dwidth_converter_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="conv_3_3_axis_dwidth_converter_0_0_synth_1" LaunchDir="/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.runs/conv_3_3_axis_dwidth_converter_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="conv_3_3_conv_3_3_0_0_synth_1" LaunchDir="/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.runs/conv_3_3_conv_3_3_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="conv_3_3_zynq_ultra_ps_e_0_0_synth_1" LaunchDir="/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.runs/conv_3_3_zynq_ultra_ps_e_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="conv_3_3_smartconnect_1_0_synth_1"/>
+		<Parent Id="conv_3_3_axi_dma_0_0_synth_1"/>
+		<Parent Id="conv_3_3_smartconnect_0_0_synth_1"/>
+		<Parent Id="conv_3_3_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="conv_3_3_axis_dwidth_converter_1_0_synth_1"/>
+		<Parent Id="conv_3_3_axis_dwidth_converter_0_0_synth_1"/>
+		<Parent Id="conv_3_3_conv_3_3_0_0_synth_1"/>
+		<Parent Id="conv_3_3_zynq_ultra_ps_e_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="conv_3_3_smartconnect_1_0_synth_1"/>
+		<Parent Id="conv_3_3_axi_dma_0_0_synth_1"/>
+		<Parent Id="conv_3_3_smartconnect_0_0_synth_1"/>
+		<Parent Id="conv_3_3_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="conv_3_3_axis_dwidth_converter_1_0_synth_1"/>
+		<Parent Id="conv_3_3_axis_dwidth_converter_0_0_synth_1"/>
+		<Parent Id="conv_3_3_conv_3_3_0_0_synth_1"/>
+		<Parent Id="conv_3_3_zynq_ultra_ps_e_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

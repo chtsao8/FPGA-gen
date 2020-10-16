@@ -1,0 +1,440 @@
+
+*** Running vivado
+    with args -log conv_3_3_smartconnect_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source conv_3_3_smartconnect_1_0.tcl
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source conv_3_3_smartconnect_1_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/fpga/hls/conv_3_3/conv_3_3/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/xilinx/vivado/2020.1/Vivado/2020.1/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 2083.082 ; gain = 0.000 ; free physical = 8964 ; free virtual = 84764
+Command: synth_design -top conv_3_3_smartconnect_1_0 -part xczu7ev-ffvc1156-2-e -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu7ev'
+INFO: [Device 21-403] Loading part xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1601735
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 2660.555 ; gain = 10.812 ; free physical = 4169 ; free virtual = 78177
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'conv_3_3_smartconnect_1_0' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/synth/conv_3_3_smartconnect_1_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'bd_ad0e' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/synth/bd_ad0e.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_1I1UBO' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/synth/bd_ad0e.v:723]
+INFO: [Synth 8-6157] synthesizing module 'bd_ad0e_one_0' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_0/synth/bd_ad0e_one_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 1 - type: integer 
+	Parameter CONST_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (1#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'bd_ad0e_one_0' (2#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_0/synth/bd_ad0e_one_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'bd_ad0e_psr_aclk_0' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_1/synth/bd_ad0e_psr_aclk_0.vhd:74]
+	Parameter C_FAMILY bound to: zynquplus - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at '/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_1/synth/bd_ad0e_psr_aclk_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+	Parameter C_FAMILY bound to: zynquplus - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+	Parameter INIT bound to: 1'b1 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
+	Parameter INIT bound to: 1'b1 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
+	Parameter INIT bound to: 1'b1 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'lpf' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+INFO: [Synth 8-3491] module 'SRL16' declared at '/cad/xilinx/vivado/2020.1/Vivado/2020.1/scripts/rt/data/unisim_comp.v:78043' bound to instance 'POR_SRL_I' of component 'SRL16' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
+INFO: [Synth 8-6157] synthesizing module 'SRL16' [/cad/xilinx/vivado/2020.1/Vivado/2020.1/scripts/rt/data/unisim_comp.v:78043]
+	Parameter INIT bound to: 16'b0000000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (3#1) [/cad/xilinx/vivado/2020.1/Vivado/2020.1/scripts/rt/data/unisim_comp.v:78043]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter C_CDC_TYPE bound to: 1 - type: integer 
+	Parameter C_RESET_STATE bound to: 0 - type: integer 
+	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
+	Parameter C_FLOP_INPUT bound to: 0 - type: integer 
+	Parameter C_VECTOR_WIDTH bound to: 2 - type: integer 
+	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (4#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (5#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+	Parameter C_SIZE bound to: 6 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (6#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (7#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (8#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'bd_ad0e_psr_aclk_0' (9#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_1/synth/bd_ad0e_psr_aclk_0.vhd:74]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'bd_ad0e_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/synth/bd_ad0e.v:758]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'bd_ad0e_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/synth/bd_ad0e.v:758]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'bd_ad0e_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/synth/bd_ad0e.v:758]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'bd_ad0e_psr_aclk_0' is unconnected for instance 'psr_aclk' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/synth/bd_ad0e.v:758]
+WARNING: [Synth 8-7023] instance 'psr_aclk' of module 'bd_ad0e_psr_aclk_0' has 10 connections declared, but only 6 given [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/synth/bd_ad0e.v:758]
+INFO: [Synth 8-6155] done synthesizing module 'clk_map_imp_1I1UBO' (10#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/synth/bd_ad0e.v:723]
+INFO: [Synth 8-6157] synthesizing module 'm00_exit_pipeline_imp_1YEW00V' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/synth/bd_ad0e.v:767]
+INFO: [Synth 8-6157] synthesizing module 'bd_ad0e_m00e_0' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_12/synth/bd_ad0e_m00e_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_ad0e_m00e_0' (17#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_12/synth/bd_ad0e_m00e_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'm00_exit_pipeline_imp_1YEW00V' (18#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/synth/bd_ad0e.v:767]
+INFO: [Synth 8-6157] synthesizing module 'bd_ad0e_m00s2a_0' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_11/synth/bd_ad0e_m00s2a_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_ad0e_m00s2a_0' (20#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_11/synth/bd_ad0e_m00s2a_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_ad0e_s00a2s_0' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_5/synth/bd_ad0e_s00a2s_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_ad0e_s00a2s_0' (22#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_5/synth/bd_ad0e_s00a2s_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 's00_entry_pipeline_imp_Z7XC0S' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/synth/bd_ad0e.v:1068]
+INFO: [Synth 8-6157] synthesizing module 'bd_ad0e_s00mmu_0' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_2/synth/bd_ad0e_s00mmu_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_ad0e_s00mmu_0' (25#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_2/synth/bd_ad0e_s00mmu_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_ad0e_s00sic_0' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_4/synth/bd_ad0e_s00sic_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_ad0e_s00sic_0' (28#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_4/synth/bd_ad0e_s00sic_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_ad0e_s00tr_0' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_3/synth/bd_ad0e_s00tr_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_ad0e_s00tr_0' (31#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_3/synth/bd_ad0e_s00tr_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 's00_entry_pipeline_imp_Z7XC0S' (32#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/synth/bd_ad0e.v:1068]
+INFO: [Synth 8-6157] synthesizing module 's00_nodes_imp_TS6FBA' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/synth/bd_ad0e.v:1727]
+INFO: [Synth 8-6157] synthesizing module 'bd_ad0e_sarn_0' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_6/synth/bd_ad0e_sarn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_ad0e_sarn_0' (46#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_6/synth/bd_ad0e_sarn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_ad0e_sawn_0' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_8/synth/bd_ad0e_sawn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_ad0e_sawn_0' (47#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_8/synth/bd_ad0e_sawn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_ad0e_sbn_0' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_10/synth/bd_ad0e_sbn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_ad0e_sbn_0' (48#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_10/synth/bd_ad0e_sbn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_ad0e_srn_0' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_7/synth/bd_ad0e_srn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_ad0e_srn_0' (49#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_7/synth/bd_ad0e_srn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_ad0e_swn_0' [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_9/synth/bd_ad0e_swn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_ad0e_swn_0' (50#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_9/synth/bd_ad0e_swn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_TS6FBA' (51#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/synth/bd_ad0e.v:1727]
+INFO: [Synth 8-6155] done synthesizing module 'bd_ad0e' (52#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/synth/bd_ad0e.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'conv_3_3_smartconnect_1_0' (53#1) [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/synth/conv_3_3_smartconnect_1_0.v:57]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 2772.367 ; gain = 122.625 ; free physical = 3951 ; free virtual = 77962
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 2790.180 ; gain = 140.438 ; free physical = 3930 ; free virtual = 77941
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 2790.180 ; gain = 140.438 ; free physical = 3930 ; free virtual = 77941
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.59 ; elapsed = 00:00:00.59 . Memory (MB): peak = 2796.117 ; gain = 0.000 ; free physical = 3757 ; free virtual = 77772
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/ooc.xdc] for cell 'inst'
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3077.461 ; gain = 21.781 ; free physical = 3292 ; free virtual = 77318
+Finished Parsing XDC File [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_1/bd_ad0e_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_1/bd_ad0e_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_1/bd_ad0e_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.srcs/sources_1/bd/conv_3_3/ip/conv_3_3_smartconnect_1_0/bd_0/ip/ip_1/bd_ad0e_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Parsing XDC File [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.runs/conv_3_3_smartconnect_1_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.runs/conv_3_3_smartconnect_1_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3077.461 ; gain = 0.000 ; free physical = 3291 ; free virtual = 77317
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 13 instances were transformed.
+  FDR => FDRE: 12 instances
+  SRL16 => SRL16E: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.14 . Memory (MB): peak = 3077.461 ; gain = 0.000 ; free physical = 3277 ; free virtual = 77303
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:43 . Memory (MB): peak = 3077.461 ; gain = 427.719 ; free physical = 3135 ; free virtual = 77162
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu7ev-ffvc1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:43 . Memory (MB): peak = 3077.461 ; gain = 427.719 ; free physical = 3135 ; free virtual = 77162
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.runs/conv_3_3_smartconnect_1_0_synth_1/dont_touch.xdc, line 71).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:43 . Memory (MB): peak = 3077.461 ; gain = 427.719 ; free physical = 3134 ; free virtual = 77160
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'w_state_reg' in module 'sc_si_converter_v1_0_9_axilite_conv'
+INFO: [Synth 8-802] inferred FSM for state register 'r_state_reg' in module 'sc_si_converter_v1_0_9_axilite_conv'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  W_IDLE |                              000 | 00000000000000000000000000000000
+                    W_RX |                              001 | 00000000000000000000000000000001
+                    W_TX |                              010 | 00000000000000000000000000000010
+              W_COMPLETE |                              011 | 00000000000000000000000000000100
+               W_RECOVER |                              100 | 00000000000000000000000000000011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'w_state_reg' using encoding 'sequential' in module 'sc_si_converter_v1_0_9_axilite_conv'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  R_IDLE |                               00 | 00000000000000000000000000000000
+                    R_RX |                               01 | 00000000000000000000000000000001
+                    R_TX |                               10 | 00000000000000000000000000000010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_state_reg' using encoding 'sequential' in module 'sc_si_converter_v1_0_9_axilite_conv'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:47 . Memory (MB): peak = 3077.461 ; gain = 427.719 ; free physical = 2990 ; free virtual = 77019
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   12 Bit       Adders := 3     
+	   2 Input   11 Bit       Adders := 4     
+	   4 Input   11 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 6     
+	   2 Input    2 Bit       Adders := 1     
+	   2 Input    1 Bit       Adders := 5     
+	   3 Input    1 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 10    
++---Registers : 
+	              512 Bit    Registers := 1     
+	              181 Bit    Registers := 2     
+	              128 Bit    Registers := 2     
+	               70 Bit    Registers := 2     
+	               64 Bit    Registers := 4     
+	               47 Bit    Registers := 1     
+	               40 Bit    Registers := 1     
+	               33 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 3     
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 4     
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 7     
+	                3 Bit    Registers := 7     
+	                2 Bit    Registers := 12    
+	                1 Bit    Registers := 109   
++---Muxes : 
+	   2 Input  128 Bit        Muxes := 3     
+	   4 Input  128 Bit        Muxes := 2     
+	   3 Input  128 Bit        Muxes := 2     
+	   3 Input   40 Bit        Muxes := 1     
+	   2 Input   40 Bit        Muxes := 1     
+	   5 Input   32 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 7     
+	   5 Input   12 Bit        Muxes := 1     
+	   5 Input   11 Bit        Muxes := 1     
+	   3 Input   11 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 6     
+	   3 Input    8 Bit        Muxes := 1     
+	   3 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 6     
+	   4 Input    7 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
+	   5 Input    4 Bit        Muxes := 3     
+	   2 Input    4 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 6     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 15    
+	   4 Input    2 Bit        Muxes := 2     
+	   3 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 82    
+	   5 Input    1 Bit        Muxes := 17    
+	   3 Input    1 Bit        Muxes := 17    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1728 (col length:144)
+BRAMs: 624 (col length: RAMB18 144 RAMB36 72)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:42 ; elapsed = 00:00:56 . Memory (MB): peak = 3077.461 ; gain = 427.719 ; free physical = 2369 ; free virtual = 76413
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:17 ; elapsed = 00:02:01 . Memory (MB): peak = 3322.062 ; gain = 672.320 ; free physical = 6799 ; free virtual = 80908
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:19 ; elapsed = 00:02:02 . Memory (MB): peak = 3370.406 ; gain = 720.664 ; free physical = 6681 ; free virtual = 80790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:19 ; elapsed = 00:02:03 . Memory (MB): peak = 3370.406 ; gain = 720.664 ; free physical = 6599 ; free virtual = 80708
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:22 ; elapsed = 00:02:06 . Memory (MB): peak = 3370.406 ; gain = 720.664 ; free physical = 6515 ; free virtual = 80624
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:22 ; elapsed = 00:02:06 . Memory (MB): peak = 3370.406 ; gain = 720.664 ; free physical = 6514 ; free virtual = 80624
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:22 ; elapsed = 00:02:06 . Memory (MB): peak = 3370.406 ; gain = 720.664 ; free physical = 6513 ; free virtual = 80623
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:22 ; elapsed = 00:02:06 . Memory (MB): peak = 3370.406 ; gain = 720.664 ; free physical = 6513 ; free virtual = 80623
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:22 ; elapsed = 00:02:06 . Memory (MB): peak = 3370.406 ; gain = 720.664 ; free physical = 6511 ; free virtual = 80621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:22 ; elapsed = 00:02:06 . Memory (MB): peak = 3370.406 ; gain = 720.664 ; free physical = 6511 ; free virtual = 80621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT1  |    37|
+|2     |LUT2  |    52|
+|3     |LUT3  |    52|
+|4     |LUT4  |   191|
+|5     |LUT5  |    73|
+|6     |LUT6  |   180|
+|7     |MUXF7 |     1|
+|8     |SRL16 |     1|
+|9     |FDR   |     4|
+|10    |FDRE  |   471|
+|11    |FDSE  |    13|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:22 ; elapsed = 00:02:06 . Memory (MB): peak = 3370.406 ; gain = 720.664 ; free physical = 6511 ; free virtual = 80621
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:08 ; elapsed = 00:01:49 . Memory (MB): peak = 3370.406 ; gain = 433.383 ; free physical = 6551 ; free virtual = 80661
+Synthesis Optimization Complete : Time (s): cpu = 00:01:22 ; elapsed = 00:02:06 . Memory (MB): peak = 3370.414 ; gain = 720.664 ; free physical = 6551 ; free virtual = 80661
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.10 . Memory (MB): peak = 3370.414 ; gain = 0.000 ; free physical = 6614 ; free virtual = 80724
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3434.141 ; gain = 0.000 ; free physical = 6526 ; free virtual = 80635
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  FDR => FDRE: 4 instances
+  SRL16 => SRL16E: 1 instance 
+
+INFO: [Common 17-83] Releasing license: Synthesis
+89 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:45 ; elapsed = 00:02:36 . Memory (MB): peak = 3434.141 ; gain = 1351.059 ; free physical = 6677 ; free virtual = 80786
+INFO: [Common 17-1381] The checkpoint '/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.runs/conv_3_3_smartconnect_1_0_synth_1/conv_3_3_smartconnect_1_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP conv_3_3_smartconnect_1_0, cache-ID = 241a8398fe9989c2
+INFO: [Coretcl 2-1174] Renamed 57 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3.runs/conv_3_3_smartconnect_1_0_synth_1/conv_3_3_smartconnect_1_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file conv_3_3_smartconnect_1_0_utilization_synth.rpt -pb conv_3_3_smartconnect_1_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 13 14:47:22 2020...

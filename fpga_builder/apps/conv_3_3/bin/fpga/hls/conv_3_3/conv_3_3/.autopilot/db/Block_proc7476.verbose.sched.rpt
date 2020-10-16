@@ -1,0 +1,116 @@
+
+
+================================================================
+== Vivado HLS Report for 'Block_proc7476'
+================================================================
+* Date:           Tue Oct 13 14:40:47 2020
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        conv_3_3
+* Solution:       conv_3_3
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns |   0 ns   |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        1|        1| 5.000 ns | 5.000 ns |    1|    1|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%tmp_tlast_V = call i1 @_ssdm_op_Read.ap_auto.volatile.i1P(i1* %val_assign_1)"   --->   Operation 3 'read' 'tmp_tlast_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%tmp_data_V = call i16 @_ssdm_op_Read.ap_auto.volatile.i16P(i16* %val_assign)"   --->   Operation 4 'read' 'tmp_data_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [2/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i16P.i1P(i16* %arg_out_V_data_V, i1* %arg_out_V_tlast_V, i16 %tmp_data_V, i1 %tmp_tlast_V)" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:483]   --->   Operation 5 'write' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1* %arg_out_V_tlast_V, i16* %arg_out_V_data_V, [5 x i8]* @p_str8, i32 1, i32 1, [5 x i8]* @p_str9, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @p_str11, [1 x i8]* @p_str)"   --->   Operation 6 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 7 [1/2] (0.00ns)   --->   "call void @_ssdm_op_Write.axis.volatile.i16P.i1P(i16* %arg_out_V_data_V, i1* %arg_out_V_tlast_V, i16 %tmp_data_V, i1 %tmp_tlast_V)" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:483]   --->   Operation 7 'write' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 8 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Oct 13 14:42:26 2020
+# Process ID: 1601016
+# Current directory: /home/nyengele/aha/fpga_builder/apps/conv_3_3
+# Command line: vivado -mode gui -source /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/fpga/vivado/gen_hw.tcl -journal ./bin/fpga/vivado/logs/conv_3_3.jou -log ./bin/fpga/vivado/logs/conv_3_3.log
+# Log file: /home/nyengele/aha/fpga_builder/apps/conv_3_3/./bin/fpga/vivado/logs/conv_3_3.log
+# Journal file: /home/nyengele/aha/fpga_builder/apps/conv_3_3/./bin/fpga/vivado/logs/conv_3_3.jou
+#-----------------------------------------------------------
+start_gui
+source /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/fpga/vivado/gen_hw.tcl
+update_compile_order -fileset sources_1

@@ -1,0 +1,27 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="conv_3_3"/>
+    </name>
+    <project>
+        <value string="conv_3_3"/>
+    </project>
+    <targetInfo>
+        <TargetInfo value="xczu7ev:-ffvc1156:-2-e"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/zynquplus/zynquplus" name="DefaultPlatform"/>
+        <library value="xilinx/zynquplus/zynquplus_fpv7" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock name="default" period="5" default="false"/>
+    </clockList>
+    <config>
+        <config_schedule effort="medium" relax_ii_for_timing="0"/>
+        <config_export description="conv_3_3" display_name="conv_3_3" format="ip_catalog" ipname="conv_3_3" library="halide_hardware" rtl="verilog" vendor="aha" version="1.0"/>
+        <schedule model="unoptimized_conv_3_3_rdai"/>
+    </config>
+    <ExportDesign askAgain="true" evaluate="false" rtl="verilog" formatName="ip_catalog">
+        <Format formatName="ip_catalog" description="conv_3_3" vendor="aha" library="halide_hardware" ipname="conv_3_3" version="1.0" driver_input_dir="" display_name="conv_3_3" taxonomy=""/>
+    </ExportDesign>
+</AutoPilot:solution>
+

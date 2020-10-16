@@ -1,0 +1,186 @@
+
+
+================================================================
+== Vivado HLS Report for 'unoptimized_conv_3_3_rdai'
+================================================================
+* Date:           Tue Oct 13 14:40:47 2020
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        conv_3_3
+* Solution:       conv_3_3
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 4.129 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+----------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
+    +---------+---------+----------+----------+-------+-------+----------+
+    |    31258|    31258| 0.156 ms | 0.156 ms |  31259|  31259| dataflow |
+    +---------+---------+----------+----------+-------+-------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 8, States = { 1 2 3 4 5 6 7 8 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%val_assign_1_channel = alloca i1, align 1"   --->   Operation 9 'alloca' 'val_assign_1_channel' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%val_assign_channel = alloca i16, align 2"   --->   Operation 10 'alloca' 'val_assign_channel' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%arg_in0_hwstream_val = alloca i16, align 2" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:466]   --->   Operation 11 'alloca' 'arg_in0_hwstream_val' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%arg_out_data_values_s = alloca i16, align 2" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:470]   --->   Operation 12 'alloca' 'arg_out_data_values_s' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%arg_out_tlast_values = alloca i1, align 1" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:471]   --->   Operation 13 'alloca' 'arg_out_tlast_values' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+
+State 2 <SV = 1> <Delay = 1.83>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%this_assign_channel = call fastcc i16 @Block__proc75(i16* %arg_in0_V_data_V, i1* %arg_in0_V_tlast_V)"   --->   Operation 14 'call' 'this_assign_channel' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_2 : Operation 15 [1/1] (1.83ns)   --->   "call fastcc void @write(i16* %arg_in0_hwstream_val, i16 %this_assign_channel)" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:474]   --->   Operation 15 'call' <Predicate = true> <Delay = 1.83> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 16 [2/2] (0.00ns)   --->   "call fastcc void @unoptimized_conv_3_3(i16* %arg_in0_hwstream_val, i16* %arg_out_data_values_s, i1* %arg_out_tlast_values)" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:477]   --->   Operation 16 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 17 [1/2] (0.00ns)   --->   "call fastcc void @unoptimized_conv_3_3(i16* %arg_in0_hwstream_val, i16* %arg_out_data_values_s, i1* %arg_out_tlast_values)" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:477]   --->   Operation 17 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 18 [1/1] (0.00ns)   --->   "%p_0 = call fastcc i16 @read.1(i16* %arg_out_data_values_s)" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:480]   --->   Operation 18 'call' 'p_0' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_5 : Operation 19 [1/1] (0.00ns)   --->   "call fastcc void @"operator int.1"(i16* %val_assign_channel, i16 %p_0)" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:480]   --->   Operation 19 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 20 [1/1] (0.00ns)   --->   "%p_s = call fastcc i1 @read(i1* %arg_out_tlast_values)" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:481]   --->   Operation 20 'call' 'p_s' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_5 : Operation 21 [1/1] (0.00ns)   --->   "call fastcc void @"operator int"(i1* %val_assign_1_channel, i1 %p_s)" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:481]   --->   Operation 21 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 22 [2/2] (0.00ns)   --->   "call fastcc void @Block__proc7476(i16* %val_assign_channel, i1* %val_assign_1_channel, i16* %arg_out_V_data_V, i1* %arg_out_V_tlast_V)"   --->   Operation 22 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 23 [1/2] (0.00ns)   --->   "call fastcc void @Block__proc7476(i16* %val_assign_channel, i1* %val_assign_1_channel, i16* %arg_out_V_data_V, i1* %arg_out_V_tlast_V)"   --->   Operation 23 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, i32 0, [1 x i8]* @p_str) nounwind" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:460]   --->   Operation 24 'specdataflowpipeline' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %arg_in0_V_data_V), !map !183"   --->   Operation 25 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %arg_in0_V_tlast_V), !map !189"   --->   Operation 26 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i16* %arg_out_V_data_V), !map !193"   --->   Operation 27 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %arg_out_V_tlast_V), !map !197"   --->   Operation 28 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([26 x i8]* @unoptimized_conv_3_3_1) nounwind"   --->   Operation 29 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 30 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecChannel([32 x i8]* @arg_in0_hwstream_OC_s, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i16* %arg_in0_hwstream_val, i16* %arg_in0_hwstream_val)"   --->   Operation 30 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %arg_in0_hwstream_val, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 31 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 32 [1/1] (0.00ns)   --->   "%empty_5 = call i32 (...)* @_ssdm_op_SpecChannel([28 x i8]* @arg_out_data_OC_valu, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i16* %arg_out_data_values_s, i16* %arg_out_data_values_s)"   --->   Operation 32 'specchannel' 'empty_5' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %arg_out_data_values_s, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 33 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 34 [1/1] (0.00ns)   --->   "%empty_6 = call i32 (...)* @_ssdm_op_SpecChannel([29 x i8]* @arg_out_tlast_OC_val, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i1* %arg_out_tlast_values, i1* %arg_out_tlast_values)"   --->   Operation 34 'specchannel' 'empty_6' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1* %arg_out_tlast_values, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 35 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %arg_in0_V_data_V, i1* %arg_in0_V_tlast_V, [5 x i8]* @p_str8, i32 1, i32 1, [5 x i8]* @p_str9, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @p_str10, [1 x i8]* @p_str) nounwind" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:461]   --->   Operation 36 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %arg_out_V_data_V, i1* %arg_out_V_tlast_V, [5 x i8]* @p_str8, i32 1, i32 1, [5 x i8]* @p_str9, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @p_str11, [1 x i8]* @p_str) nounwind" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:462]   --->   Operation 37 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [13 x i8]* @p_str12, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:463]   --->   Operation 38 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 39 [1/1] (0.00ns)   --->   "ret void" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:484]   --->   Operation 39 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 1.84ns
+The critical path consists of the following:
+	'call' operation ('this_assign_channel') to 'Block__proc75' [25]  (0 ns)
+	'call' operation ('call_ln474', /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:474) to 'write' [26]  (1.84 ns)
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+ <State 8>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

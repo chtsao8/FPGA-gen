@@ -1,0 +1,199 @@
+<stg><name>Block__proc7476</name>
+
+
+<trans_list>
+
+<trans id="9" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+newFuncRoot:1  %tmp_tlast_V = call i1 @_ssdm_op_Read.ap_auto.volatile.i1P(i1* %val_assign_1)
+
+]]></Node>
+<StgValue><ssdm name="tmp_tlast_V"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="16" op_0_bw="16" op_1_bw="16">
+<![CDATA[
+newFuncRoot:2  %tmp_data_V = call i16 @_ssdm_op_Read.ap_auto.volatile.i16P(i16* %val_assign)
+
+]]></Node>
+<StgValue><ssdm name="tmp_data_V"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="2" lat="2">
+<core>AXI4Stream</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="1" op_3_bw="16" op_4_bw="1">
+<![CDATA[
+newFuncRoot:3  call void @_ssdm_op_Write.axis.volatile.i16P.i1P(i16* %arg_out_V_data_V, i1* %arg_out_V_tlast_V, i16 %tmp_data_V, i1 %tmp_tlast_V)
+
+]]></Node>
+<StgValue><ssdm name="write_ln483"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="6" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="16" op_3_bw="0" op_4_bw="32" op_5_bw="32" op_6_bw="0" op_7_bw="32" op_8_bw="32" op_9_bw="0" op_10_bw="0" op_11_bw="0" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="32" op_16_bw="0" op_17_bw="0">
+<![CDATA[
+newFuncRoot:0  call void (...)* @_ssdm_op_SpecInterface(i1* %arg_out_V_tlast_V, i16* %arg_out_V_data_V, [5 x i8]* @p_str8, i32 1, i32 1, [5 x i8]* @p_str9, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [8 x i8]* @p_str11, [1 x i8]* @p_str)
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="7" st_id="2" stage="1" lat="2">
+<core>AXI4Stream</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="0" op_0_bw="0" op_1_bw="16" op_2_bw="1" op_3_bw="16" op_4_bw="1">
+<![CDATA[
+newFuncRoot:3  call void @_ssdm_op_Write.axis.volatile.i16P.i1P(i16* %arg_out_V_data_V, i1* %arg_out_V_tlast_V, i16 %tmp_data_V, i1 %tmp_tlast_V)
+
+]]></Node>
+<StgValue><ssdm name="write_ln483"/></StgValue>
+</operation>
+
+<operation id="8" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="0">
+<![CDATA[
+newFuncRoot:4  ret void
+
+]]></Node>
+<StgValue><ssdm name="ret_ln0"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="10" name="val_assign" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="val_assign"/></StgValue>
+</port>
+<port id="11" name="val_assign_1" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="val_assign_1"/></StgValue>
+</port>
+<port id="12" name="arg_out_V_data_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="arg_out_V_data_V"/></StgValue>
+</port>
+<port id="13" name="arg_out_V_tlast_V" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="arg_out_V_tlast_V"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="15" from="_ssdm_op_Read.ap_auto.volatile.i1P" to="tmp_tlast_V" fromId="14" toId="3">
+</dataflow>
+<dataflow id="16" from="val_assign_1" to="tmp_tlast_V" fromId="11" toId="3">
+</dataflow>
+<dataflow id="18" from="_ssdm_op_Read.ap_auto.volatile.i16P" to="tmp_data_V" fromId="17" toId="4">
+</dataflow>
+<dataflow id="19" from="val_assign" to="tmp_data_V" fromId="10" toId="4">
+</dataflow>
+<dataflow id="21" from="_ssdm_op_Write.axis.volatile.i16P.i1P" to="write_ln483" fromId="20" toId="5">
+</dataflow>
+<dataflow id="22" from="arg_out_V_data_V" to="write_ln483" fromId="12" toId="5">
+</dataflow>
+<dataflow id="23" from="arg_out_V_tlast_V" to="write_ln483" fromId="13" toId="5">
+</dataflow>
+<dataflow id="24" from="tmp_data_V" to="write_ln483" fromId="4" toId="5">
+</dataflow>
+<dataflow id="25" from="tmp_tlast_V" to="write_ln483" fromId="3" toId="5">
+</dataflow>
+<dataflow id="27" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="26" toId="6">
+</dataflow>
+<dataflow id="28" from="arg_out_V_tlast_V" to="specinterface_ln0" fromId="13" toId="6">
+</dataflow>
+<dataflow id="29" from="arg_out_V_data_V" to="specinterface_ln0" fromId="12" toId="6">
+</dataflow>
+<dataflow id="31" from="p_str8" to="specinterface_ln0" fromId="30" toId="6">
+</dataflow>
+<dataflow id="33" from="StgValue_32" to="specinterface_ln0" fromId="32" toId="6">
+</dataflow>
+<dataflow id="34" from="StgValue_32" to="specinterface_ln0" fromId="32" toId="6">
+</dataflow>
+<dataflow id="36" from="p_str9" to="specinterface_ln0" fromId="35" toId="6">
+</dataflow>
+<dataflow id="38" from="StgValue_37" to="specinterface_ln0" fromId="37" toId="6">
+</dataflow>
+<dataflow id="39" from="StgValue_37" to="specinterface_ln0" fromId="37" toId="6">
+</dataflow>
+<dataflow id="41" from="p_str" to="specinterface_ln0" fromId="40" toId="6">
+</dataflow>
+<dataflow id="42" from="p_str" to="specinterface_ln0" fromId="40" toId="6">
+</dataflow>
+<dataflow id="43" from="p_str" to="specinterface_ln0" fromId="40" toId="6">
+</dataflow>
+<dataflow id="44" from="StgValue_37" to="specinterface_ln0" fromId="37" toId="6">
+</dataflow>
+<dataflow id="45" from="StgValue_37" to="specinterface_ln0" fromId="37" toId="6">
+</dataflow>
+<dataflow id="46" from="StgValue_37" to="specinterface_ln0" fromId="37" toId="6">
+</dataflow>
+<dataflow id="47" from="StgValue_37" to="specinterface_ln0" fromId="37" toId="6">
+</dataflow>
+<dataflow id="49" from="p_str11" to="specinterface_ln0" fromId="48" toId="6">
+</dataflow>
+<dataflow id="50" from="p_str" to="specinterface_ln0" fromId="40" toId="6">
+</dataflow>
+<dataflow id="51" from="_ssdm_op_Write.axis.volatile.i16P.i1P" to="write_ln483" fromId="20" toId="7">
+</dataflow>
+<dataflow id="52" from="arg_out_V_data_V" to="write_ln483" fromId="12" toId="7">
+</dataflow>
+<dataflow id="53" from="arg_out_V_tlast_V" to="write_ln483" fromId="13" toId="7">
+</dataflow>
+<dataflow id="54" from="tmp_data_V" to="write_ln483" fromId="4" toId="7">
+</dataflow>
+<dataflow id="55" from="tmp_tlast_V" to="write_ln483" fromId="3" toId="7">
+</dataflow>
+</dataflows>
+
+
+</stg>

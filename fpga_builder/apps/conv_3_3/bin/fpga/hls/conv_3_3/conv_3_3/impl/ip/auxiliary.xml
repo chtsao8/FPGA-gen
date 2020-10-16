@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="unoptimized_conv_3_3_rdai" xd:componentRef="conv_3_3" xd:initiationInterval="31259" xd:clockPeriod="5.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:arg xd:name="arg_in0.data" xd:originalName="arg_in0" xd:direction="in" xd:interfaceRef="arg_in0" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="arg_in0.tlast" xd:originalName="arg_in0" xd:direction="in" xd:interfaceRef="arg_in0" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="arg_out.data" xd:originalName="arg_out" xd:direction="out" xd:interfaceRef="arg_out" xd:busTypeRef="axis" xd:dataWidth="16"/>
+  <xd:arg xd:name="arg_out.tlast" xd:originalName="arg_out" xd:direction="out" xd:interfaceRef="arg_out" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:latencyEstimates xd:best-case="31258" xd:worst-case="31258" xd:average-case="31258"/>
+  <xd:resourceEstimates xd:LUT="952" xd:FF="306" xd:BRAM="4" xd:DSP="2"/>
+</xd:acceleratorMap>

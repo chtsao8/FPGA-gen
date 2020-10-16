@@ -1,0 +1,341 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Analyzing design file '/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp' ... 
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:439:32
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:440:33
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:441:32
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:443:138
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:447:113
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:448:88
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:474:26
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:480:15
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:481:16
+WARNING: [HLS 200-471] Dataflow form checks found 9 issue(s) in file /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1512.535 ; gain = 1099.754 ; free physical = 11974 ; free virtual = 87694
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1512.535 ; gain = 1099.754 ; free physical = 11974 ; free virtual = 87694
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'op_hcompute_hw_input_global_wrapper_stencil' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'op_hcompute_conv_stencil' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:396).
+INFO: [XFORM 203-603] Inlining function 'op_hcompute_conv_stencil_1' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'op_hcompute_hw_output_stencil' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+INFO: [XFORM 203-603] Inlining function 'op_hcompute_tlast' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:399).
+INFO: [XFORM 203-603] Inlining function 'HWStream<hw_uint<16> >::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:270->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'hcompute_hw_input_global_wrapper_stencil' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:271->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_hw_input_global_wrapper_stencil_write_bundle_write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:273->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'hcompute_conv_stencil' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:283->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:396).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_op_hcompute_conv_stencil_write_bundle_write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:285->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:396).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_op_hcompute_conv_stencil_1_read_bundle_read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:296->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_read_bundle_read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hcompute_conv_stencil_1' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_op_hcompute_conv_stencil_1_write_bundle_write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:309->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_op_hcompute_hw_output_stencil_read_bundle_read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:320->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+INFO: [XFORM 203-603] Inlining function 'hcompute_hw_output_stencil' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:325->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+INFO: [XFORM 203-603] Inlining function 'HWStream<hw_uint<16> >::write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:327->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+INFO: [XFORM 203-603] Inlining function 'hcompute_tlast' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:337->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:399).
+INFO: [XFORM 203-603] Inlining function 'HWStream<hw_uint<1> >::write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:339->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:399).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::extract<0, 15>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:8->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:271->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:8->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:271->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::extract<0, 15>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:258->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:273->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_hw_input_global_wrapper_stencil_0_write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:259->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:273->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::extract<0, 15>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:85->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:285->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:396).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_op_hcompute_conv_stencil_2_write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:86->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:285->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:396).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_op_hcompute_conv_stencil_1_4_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:70->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:296->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<0, 16, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:71->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:296->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_5_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:234->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<0, 144, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:235->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_6_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:236->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<16, 144, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:237->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_7_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:238->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<32, 144, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:239->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_8_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:240->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<48, 144, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:241->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_9_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:242->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<64, 144, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:243->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_10_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:244->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<80, 144, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:245->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_11_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:246->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<96, 144, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:247->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_12_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:248->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<112, 144, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:249->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_13_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:250->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<128, 144, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:251->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::extract<0, 15>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:21->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:21->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<144>::extract<0, 15>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:23->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:23->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<144>::extract<16, 31>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:24->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:24->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<144>::extract<32, 47>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:25->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:25->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<144>::extract<48, 63>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:26->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:26->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<144>::extract<64, 79>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:27->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:27->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<144>::extract<80, 95>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:28->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:28->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<144>::extract<96, 111>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:29->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:29->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<144>::extract<112, 127>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:30->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:30->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<144>::extract<128, 143>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:31->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:31->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::extract<0, 15>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:78->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:309->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_op_hcompute_conv_stencil_1_3_write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:79->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:309->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_op_hcompute_hw_output_stencil_15_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:96->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:320->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+INFO: [XFORM 203-603] Inlining function 'set_at<0, 16, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:97->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:320->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::extract<0, 15>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:64->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:325->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:64->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:325->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:8->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:271->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:126->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:259->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:273->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_all_inputs_to_all_outputs_cache::write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:41->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:86->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:285->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:396).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:48->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:70->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:296->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:169->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:234->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:178->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:236->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:187->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:238->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:196->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:240->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:205->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:242->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:133->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:244->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:142->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:246->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:151->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:248->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:160->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:250->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:21->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:23->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:24->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:25->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:26->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:27->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:28->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:29->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:30->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:31->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_all_inputs_to_all_outputs_cache::write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:37->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:79->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:309->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:57->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:96->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:320->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:64->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:325->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 1512.535 ; gain = 1099.754 ; free physical = 11964 ; free virtual = 87685
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'hw_uint<16>::to_int' into 'hw_uint<16>::operator int' (/home/nyengele/aha/clockwork/hw_classes.h:221) automatically.
+INFO: [XFORM 203-602] Inlining function 'hw_uint<1>::to_int' into 'hw_uint<1>::operator int' (/home/nyengele/aha/clockwork/hw_classes.h:221) automatically.
+WARNING: [SYNCHK 200-23] /home/nyengele/aha/clockwork/hw_classes.h:212: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:19 ; elapsed = 00:00:31 . Memory (MB): peak = 1512.535 ; gain = 1099.754 ; free physical = 11957 ; free virtual = 87679
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.2' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.2' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.3' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.4' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.5' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.6' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.7' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.8' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.9' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.10' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.11' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.12' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.13' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.14' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.15' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.16' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.17' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.18' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.19' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.20' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.21' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.22' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.23' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.24' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [XFORM 203-602] Inlining function 'hw_uint<16>::to_int' into 'hw_uint<16>::operator int' (/home/nyengele/aha/clockwork/hw_classes.h:221) automatically.
+INFO: [XFORM 203-602] Inlining function 'hw_uint<1>::to_int' into 'hw_uint<1>::operator int' (/home/nyengele/aha/clockwork/hw_classes.h:221) automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'unoptimized_conv_3_3_rdai', detected/extracted 8 process function(s): 
+	 'Block__proc75'
+	 'HWStream<hw_uint<16> >::write'
+	 'unoptimized_conv_3_3'
+	 'HWStream<hw_uint<16> >::read'
+	 'hw_uint<16>::operator int'
+	 'HWStream<hw_uint<1> >::read'
+	 'hw_uint<1>::operator int'
+	 'Block__proc7476'.
+INFO: [XFORM 203-11] Balancing expressions in function 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:347)...9 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:32 . Memory (MB): peak = 1512.535 ; gain = 1099.754 ; free physical = 11931 ; free virtual = 87654
+WARNING: [XFORM 203-631] Renaming function 'hw_uint<1>::operator int' to 'operator int' (/home/nyengele/aha/clockwork/hw_classes.h:221)
+WARNING: [XFORM 203-631] Renaming function 'hw_uint<16>::operator int' to 'operator int.1' (/home/nyengele/aha/clockwork/hw_classes.h:221:35)
+WARNING: [XFORM 203-631] Renaming function 'HWStream<hw_uint<1> >::read' to 'read' (/home/nyengele/aha/clockwork/hw_classes.h:380)
+WARNING: [XFORM 203-631] Renaming function 'HWStream<hw_uint<16> >::write' to 'write' (/home/nyengele/aha/clockwork/hw_classes.h:376)
+WARNING: [XFORM 203-631] Renaming function 'HWStream<hw_uint<16> >::read' to 'read.1' (/home/nyengele/aha/clockwork/hw_classes.h:381:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'hw_input_global_wrap' (/home/nyengele/aha/clockwork/hw_classes.h:190:7)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 1512.535 ; gain = 1099.754 ; free physical = 11866 ; free virtual = 87589
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'unoptimized_conv_3_3_rdai' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc75' to 'Block_proc75'.
+WARNING: [SYN 201-103] Legalizing function name 'write' to 'write_r'.
+WARNING: [SYN 201-103] Legalizing function name 'read.1' to 'read_1'.
+WARNING: [SYN 201-103] Legalizing function name 'operator int.1' to 'operator_int_1'.
+WARNING: [SYN 201-103] Legalizing function name 'read' to 'read_r'.
+WARNING: [SYN 201-103] Legalizing function name 'operator int' to 'operator_int'.
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc7476' to 'Block_proc7476'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc75' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.4 seconds; current allocated memory: 204.238 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 204.288 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 204.486 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 204.536 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'unoptimized_conv_3_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 204.990 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 205.406 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'read_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 205.474 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 205.516 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'operator_int_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 205.530 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 205.564 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'read_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 205.594 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 205.637 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'operator_int' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 205.654 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 205.693 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc7476' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 205.713 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 205.774 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'unoptimized_conv_3_3_rdai' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 205.879 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 206.047 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_proc75' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_proc75'.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 206.260 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_r'.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 206.587 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'unoptimized_conv_3_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'unoptimized_conv_3_3_hw_input_global_wrap' to 'unoptimized_conv_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'unoptimized_conv_3_3_rdai_mac_muladd_6ns_16s_16ns_16_1_1' to 'unoptimized_conv_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'unoptimized_conv_cud': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'unoptimized_conv_3_3'.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 207.441 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'read_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'read_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 209.245 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'operator_int_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_int_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 209.465 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'read_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'read_r'.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 209.663 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'operator_int' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_int'.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 209.881 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_proc7476' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_proc7476'.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 210.121 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'unoptimized_conv_3_3_rdai' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'unoptimized_conv_3_3_rdai/arg_in0_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'unoptimized_conv_3_3_rdai/arg_in0_V_tlast_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'unoptimized_conv_3_3_rdai/arg_out_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'unoptimized_conv_3_3_rdai/arg_out_V_tlast_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'unoptimized_conv_3_3_rdai' to 'ap_ctrl_none'.
+WARNING: [HLS 200-631] Ignoring ap_ctrl_none interface for unoptimized_conv_3_3_rdai due to write with non-FIFO I/O
+INFO: [SYN 201-210] Renamed object name 'start_for_unoptimized_conv_3_3_U0' to 'start_for_unoptimdEe' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'unoptimized_conv_3_3_rdai'.

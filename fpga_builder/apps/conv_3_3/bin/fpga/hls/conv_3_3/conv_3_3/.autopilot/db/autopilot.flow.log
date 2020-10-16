@@ -1,0 +1,1403 @@
+INFO-FLOW: Workspace /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3 opened at Tue Oct 13 14:40:16 PDT 2020
+Execute     set_part xczu7ev-ffvc1156-2-e 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data single -quiet 
+Command       ap_part_info done; 11.23 sec.
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu7ev:-ffvc1156:-2-e 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/plb46.lib 
+Execute               source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/fsl.lib 
+Execute               source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/axi4.lib 
+Execute               source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/maxi.lib 
+Execute               source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/xfft.lib 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/xfir.lib 
+Command           ap_source done; 0.16 sec.
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Command         import_lib done; 0.22 sec.
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.13 sec.
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.27 sec.
+Command         ap_source done; 0.27 sec.
+Execute         ap_part_info -data single -name xczu7ev-ffvc1156-2-e 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data resources 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -resource {SLICE 28800} {LUT 230400} {FF 460800} {DSP48E 1728} {BRAM 624} {URAM 96} 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         config_chip_info -quiet -speed medium 
+Command       add_library done; 0.64 sec.
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/target_info.tcl 
+Execute               source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xczu7ev-ffvc1156-2-e'
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 12.03 sec.
+Execute     create_clock -period 5 -name default 
+Execute       config_clock -quiet -name default -period 5 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute     config_schedule -effort medium -relax_ii_for_timing=0 
+Execute     config_export -format ip_catalog -rtl verilog -description conv_3_3 -display_name conv_3_3 -ipname conv_3_3 -library halide_hardware -vendor aha -version 1.0 
+Execute     csynth_design 
+Execute       get_config_compile -dump_cfg 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute         get_config_schedule -relax_ii_for_timing 
+Execute         get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file '/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         is_m_axi_addr64 
+INFO-FLOW: Handling /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp as C++
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+Execute         is_encrypted /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute         clang  -fno-limit-debug-info -gcc-toolchain "/cad/xilinx/vivado/2020.1/Vivado/2020.1/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp"   -I/home/nyengele/aha/clockwork -I/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork -std=c++11 -D__VIVADO_SYNTH__  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/autopilot" -I "/cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pp.0.cpp" 
+INFO-FLOW: exec /cad/xilinx/vivado/2020.1/Vivado/2020.1/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /cad/xilinx/vivado/2020.1/Vivado/2020.1/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp -I/home/nyengele/aha/clockwork -I/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork -std=c++11 -D__VIVADO_SYNTH__ -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/autopilot -I /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pp.0.cpp
+Command         clang done; 2.89 sec.
+Execute         tidy_31 xilinx-xfmat-array-geometry /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pp.0.cpp std=c++11 
+INFO-FLOW: exec /cad/xilinx/vivado/2020.1/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command         tidy_31 done; 1.03 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute         clang -syntaxcheck -src /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "/cad/xilinx/vivado/2020.1/Vivado/2020.1/lnx64/tools/gcc" -hls  -I/home/nyengele/aha/clockwork -I/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork -std=c++11 -D__VIVADO_SYNTH__  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/autopilot" -I "/cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pp.0.cpp"  -o "/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /cad/xilinx/vivado/2020.1/Vivado/2020.1/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /cad/xilinx/vivado/2020.1/Vivado/2020.1/lnx64/tools/gcc -hls -I/home/nyengele/aha/clockwork -I/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork -std=c++11 -D__VIVADO_SYNTH__ -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/autopilot -I /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pp.0.cpp -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/useless.bc
+Command         clang done; 2.21 sec.
+INFO-FLOW: Done: GCC PP time: 6.1 seconds per iteration
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute         list_core -type functional_unit 
+Execute         tidy_31 xilinx-systemc-detector /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pp.0.cpp std=c++11 -directive=/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /cad/xilinx/vivado/2020.1/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/.systemc_flag -quiet -fix-errors /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command         tidy_31 done; 0.81 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute         tidy_31 xilinx-directive2pragma /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pp.0.cpp std=c++11 -directive=/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /cad/xilinx/vivado/2020.1/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/all.directive.json -quiet -fix-errors /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command         tidy_31 done; 0.79 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr /cad/xilinx/vivado/2020.1/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/xilinx-dataflow-lawyer.unoptimized_conv_3_3.pp.0.cpp.diag.yml /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0 -fstrict-dataflow > /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/xilinx-dataflow-lawyer.unoptimized_conv_3_3.pp.0.cpp.out.log 2> /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/xilinx-dataflow-lawyer.unoptimized_conv_3_3.pp.0.cpp.err.log 
+Command         ap_eval done; 0.92 sec.
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:439:32
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:440:33
+WARNING: [HLS 214-111] Static scalars and arrays declared inside a dataflow region will be treated like local variables: /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:441:32
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:443:138
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:447:113
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:448:88
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:474:26
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:480:15
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:481:16
+Execute         send_msg_by_id WARNING @200-471@%s%s 9 /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp 
+WARNING: [HLS 200-471] Dataflow form checks found 9 issue(s) in file /home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp
+Execute         tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pp.0.cpp std=c++11 
+Execute           ap_eval exec -ignorestderr /cad/xilinx/vivado/2020.1/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/tidy-3.1.unoptimized_conv_3_3.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0 > /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/tidy-3.1.unoptimized_conv_3_3.pp.0.cpp.out.log 2> /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/tidy-3.1.unoptimized_conv_3_3.pp.0.cpp.err.log 
+Command           ap_eval done; 0.96 sec.
+Execute           ap_eval exec -ignorestderr /cad/xilinx/vivado/2020.1/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pp.0.cpp -- -std=c++11 -fhls -ferror-limit=0 > /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/xilinx-legacy-rewriter.unoptimized_conv_3_3.pp.0.cpp.out.log 2> /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/xilinx-legacy-rewriter.unoptimized_conv_3_3.pp.0.cpp.err.log 
+Command           ap_eval done; 0.71 sec.
+Command         tidy_31 done; 1.67 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 3.5 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute         tidy_31 xilinx-ssdm-intrinsics-arguments /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pragma.1.cpp std=c++11 
+INFO-FLOW: exec /cad/xilinx/vivado/2020.1/Vivado/2020.1/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pragma.1.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command         tidy_31 done; 1.44 sec.
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+INFO-FLOW: Processing labels
+Execute         clang -src /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /cad/xilinx/vivado/2020.1/Vivado/2020.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pragma.2.cpp"  -I/home/nyengele/aha/clockwork -I/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork -std=c++11 -D__VIVADO_SYNTH__  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/autopilot" -I "/cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "/home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.bc" 
+INFO-FLOW: exec /cad/xilinx/vivado/2020.1/Vivado/2020.1/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /cad/xilinx/vivado/2020.1/Vivado/2020.1/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.pragma.2.cpp -I/home/nyengele/aha/clockwork -I/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork -std=c++11 -D__VIVADO_SYNTH__ -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/autopilot -I /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.bc
+Command         clang done; 2.23 sec.
+INFO-FLOW: Linking Debug ...
+Execute         llvm-ld /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.g.bc -hls-opt -except-internalize unoptimized_conv_3_3_rdai -L/cad/xilinx/vivado/2020.1/Vivado/2020.1/lnx64/lib -lhlsm -lhlsmc++ -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/a.g 
+Command         llvm-ld done; 1.02 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1512.535 ; gain = 1099.754 ; free physical = 11974 ; free virtual = 87694
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1512.535 ; gain = 1099.754 ; free physical = 11974 ; free virtual = 87694
+Execute         get_config_sdx -target 
+Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute           cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute           transform -promote-dbg-pointer /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/a.pp.bc -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/a.pp.0.bc -f 
+Execute           llvm-ld /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/a.pp.0.bc -disable-opt -L/cad/xilinx/vivado/2020.1/Vivado/2020.1/lnx64/lib -lfloatconversion -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/a.g.0 
+Command           llvm-ld done; 0.94 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -stream-depth-lower -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top unoptimized_conv_3_3_rdai -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/a.g.0.bc -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [XFORM 203-603] Inlining function 'op_hcompute_hw_input_global_wrapper_stencil' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'op_hcompute_conv_stencil' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:396).
+INFO: [XFORM 203-603] Inlining function 'op_hcompute_conv_stencil_1' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'op_hcompute_hw_output_stencil' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+INFO: [XFORM 203-603] Inlining function 'op_hcompute_tlast' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:399).
+INFO: [XFORM 203-603] Inlining function 'HWStream<hw_uint<16> >::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:270->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'hcompute_hw_input_global_wrapper_stencil' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:271->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_hw_input_global_wrapper_stencil_write_bundle_write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:273->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'hcompute_conv_stencil' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:283->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:396).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_op_hcompute_conv_stencil_write_bundle_write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:285->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:396).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_op_hcompute_conv_stencil_1_read_bundle_read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:296->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_read_bundle_read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hcompute_conv_stencil_1' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_op_hcompute_conv_stencil_1_write_bundle_write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:309->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_op_hcompute_hw_output_stencil_read_bundle_read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:320->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+INFO: [XFORM 203-603] Inlining function 'hcompute_hw_output_stencil' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:325->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+INFO: [XFORM 203-603] Inlining function 'HWStream<hw_uint<16> >::write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:327->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+INFO: [XFORM 203-603] Inlining function 'hcompute_tlast' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:337->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:399).
+INFO: [XFORM 203-603] Inlining function 'HWStream<hw_uint<1> >::write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:339->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:399).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::extract<0, 15>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:8->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:271->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:8->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:271->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::extract<0, 15>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:258->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:273->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_hw_input_global_wrapper_stencil_0_write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:259->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:273->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::extract<0, 15>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:85->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:285->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:396).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_op_hcompute_conv_stencil_2_write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:86->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:285->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:396).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_op_hcompute_conv_stencil_1_4_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:70->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:296->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<0, 16, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:71->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:296->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_5_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:234->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<0, 144, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:235->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_6_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:236->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<16, 144, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:237->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_7_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:238->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<32, 144, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:239->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_8_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:240->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<48, 144, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:241->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_9_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:242->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<64, 144, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:243->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_10_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:244->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<80, 144, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:245->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_11_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:246->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<96, 144, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:247->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_12_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:248->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<112, 144, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:249->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_op_hcompute_conv_stencil_1_13_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:250->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'set_at<128, 144, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:251->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::extract<0, 15>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:21->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:21->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<144>::extract<0, 15>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:23->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:23->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<144>::extract<16, 31>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:24->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:24->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<144>::extract<32, 47>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:25->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:25->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<144>::extract<48, 63>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:26->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:26->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<144>::extract<64, 79>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:27->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:27->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<144>::extract<80, 95>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:28->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:28->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<144>::extract<96, 111>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:29->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:29->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<144>::extract<112, 127>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:30->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:30->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<144>::extract<128, 143>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:31->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:31->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::extract<0, 15>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:78->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:309->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_op_hcompute_conv_stencil_1_3_write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:79->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:309->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_op_hcompute_hw_output_stencil_15_select' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:96->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:320->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+INFO: [XFORM 203-603] Inlining function 'set_at<0, 16, 16>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:97->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:320->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::extract<0, 15>' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:64->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:325->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::operator int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:64->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:325->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:8->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:271->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:126->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:259->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:273->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_all_inputs_to_all_outputs_cache::write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:41->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:86->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:285->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:396).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:48->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:70->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:296->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:169->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:234->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:178->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:236->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:187->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:238->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:196->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:240->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:205->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:242->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:133->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:244->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:142->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:246->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:151->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:248->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_input_global_wrapper_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:160->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:250->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:21->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:23->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:24->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:25->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:26->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:27->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:28->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:29->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:30->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:31->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_all_inputs_to_all_outputs_cache::write' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:37->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:79->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:309->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397).
+INFO: [XFORM 203-603] Inlining function 'conv_stencil_all_inputs_to_all_outputs_cache::read' into 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:57->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:96->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:320->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+INFO: [XFORM 203-603] Inlining function 'hw_uint<16>::to_int' into 'unoptimized_conv_3_3' (/home/nyengele/aha/clockwork/hw_classes.h:221->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:64->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:325->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398).
+Command           transform done; 0.3 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:18 ; elapsed = 00:00:31 . Memory (MB): peak = 1512.535 ; gain = 1099.754 ; free physical = 11964 ; free virtual = 87685
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute           transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/a.g.1.bc -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'hw_uint<16>::to_int' into 'hw_uint<16>::operator int' (/home/nyengele/aha/clockwork/hw_classes.h:221) automatically.
+INFO: [XFORM 203-602] Inlining function 'hw_uint<1>::to_int' into 'hw_uint<1>::operator int' (/home/nyengele/aha/clockwork/hw_classes.h:221) automatically.
+Command           transform done; 0.2 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute           transform -syn-check /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/a.g.2.prechk.bc -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] /home/nyengele/aha/clockwork/hw_classes.h:212: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:19 ; elapsed = 00:00:31 . Memory (MB): peak = 1512.535 ; gain = 1099.754 ; free physical = 11957 ; free virtual = 87679
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/a.g.1.bc to /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute           transform -hls -tmp /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/a.o.1.bc -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.1' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1.2' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.2' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.3' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.4' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.5' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.6' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.7' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.8' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.9' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.10' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.11' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.12' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.13' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.14' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.15' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.16' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.17' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.18' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.19' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.20' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.21' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.22' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.23' (/home/nyengele/aha/clockwork/hw_classes.h:343) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.24' (/home/nyengele/aha/clockwork/hw_classes.h:209) in function 'unoptimized_conv_3_3' completely with a factor of 16.
+INFO: [XFORM 203-602] Inlining function 'hw_uint<16>::to_int' into 'hw_uint<16>::operator int' (/home/nyengele/aha/clockwork/hw_classes.h:221) automatically.
+INFO: [XFORM 203-602] Inlining function 'hw_uint<1>::to_int' into 'hw_uint<1>::operator int' (/home/nyengele/aha/clockwork/hw_classes.h:221) automatically.
+INFO: [XFORM 203-712] Applying dataflow to function 'unoptimized_conv_3_3_rdai', detected/extracted 8 process function(s): 
+	 'Block__proc75'
+	 'HWStream<hw_uint<16> >::write'
+	 'unoptimized_conv_3_3'
+	 'HWStream<hw_uint<16> >::read'
+	 'hw_uint<16>::operator int'
+	 'HWStream<hw_uint<1> >::read'
+	 'hw_uint<1>::operator int'
+	 'Block__proc7476'.
+Command           transform done; 0.68 sec.
+INFO-FLOW: Presyn 2...
+Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/a.o.1.tmp.bc -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-11] Balancing expressions in function 'unoptimized_conv_3_3' (/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:347)...9 expression(s) balanced.
+Command           transform done; 0.12 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:32 . Memory (MB): peak = 1512.535 ; gain = 1099.754 ; free physical = 11931 ; free virtual = 87654
+INFO-FLOW: Building ssdm...
+Execute           transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/a.o.2.bc -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-631] Renaming function 'hw_uint<1>::operator int' to 'operator int' (/home/nyengele/aha/clockwork/hw_classes.h:221)
+WARNING: [XFORM 203-631] Renaming function 'hw_uint<16>::operator int' to 'operator int.1' (/home/nyengele/aha/clockwork/hw_classes.h:221:35)
+WARNING: [XFORM 203-631] Renaming function 'HWStream<hw_uint<1> >::read' to 'read' (/home/nyengele/aha/clockwork/hw_classes.h:380)
+WARNING: [XFORM 203-631] Renaming function 'HWStream<hw_uint<16> >::write' to 'write' (/home/nyengele/aha/clockwork/hw_classes.h:376)
+WARNING: [XFORM 203-631] Renaming function 'HWStream<hw_uint<16> >::read' to 'read.1' (/home/nyengele/aha/clockwork/hw_classes.h:381:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'hw_input_global_wrap' (/home/nyengele/aha/clockwork/hw_classes.h:190:7)
+Command           transform done; 0.26 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:32 . Memory (MB): peak = 1512.535 ; gain = 1099.754 ; free physical = 11866 ; free virtual = 87589
+INFO-FLOW: Finish building internal data model.
+Command         opt_and_import_c done; 2.56 sec.
+Command       elaborate done; 17.94 sec.
+Execute       autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'unoptimized_conv_3_3_rdai' ...
+Execute         ap_set_top_model unoptimized_conv_3_3_rdai 
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc75' to 'Block_proc75'.
+WARNING: [SYN 201-103] Legalizing function name 'write' to 'write_r'.
+WARNING: [SYN 201-103] Legalizing function name 'read.1' to 'read_1'.
+WARNING: [SYN 201-103] Legalizing function name 'operator int.1' to 'operator_int_1'.
+WARNING: [SYN 201-103] Legalizing function name 'read' to 'read_r'.
+WARNING: [SYN 201-103] Legalizing function name 'operator int' to 'operator_int'.
+WARNING: [SYN 201-103] Legalizing function name 'Block__proc7476' to 'Block_proc7476'.
+Execute         get_model_list unoptimized_conv_3_3_rdai -filter all-wo-channel -topdown 
+Execute         preproc_iomode -model unoptimized_conv_3_3_rdai 
+Execute         preproc_iomode -model Block__proc7476 
+Execute         preproc_iomode -model operator int 
+Execute         preproc_iomode -model read 
+Execute         preproc_iomode -model operator int.1 
+Execute         preproc_iomode -model read.1 
+Execute         preproc_iomode -model unoptimized_conv_3_3 
+Execute         preproc_iomode -model write 
+Execute         preproc_iomode -model Block__proc75 
+Execute         get_model_list unoptimized_conv_3_3_rdai -filter all-wo-channel 
+INFO-FLOW: Model list for configure: Block__proc75 write unoptimized_conv_3_3 read.1 {operator int.1} read {operator int} Block__proc7476 unoptimized_conv_3_3_rdai
+INFO-FLOW: Configuring Module : Block__proc75 ...
+Execute         set_default_model Block__proc75 
+Execute         apply_spec_resource_limit Block__proc75 
+INFO-FLOW: Configuring Module : write ...
+Execute         set_default_model write 
+Execute         apply_spec_resource_limit write 
+INFO-FLOW: Configuring Module : unoptimized_conv_3_3 ...
+Execute         set_default_model unoptimized_conv_3_3 
+Execute         apply_spec_resource_limit unoptimized_conv_3_3 
+INFO-FLOW: Configuring Module : read.1 ...
+Execute         set_default_model read.1 
+Execute         apply_spec_resource_limit read.1 
+INFO-FLOW: Configuring Module : operator int.1 ...
+Execute         set_default_model operator int.1 
+Execute         apply_spec_resource_limit operator int.1 
+INFO-FLOW: Configuring Module : read ...
+Execute         set_default_model read 
+Execute         apply_spec_resource_limit read 
+INFO-FLOW: Configuring Module : operator int ...
+Execute         set_default_model operator int 
+Execute         apply_spec_resource_limit operator int 
+INFO-FLOW: Configuring Module : Block__proc7476 ...
+Execute         set_default_model Block__proc7476 
+Execute         apply_spec_resource_limit Block__proc7476 
+INFO-FLOW: Configuring Module : unoptimized_conv_3_3_rdai ...
+Execute         set_default_model unoptimized_conv_3_3_rdai 
+Execute         apply_spec_resource_limit unoptimized_conv_3_3_rdai 
+INFO-FLOW: Model list for preprocess: Block__proc75 write unoptimized_conv_3_3 read.1 {operator int.1} read {operator int} Block__proc7476 unoptimized_conv_3_3_rdai
+INFO-FLOW: Preprocessing Module: Block__proc75 ...
+Execute         set_default_model Block__proc75 
+Execute         cdfg_preprocess -model Block__proc75 
+Execute         rtl_gen_preprocess Block__proc75 
+INFO-FLOW: Preprocessing Module: write ...
+Execute         set_default_model write 
+Execute         cdfg_preprocess -model write 
+Execute         rtl_gen_preprocess write 
+INFO-FLOW: Preprocessing Module: unoptimized_conv_3_3 ...
+Execute         set_default_model unoptimized_conv_3_3 
+Execute         cdfg_preprocess -model unoptimized_conv_3_3 
+Execute         rtl_gen_preprocess unoptimized_conv_3_3 
+INFO-FLOW: Preprocessing Module: read.1 ...
+Execute         set_default_model read.1 
+Execute         cdfg_preprocess -model read.1 
+Execute         rtl_gen_preprocess read.1 
+INFO-FLOW: Preprocessing Module: operator int.1 ...
+Execute         set_default_model operator int.1 
+Execute         cdfg_preprocess -model operator int.1 
+Execute         rtl_gen_preprocess operator int.1 
+INFO-FLOW: Preprocessing Module: read ...
+Execute         set_default_model read 
+Execute         cdfg_preprocess -model read 
+Execute         rtl_gen_preprocess read 
+INFO-FLOW: Preprocessing Module: operator int ...
+Execute         set_default_model operator int 
+Execute         cdfg_preprocess -model operator int 
+Execute         rtl_gen_preprocess operator int 
+INFO-FLOW: Preprocessing Module: Block__proc7476 ...
+Execute         set_default_model Block__proc7476 
+Execute         cdfg_preprocess -model Block__proc7476 
+Execute         rtl_gen_preprocess Block__proc7476 
+INFO-FLOW: Preprocessing Module: unoptimized_conv_3_3_rdai ...
+Execute         set_default_model unoptimized_conv_3_3_rdai 
+Execute         cdfg_preprocess -model unoptimized_conv_3_3_rdai 
+Execute         rtl_gen_preprocess unoptimized_conv_3_3_rdai 
+INFO-FLOW: Model list for synthesis: Block__proc75 write unoptimized_conv_3_3 read.1 {operator int.1} read {operator int} Block__proc7476 unoptimized_conv_3_3_rdai
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc75' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model Block__proc75 
+Execute         schedule -model Block__proc75 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.4 seconds; current allocated memory: 204.238 MB.
+Execute         syn_report -verbosereport -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc75.verbose.sched.rpt 
+Execute         db_write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc75.sched.adb -f 
+INFO-FLOW: Finish scheduling Block__proc75.
+Execute         set_default_model Block__proc75 
+Execute         bind -model Block__proc75 
+BIND OPTION: model=Block__proc75
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 204.288 MB.
+Execute         syn_report -verbosereport -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc75.verbose.bind.rpt 
+Execute         db_write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc75.bind.adb -f 
+INFO-FLOW: Finish binding Block__proc75.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'write_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model write 
+Execute         schedule -model write 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 204.486 MB.
+Execute         syn_report -verbosereport -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/write_r.verbose.sched.rpt 
+Execute         db_write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/write_r.sched.adb -f 
+INFO-FLOW: Finish scheduling write.
+Execute         set_default_model write 
+Execute         bind -model write 
+BIND OPTION: model=write
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 204.536 MB.
+Execute         syn_report -verbosereport -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/write_r.verbose.bind.rpt 
+Execute         db_write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/write_r.bind.adb -f 
+INFO-FLOW: Finish binding write.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'unoptimized_conv_3_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model unoptimized_conv_3_3 
+Execute         schedule -model unoptimized_conv_3_3 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 204.990 MB.
+Execute         syn_report -verbosereport -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.verbose.sched.rpt 
+Execute         db_write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.sched.adb -f 
+INFO-FLOW: Finish scheduling unoptimized_conv_3_3.
+Execute         set_default_model unoptimized_conv_3_3 
+Execute         bind -model unoptimized_conv_3_3 
+BIND OPTION: model=unoptimized_conv_3_3
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 205.406 MB.
+Execute         syn_report -verbosereport -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.verbose.bind.rpt 
+Execute         db_write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.bind.adb -f 
+INFO-FLOW: Finish binding unoptimized_conv_3_3.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'read_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model read.1 
+Execute         schedule -model read.1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 205.474 MB.
+Execute         syn_report -verbosereport -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_1.verbose.sched.rpt 
+Execute         db_write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_1.sched.adb -f 
+INFO-FLOW: Finish scheduling read.1.
+Execute         set_default_model read.1 
+Execute         bind -model read.1 
+BIND OPTION: model=read.1
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 205.516 MB.
+Execute         syn_report -verbosereport -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_1.verbose.bind.rpt 
+Execute         db_write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_1.bind.adb -f 
+INFO-FLOW: Finish binding read.1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'operator_int_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model operator int.1 
+Execute         schedule -model operator int.1 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 205.530 MB.
+Execute         syn_report -verbosereport -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int_1.verbose.sched.rpt 
+Execute         db_write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int_1.sched.adb -f 
+INFO-FLOW: Finish scheduling operator int.1.
+Execute         set_default_model operator int.1 
+Execute         bind -model operator int.1 
+BIND OPTION: model=operator int.1
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 205.564 MB.
+Execute         syn_report -verbosereport -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int_1.verbose.bind.rpt 
+Execute         db_write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int_1.bind.adb -f 
+INFO-FLOW: Finish binding operator int.1.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'read_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model read 
+Execute         schedule -model read 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 205.594 MB.
+Execute         syn_report -verbosereport -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_r.verbose.sched.rpt 
+Execute         db_write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_r.sched.adb -f 
+INFO-FLOW: Finish scheduling read.
+Execute         set_default_model read 
+Execute         bind -model read 
+BIND OPTION: model=read
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 205.637 MB.
+Execute         syn_report -verbosereport -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_r.verbose.bind.rpt 
+Execute         db_write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_r.bind.adb -f 
+INFO-FLOW: Finish binding read.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'operator_int' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model operator int 
+Execute         schedule -model operator int 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 205.654 MB.
+Execute         syn_report -verbosereport -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int.verbose.sched.rpt 
+Execute         db_write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int.sched.adb -f 
+INFO-FLOW: Finish scheduling operator int.
+Execute         set_default_model operator int 
+Execute         bind -model operator int 
+BIND OPTION: model=operator int
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 205.693 MB.
+Execute         syn_report -verbosereport -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int.verbose.bind.rpt 
+Execute         db_write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int.bind.adb -f 
+INFO-FLOW: Finish binding operator int.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_proc7476' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model Block__proc7476 
+Execute         schedule -model Block__proc7476 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 205.713 MB.
+Execute         syn_report -verbosereport -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc7476.verbose.sched.rpt 
+Execute         db_write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc7476.sched.adb -f 
+INFO-FLOW: Finish scheduling Block__proc7476.
+Execute         set_default_model Block__proc7476 
+Execute         bind -model Block__proc7476 
+BIND OPTION: model=Block__proc7476
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.01 seconds; current allocated memory: 205.774 MB.
+Execute         syn_report -verbosereport -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc7476.verbose.bind.rpt 
+Execute         db_write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc7476.bind.adb -f 
+INFO-FLOW: Finish binding Block__proc7476.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'unoptimized_conv_3_3_rdai' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model unoptimized_conv_3_3_rdai 
+Execute         schedule -model unoptimized_conv_3_3_rdai 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 205.879 MB.
+Execute         syn_report -verbosereport -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.verbose.sched.rpt 
+Execute         db_write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.sched.adb -f 
+INFO-FLOW: Finish scheduling unoptimized_conv_3_3_rdai.
+Execute         set_default_model unoptimized_conv_3_3_rdai 
+Execute         bind -model unoptimized_conv_3_3_rdai 
+BIND OPTION: model=unoptimized_conv_3_3_rdai
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 206.047 MB.
+Execute         syn_report -verbosereport -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.verbose.bind.rpt 
+Execute         db_write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.bind.adb -f 
+INFO-FLOW: Finish binding unoptimized_conv_3_3_rdai.
+Execute         get_model_list unoptimized_conv_3_3_rdai -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute         rtl_gen_preprocess Block__proc75 
+Execute         rtl_gen_preprocess write 
+Execute         rtl_gen_preprocess unoptimized_conv_3_3 
+Execute         rtl_gen_preprocess read.1 
+Execute         rtl_gen_preprocess operator int.1 
+Execute         rtl_gen_preprocess read 
+Execute         rtl_gen_preprocess operator int 
+Execute         rtl_gen_preprocess Block__proc7476 
+Execute         rtl_gen_preprocess unoptimized_conv_3_3_rdai 
+INFO-FLOW: Model list for RTL generation: Block__proc75 write unoptimized_conv_3_3 read.1 {operator int.1} read {operator int} Block__proc7476 unoptimized_conv_3_3_rdai
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_proc75' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model Block__proc75 -vendor xilinx -mg_file /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc75.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_proc75'.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 206.260 MB.
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute         gen_rtl Block__proc75 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/systemc/Block_proc75 -synmodules Block__proc75 write unoptimized_conv_3_3 read.1 {operator int.1} read {operator int} Block__proc7476 unoptimized_conv_3_3_rdai 
+Execute         gen_rtl Block__proc75 -style xilinx -f -lang vhdl -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/vhdl/Block_proc75 
+Execute         gen_rtl Block__proc75 -style xilinx -f -lang vlog -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/verilog/Block_proc75 
+Execute         syn_report -csynth -model Block__proc75 -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/report/Block_proc75_csynth.rpt 
+Execute         syn_report -rtlxml -model Block__proc75 -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/report/Block_proc75_csynth.xml 
+Execute         syn_report -verbosereport -model Block__proc75 -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc75.verbose.rpt 
+Execute         db_write -model Block__proc75 -f -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc75.adb 
+Execute         gen_tb_info Block__proc75 -p /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc75 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'write_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model write -vendor xilinx -mg_file /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/write_r.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'write_r'.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 206.587 MB.
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute         gen_rtl write -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/systemc/write_r -synmodules Block__proc75 write unoptimized_conv_3_3 read.1 {operator int.1} read {operator int} Block__proc7476 unoptimized_conv_3_3_rdai 
+Execute         gen_rtl write -style xilinx -f -lang vhdl -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/vhdl/write_r 
+Execute         gen_rtl write -style xilinx -f -lang vlog -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/verilog/write_r 
+Execute         syn_report -csynth -model write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/report/write_r_csynth.rpt 
+Execute         syn_report -rtlxml -model write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/report/write_r_csynth.xml 
+Execute         syn_report -verbosereport -model write -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/write_r.verbose.rpt 
+Execute         db_write -model write -f -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/write_r.adb 
+Execute         gen_tb_info write -p /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/write_r 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'unoptimized_conv_3_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model unoptimized_conv_3_3 -vendor xilinx -mg_file /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'unoptimized_conv_3_3_hw_input_global_wrap' to 'unoptimized_conv_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'unoptimized_conv_3_3_rdai_mac_muladd_6ns_16s_16ns_16_1_1' to 'unoptimized_conv_cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'unoptimized_conv_cud': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'unoptimized_conv_3_3'.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 207.441 MB.
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute         gen_rtl unoptimized_conv_3_3 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/systemc/unoptimized_conv_3_3 -synmodules Block__proc75 write unoptimized_conv_3_3 read.1 {operator int.1} read {operator int} Block__proc7476 unoptimized_conv_3_3_rdai 
+Execute         gen_rtl unoptimized_conv_3_3 -style xilinx -f -lang vhdl -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/vhdl/unoptimized_conv_3_3 
+Execute         gen_rtl unoptimized_conv_3_3 -style xilinx -f -lang vlog -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/verilog/unoptimized_conv_3_3 
+Execute         syn_report -csynth -model unoptimized_conv_3_3 -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/report/unoptimized_conv_3_3_csynth.rpt 
+Execute         syn_report -rtlxml -model unoptimized_conv_3_3 -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/report/unoptimized_conv_3_3_csynth.xml 
+Execute         syn_report -verbosereport -model unoptimized_conv_3_3 -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.verbose.rpt 
+Execute         db_write -model unoptimized_conv_3_3 -f -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.adb 
+Execute         gen_tb_info unoptimized_conv_3_3 -p /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'read_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model read.1 -vendor xilinx -mg_file /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_1.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'read_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 209.245 MB.
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute         gen_rtl read.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/systemc/read_1 -synmodules Block__proc75 write unoptimized_conv_3_3 read.1 {operator int.1} read {operator int} Block__proc7476 unoptimized_conv_3_3_rdai 
+Execute         gen_rtl read.1 -style xilinx -f -lang vhdl -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/vhdl/read_1 
+Execute         gen_rtl read.1 -style xilinx -f -lang vlog -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/verilog/read_1 
+Execute         syn_report -csynth -model read.1 -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/report/read_1_csynth.rpt 
+Execute         syn_report -rtlxml -model read.1 -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/report/read_1_csynth.xml 
+Execute         syn_report -verbosereport -model read.1 -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_1.verbose.rpt 
+Execute         db_write -model read.1 -f -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_1.adb 
+Execute         gen_tb_info read.1 -p /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'operator_int_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model operator int.1 -vendor xilinx -mg_file /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int_1.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_int_1'.
+INFO: [HLS 200-111]  Elapsed time: 0.02 seconds; current allocated memory: 209.465 MB.
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute         gen_rtl operator int.1 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/systemc/operator_int_1 -synmodules Block__proc75 write unoptimized_conv_3_3 read.1 {operator int.1} read {operator int} Block__proc7476 unoptimized_conv_3_3_rdai 
+Execute         gen_rtl operator int.1 -style xilinx -f -lang vhdl -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/vhdl/operator_int_1 
+Execute         gen_rtl operator int.1 -style xilinx -f -lang vlog -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/verilog/operator_int_1 
+Execute         syn_report -csynth -model operator int.1 -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/report/operator_int_1_csynth.rpt 
+Execute         syn_report -rtlxml -model operator int.1 -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/report/operator_int_1_csynth.xml 
+Execute         syn_report -verbosereport -model operator int.1 -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int_1.verbose.rpt 
+Execute         db_write -model operator int.1 -f -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int_1.adb 
+Execute         gen_tb_info operator int.1 -p /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int_1 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'read_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model read -vendor xilinx -mg_file /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_r.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'read_r'.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 209.663 MB.
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute         gen_rtl read -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/systemc/read_r -synmodules Block__proc75 write unoptimized_conv_3_3 read.1 {operator int.1} read {operator int} Block__proc7476 unoptimized_conv_3_3_rdai 
+Execute         gen_rtl read -style xilinx -f -lang vhdl -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/vhdl/read_r 
+Execute         gen_rtl read -style xilinx -f -lang vlog -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/verilog/read_r 
+Execute         syn_report -csynth -model read -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/report/read_r_csynth.rpt 
+Execute         syn_report -rtlxml -model read -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/report/read_r_csynth.xml 
+Execute         syn_report -verbosereport -model read -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_r.verbose.rpt 
+Execute         db_write -model read -f -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_r.adb 
+Execute         gen_tb_info read -p /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_r 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'operator_int' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model operator int -vendor xilinx -mg_file /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'operator_int'.
+INFO: [HLS 200-111]  Elapsed time: 0.03 seconds; current allocated memory: 209.881 MB.
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute         gen_rtl operator int -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/systemc/operator_int -synmodules Block__proc75 write unoptimized_conv_3_3 read.1 {operator int.1} read {operator int} Block__proc7476 unoptimized_conv_3_3_rdai 
+Execute         gen_rtl operator int -style xilinx -f -lang vhdl -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/vhdl/operator_int 
+Execute         gen_rtl operator int -style xilinx -f -lang vlog -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/verilog/operator_int 
+Execute         syn_report -csynth -model operator int -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/report/operator_int_csynth.rpt 
+Execute         syn_report -rtlxml -model operator int -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/report/operator_int_csynth.xml 
+Execute         syn_report -verbosereport -model operator int -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int.verbose.rpt 
+Execute         db_write -model operator int -f -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int.adb 
+Execute         gen_tb_info operator int -p /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_proc7476' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model Block__proc7476 -vendor xilinx -mg_file /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc7476.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_proc7476'.
+INFO: [HLS 200-111]  Elapsed time: 0.04 seconds; current allocated memory: 210.121 MB.
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute         gen_rtl Block__proc7476 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/systemc/Block_proc7476 -synmodules Block__proc75 write unoptimized_conv_3_3 read.1 {operator int.1} read {operator int} Block__proc7476 unoptimized_conv_3_3_rdai 
+Execute         gen_rtl Block__proc7476 -style xilinx -f -lang vhdl -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/vhdl/Block_proc7476 
+Execute         gen_rtl Block__proc7476 -style xilinx -f -lang vlog -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/verilog/Block_proc7476 
+Execute         syn_report -csynth -model Block__proc7476 -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/report/Block_proc7476_csynth.rpt 
+Execute         syn_report -rtlxml -model Block__proc7476 -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/report/Block_proc7476_csynth.xml 
+Execute         syn_report -verbosereport -model Block__proc7476 -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc7476.verbose.rpt 
+Execute         db_write -model Block__proc7476 -f -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc7476.adb 
+Execute         gen_tb_info Block__proc7476 -p /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc7476 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'unoptimized_conv_3_3_rdai' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model unoptimized_conv_3_3_rdai -vendor xilinx -mg_file /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'unoptimized_conv_3_3_rdai/arg_in0_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'unoptimized_conv_3_3_rdai/arg_in0_V_tlast_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'unoptimized_conv_3_3_rdai/arg_out_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'unoptimized_conv_3_3_rdai/arg_out_V_tlast_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'unoptimized_conv_3_3_rdai' to 'ap_ctrl_none'.
+WARNING: [HLS 200-631] Ignoring ap_ctrl_none interface for unoptimized_conv_3_3_rdai due to write with non-FIFO I/O
+INFO: [SYN 201-210] Renamed object name 'start_for_unoptimized_conv_3_3_U0' to 'start_for_unoptimdEe' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'unoptimized_conv_3_3_rdai'.
+INFO: [HLS 200-111]  Elapsed time: 0.05 seconds; current allocated memory: 210.842 MB.
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute         gen_rtl unoptimized_conv_3_3_rdai -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/systemc/unoptimized_conv_3_3_rdai -synmodules Block__proc75 write unoptimized_conv_3_3 read.1 {operator int.1} read {operator int} Block__proc7476 unoptimized_conv_3_3_rdai 
+Execute         gen_rtl unoptimized_conv_3_3_rdai -istop -style xilinx -f -lang vhdl -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/vhdl/unoptimized_conv_3_3_rdai 
+Execute         gen_rtl unoptimized_conv_3_3_rdai -istop -style xilinx -f -lang vlog -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/verilog/unoptimized_conv_3_3_rdai 
+Execute         syn_report -csynth -model unoptimized_conv_3_3_rdai -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/report/unoptimized_conv_3_3_rdai_csynth.rpt 
+Execute         syn_report -rtlxml -model unoptimized_conv_3_3_rdai -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/syn/report/unoptimized_conv_3_3_rdai_csynth.xml 
+Execute         syn_report -verbosereport -model unoptimized_conv_3_3_rdai -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.verbose.rpt 
+Execute         db_write -model unoptimized_conv_3_3_rdai -f -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.adb 
+Execute         gen_tb_info unoptimized_conv_3_3_rdai -p /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai 
+Execute         export_constraint_db -f -tool general -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.constraint.tcl 
+Execute         syn_report -designview -model unoptimized_conv_3_3_rdai -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.design.xml 
+Execute         get_config_rtl -disable_wave_debug 
+Execute         syn_report -wcfg -model unoptimized_conv_3_3_rdai -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai_dataflow_ana.wcfg 
+Execute         syn_report -protoinst -model unoptimized_conv_3_3_rdai -o /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.protoinst 
+Execute         get_config_debug -directory 
+Execute         sc_get_clocks unoptimized_conv_3_3_rdai 
+Execute         get_config_export -vivado_clock 
+Execute         sc_get_portdomain unoptimized_conv_3_3_rdai 
+INFO-FLOW: Model list for RTL component generation: Block__proc75 write unoptimized_conv_3_3 read.1 {operator int.1} read {operator int} Block__proc7476 unoptimized_conv_3_3_rdai
+INFO-FLOW: Handling components in module [Block_proc75] ... 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc75.compgen.tcl 
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Handling components in module [write_r] ... 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/write_r.compgen.tcl 
+INFO-FLOW: Handling components in module [unoptimized_conv_3_3] ... 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.compgen.tcl 
+INFO-FLOW: Found component unoptimized_conv_cud.
+INFO-FLOW: Append model unoptimized_conv_cud
+INFO-FLOW: Found component unoptimized_conv_bkb.
+INFO-FLOW: Append model unoptimized_conv_bkb
+INFO-FLOW: Handling components in module [read_1] ... 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_1.compgen.tcl 
+INFO-FLOW: Handling components in module [operator_int_1] ... 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int_1.compgen.tcl 
+INFO-FLOW: Handling components in module [read_r] ... 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_r.compgen.tcl 
+INFO-FLOW: Handling components in module [operator_int] ... 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int.compgen.tcl 
+INFO-FLOW: Handling components in module [Block_proc7476] ... 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc7476.compgen.tcl 
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Handling components in module [unoptimized_conv_3_3_rdai] ... 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.compgen.tcl 
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w1_d2_A.
+INFO-FLOW: Append model fifo_w1_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w16_d2_A.
+INFO-FLOW: Append model fifo_w16_d2_A
+INFO-FLOW: Found component fifo_w1_d2_A.
+INFO-FLOW: Append model fifo_w1_d2_A
+INFO-FLOW: Found component fifo_w1_d2_A.
+INFO-FLOW: Append model fifo_w1_d2_A
+INFO-FLOW: Found component start_for_unoptimdEe.
+INFO-FLOW: Append model start_for_unoptimdEe
+INFO-FLOW: Found component start_for_read_1_U0.
+INFO-FLOW: Append model start_for_read_1_U0
+INFO-FLOW: Found component start_for_read_U0.
+INFO-FLOW: Append model start_for_read_U0
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Append model Block_proc75
+INFO-FLOW: Append model write_r
+INFO-FLOW: Append model unoptimized_conv_3_3
+INFO-FLOW: Append model read_1
+INFO-FLOW: Append model operator_int_1
+INFO-FLOW: Append model read_r
+INFO-FLOW: Append model operator_int
+INFO-FLOW: Append model Block_proc7476
+INFO-FLOW: Append model unoptimized_conv_3_3_rdai
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: regslice_core unoptimized_conv_cud unoptimized_conv_bkb regslice_core fifo_w16_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w1_d2_A fifo_w16_d2_A fifo_w16_d2_A fifo_w1_d2_A fifo_w1_d2_A start_for_unoptimdEe start_for_read_1_U0 start_for_read_U0 regslice_core Block_proc75 write_r unoptimized_conv_3_3 read_1 operator_int_1 read_r operator_int Block_proc7476 unoptimized_conv_3_3_rdai
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model unoptimized_conv_cud
+INFO-FLOW: To file: write model unoptimized_conv_bkb
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w1_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w16_d2_A
+INFO-FLOW: To file: write model fifo_w1_d2_A
+INFO-FLOW: To file: write model fifo_w1_d2_A
+INFO-FLOW: To file: write model start_for_unoptimdEe
+INFO-FLOW: To file: write model start_for_read_1_U0
+INFO-FLOW: To file: write model start_for_read_U0
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model Block_proc75
+INFO-FLOW: To file: write model write_r
+INFO-FLOW: To file: write model unoptimized_conv_3_3
+INFO-FLOW: To file: write model read_1
+INFO-FLOW: To file: write model operator_int_1
+INFO-FLOW: To file: write model read_r
+INFO-FLOW: To file: write model operator_int
+INFO-FLOW: To file: write model Block_proc7476
+INFO-FLOW: To file: write model unoptimized_conv_3_3_rdai
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute         syn_report -model unoptimized_conv_3_3_rdai -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 242.19 MHz
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/common.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/op.gen 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=5.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc75.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/write_r.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.compgen.tcl 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info 
+INFO: [RTMG 210-278] Implementing memory 'unoptimized_conv_bkb_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_1.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int_1.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_r.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc7476.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.compgen.tcl 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'this_assign_channel_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'arg_in0_hwstream_val_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'arg_out_data_values_s_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'arg_out_tlast_values_U(fifo_w1_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'p_0_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'val_assign_channel_U(fifo_w16_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'p_s_U(fifo_w1_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'val_assign_1_channel_U(fifo_w1_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_unoptimdEe_U(start_for_unoptimdEe)' using Shift Registers.
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_read_1_U0_U(start_for_read_1_U0)' using Shift Registers.
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_read_U0_U(start_for_read_U0)' using Shift Registers.
+Command         ap_source done; 0.27 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/common.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/op.gen 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=unoptimized_conv_3_3_rdai xml_exists=0
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc75.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/write_r.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_1.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int_1.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_r.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc7476.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc75.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/write_r.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_1.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int_1.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_r.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc7476.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.compgen.tcl 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute           ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc75.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/write_r.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_1.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int_1.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_r.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc7476.compgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.compgen.tcl 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.constraint.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=8
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=4
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=1 #modelList=25 #gSsdmPorts=8
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute         get_config_export -xo 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute         get_config_sdx -target 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.compgen.dataonly.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.constraint.tcl 
+Execute         sc_get_clocks unoptimized_conv_3_3_rdai 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute         get_config_debug -directory 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc75.tbgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/write_r.tbgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.tbgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_1.tbgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int_1.tbgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_r.tbgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int.tbgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc7476.tbgen.tcl 
+Execute         source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+Execute         get_config_sdx -target 
+Execute         get_config_sdx -profile 
+Execute         get_config_rtl -kernel_profile 
+Execute         get_config_rtl -stall_sig_gen 
+Execute         get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 1512.535 ; gain = 1099.754 ; free physical = 11847 ; free virtual = 87575
+INFO: [VHDL 208-304] Generating VHDL RTL for unoptimized_conv_3_3_rdai.
+INFO: [VLOG 209-307] Generating Verilog RTL for unoptimized_conv_3_3_rdai.
+Command       autosyn done; 2.54 sec.
+Command     csynth_design done; 20.48 sec.
+Execute     export_design 
+Execute       get_config_export -acc 
+Execute       get_config_export -clock_margin 
+Execute       get_config_export -custom_script 
+Execute       get_config_export -description 
+Execute       get_config_export -display_name 
+Execute       get_config_export -driver_input_dir 
+Execute       get_config_export -format 
+Execute       get_config_export -ipname 
+Execute       get_config_export -kernel_drc 
+Execute       get_config_export -library 
+Execute       get_config_export -qor_test 
+Execute       get_config_export -rtl 
+Execute       get_config_export -sdaccel 
+Execute       get_config_export -sim 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -use_ip 
+Execute       get_config_export -use_netlist 
+Execute       get_config_export -vendor 
+Execute       get_config_export -version 
+Execute       get_config_export -xo 
+INFO-FLOW: DBG:CMD: export_design_wrap: -format ip_catalog -rtl verilog -vendor aha -library halide_hardware -version 1.0 -ipname conv_3_3 -description conv_3_3 -display_name conv_3_3
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -vivado_clock 
+Execute       get_top 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -target 
+INFO-FLOW: DBG:CMD:   auto_impl: pack: -export -tool vivado -rtl verilog -sdx-target none
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl
+Execute       source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/common.gen 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/op.gen 
+Execute       source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute       source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Execute       source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: automg_wrap -export -pcore_version 1.00.a -rtl vlog -sdx-target none -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:CMD:     auto_generate -export -pcore_version 1.00.a -rtl vlog -sdx-target none -tool Vivado -impltomg_flag
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl
+Execute       source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/common.gen 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/op.gen 
+Execute       source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute       source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Execute       source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc75.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/write_r.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_1.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int_1.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_r.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc7476.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc75.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/write_r.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_1.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int_1.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_r.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc7476.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.compgen.tcl 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute         ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc75.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/write_r.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_1.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int_1.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_r.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc7476.compgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.compgen.tcl 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.constraint.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=8
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=4
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=0 g_has_adaptors=false generate_bd_files=1 #modelList=25 #gSsdmPorts=8
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -xo 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.compgen.dataonly.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.constraint.tcl 
+Execute       sc_get_clocks unoptimized_conv_3_3_rdai 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc75.tbgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/write_r.tbgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3.tbgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_1.tbgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int_1.tbgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/read_r.tbgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/operator_int.tbgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/Block_proc7476.tbgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       copying IP vlog from /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/impl/verilog
+INFO-FLOW: DBG:CMD:       copying IP vhdl from /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/impl/vhdl
+INFO-FLOW: DBG:CMD:       generate_ip_script #gSsdmPorts=8
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_debug -directory 
+INFO-FLOW: DBG:CMD:       generate_ip_auxiliary
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=unoptimized_conv_3_3_rdai
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_top_info
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=unoptimized_conv_3_3_rdai
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.rtl_wrap.cfg.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_bd_script
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.constraint.tcl 
+INFO-FLOW: DBG:CMD:       generate_ipi_example_script
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_syn_sh
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       generate_imp_constraints
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.constraint.tcl 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/unoptimized_conv_3_3_rdai.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl
+Execute       source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/common.gen 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/op.gen 
+Execute       source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/.autopilot/db/global.setting.tcl 
+Execute       source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/fsl.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/dsp48.gen 
+Execute       source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source /cad/xilinx/vivado/2020.1/Vivado/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data names -quiet 
+Execute       ap_part_info -name xczu7ev-ffvc1156-2-e -data info -quiet 
+INFO-FLOW: DBG:CMD:     exec /home/nyengele/aha/fpga_builder/apps/conv_3_3/conv_3_3/conv_3_3/impl/ip/pack.sh
+Command     export_design done; 27.09 sec.
+Execute     cleanup_all 

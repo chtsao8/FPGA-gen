@@ -1,0 +1,2664 @@
+
+
+================================================================
+== Vivado HLS Report for 'unoptimized_conv_3_3'
+================================================================
+* Date:           Tue Oct 13 14:40:47 2020
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        conv_3_3
+* Solution:       conv_3_3
+* Product family: zynquplus
+* Target device:  xczu7ev-ffvc1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 5.00 ns | 4.129 ns |   0.62 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    31258|    31258| 0.156 ms | 0.156 ms |  31258|  31258|   none  |
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |             |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1     |     4224|     4224|        66|          -|          -|    64|    no    |
+        | + Loop 1.1  |       64|       64|         1|          -|          -|    64|    no    |
+        |- Loop 2     |    27032|    27032|       436|          -|          -|    62|    no    |
+        | + Loop 2.1  |      434|      434|         7|          -|          -|    62|    no    |
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      2|       -|       -|    -|
+|Expression       |        -|      -|       0|     370|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        -|      -|       -|       -|    -|
+|Memory           |        4|      -|       0|       0|    0|
+|Multiplexer      |        -|      -|       -|     199|    -|
+|Register         |        -|      -|     200|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        4|      2|     200|     569|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |      624|   1728|  460800|  230400|   96|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |    ~0   |   ~0  |   ~0   |   ~0   |    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48E: 
+    +-------------------------+----------------------+--------------+
+    |         Instance        |        Module        |  Expression  |
+    +-------------------------+----------------------+--------------+
+    |unoptimized_conv_cud_U6  |unoptimized_conv_cud  | i0 + i1 * i2 |
+    |unoptimized_conv_cud_U7  |unoptimized_conv_cud  | i0 + i1 * i2 |
+    +-------------------------+----------------------+--------------+
+
+    * Memory: 
+    +------------------------+----------------------+---------+---+----+-----+------+-----+------+-------------+
+    |         Memory         |        Module        | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +------------------------+----------------------+---------+---+----+-----+------+-----+------+-------------+
+    |hw_input_global_wrap_U  |unoptimized_conv_bkb  |        4|  0|   0|    0|  4096|   16|     1|        65536|
+    +------------------------+----------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total                   |                      |        4|  0|   0|    0|  4096|   16|     1|        65536|
+    +------------------------+----------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------------+----------+-------+---+----+------------+------------+
+    |             Variable Name            | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------------+----------+-------+---+----+------------+------------+
+    |add_ln142_fu_283_p2                   |     +    |      0|  0|  15|           6|           2|
+    |add_ln187_fu_326_p2                   |     +    |      0|  0|  15|           2|           6|
+    |add_ln321_fu_261_p2                   |     +    |      0|  0|  21|          14|          14|
+    |add_ln58_1_fu_470_p2                  |     +    |      0|  0|  16|          16|          16|
+    |add_ln58_2_fu_476_p2                  |     +    |      0|  0|  16|          16|          16|
+    |add_ln58_3_fu_501_p2                  |     +    |      0|  0|  16|          16|          16|
+    |add_ln58_6_fu_505_p2                  |     +    |      0|  0|  16|          16|          16|
+    |add_ln58_7_fu_510_p2                  |     +    |      0|  0|  16|          16|          16|
+    |add_ln58_fu_465_p2                    |     +    |      0|  0|  23|          16|          16|
+    |c3_1_fu_277_p2                        |     +    |      0|  0|  15|           6|           1|
+    |c3_fu_227_p2                          |     +    |      0|  0|  15|           7|           1|
+    |c5_1_fu_295_p2                        |     +    |      0|  0|  15|           6|           1|
+    |c5_fu_251_p2                          |     +    |      0|  0|  15|           7|           1|
+    |hw_output_stencil_values_V_val_V_din  |     +    |      0|  0|  16|          16|          16|
+    |tmp_i231_fu_460_p2                    |     +    |      0|  0|  21|          14|          14|
+    |grp_fu_522_p2                         |     -    |      0|  0|  23|          16|          16|
+    |grp_fu_530_p2                         |     -    |      0|  0|  23|          16|          16|
+    |p_265_fu_444_p2                       |     -    |      0|  0|  23|          16|          16|
+    |ap_block_state3                       |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln391_fu_221_p2                  |   icmp   |      0|  0|  11|           7|           8|
+    |icmp_ln392_fu_245_p2                  |   icmp   |      0|  0|  11|           7|           8|
+    |icmp_ln394_fu_271_p2                  |   icmp   |      0|  0|  11|           6|           3|
+    |icmp_ln395_fu_289_p2                  |   icmp   |      0|  0|  11|           6|           3|
+    |ap_block_state1                       |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state11                      |    or    |      0|  0|   2|           1|           1|
+    +--------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                 |          |      0|  0| 370|         251|         225|
+    +--------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------+----+-----------+-----+-----------+
+    |                  Name                  | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                               |  53|         12|    1|         12|
+    |ap_done                                 |   9|          2|    1|          2|
+    |hw_input_global_wrap_1_reg_175          |   9|          2|    7|         14|
+    |hw_input_global_wrap_2_reg_186          |   9|          2|    7|         14|
+    |hw_input_global_wrap_address0           |  38|          7|   12|         84|
+    |hw_input_global_wrap_address1           |  27|          5|   12|         60|
+    |hw_input_stencil_values_V_val_V_blk_n   |   9|          2|    1|          2|
+    |hw_output_s0_x_v32_a_reg_209            |   9|          2|    6|         12|
+    |hw_output_s0_y_v33_a_reg_197            |   9|          2|    6|         12|
+    |hw_output_stencil_values_V_val_V_blk_n  |   9|          2|    1|          2|
+    |real_start                              |   9|          2|    1|          2|
+    |tlast_values_V_val_V_blk_n              |   9|          2|    1|          2|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |Total                                   | 199|         42|   56|        218|
+    +----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------+----+----+-----+-----------+
+    |               Name              | FF | LUT| Bits| Const Bits|
+    +---------------------------------+----+----+-----+-----------+
+    |add_ln142_reg_570                |   6|   0|    6|          0|
+    |add_ln187_reg_604                |   6|   0|    6|          0|
+    |add_ln58_2_reg_671               |  15|   0|   16|          1|
+    |add_ln58_4_reg_646               |  16|   0|   16|          0|
+    |add_ln58_5_reg_676               |  16|   0|   16|          0|
+    |add_ln58_reg_666                 |  16|   0|   16|          0|
+    |ap_CS_fsm                        |  11|   0|   11|          0|
+    |ap_done_reg                      |   1|   0|    1|          0|
+    |c3_1_reg_562                     |   6|   0|    6|          0|
+    |c3_reg_541                       |   7|   0|    7|          0|
+    |c5_1_reg_580                     |   6|   0|    6|          0|
+    |empty_11_reg_631                 |  14|   0|   14|          0|
+    |hw_input_global_wrap_15_reg_625  |  16|   0|   16|          0|
+    |hw_input_global_wrap_1_reg_175   |   7|   0|    7|          0|
+    |hw_input_global_wrap_2_reg_186   |   7|   0|    7|          0|
+    |hw_input_global_wrap_7_reg_593   |  16|   0|   16|          0|
+    |hw_output_s0_x_v32_a_reg_209     |   6|   0|    6|          0|
+    |hw_output_s0_y_v33_a_reg_197     |   6|   0|    6|          0|
+    |start_once_reg                   |   1|   0|    1|          0|
+    |tmp_i231_reg_661                 |  14|   0|   14|          0|
+    |zext_ln392_reg_546               |   7|   0|   14|          7|
+    +---------------------------------+----+----+-----+-----------+
+    |Total                            | 200|   0|  208|          8|
+    +---------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------------------+-----+-----+------------+----------------------------------+--------------+
+|                RTL Ports                | Dir | Bits|  Protocol  |           Source Object          |    C Type    |
++-----------------------------------------+-----+-----+------------+----------------------------------+--------------+
+|ap_clk                                   |  in |    1| ap_ctrl_hs |       unoptimized_conv_3_3       | return value |
+|ap_rst                                   |  in |    1| ap_ctrl_hs |       unoptimized_conv_3_3       | return value |
+|ap_start                                 |  in |    1| ap_ctrl_hs |       unoptimized_conv_3_3       | return value |
+|start_full_n                             |  in |    1| ap_ctrl_hs |       unoptimized_conv_3_3       | return value |
+|ap_done                                  | out |    1| ap_ctrl_hs |       unoptimized_conv_3_3       | return value |
+|ap_continue                              |  in |    1| ap_ctrl_hs |       unoptimized_conv_3_3       | return value |
+|ap_idle                                  | out |    1| ap_ctrl_hs |       unoptimized_conv_3_3       | return value |
+|ap_ready                                 | out |    1| ap_ctrl_hs |       unoptimized_conv_3_3       | return value |
+|start_out                                | out |    1| ap_ctrl_hs |       unoptimized_conv_3_3       | return value |
+|start_write                              | out |    1| ap_ctrl_hs |       unoptimized_conv_3_3       | return value |
+|hw_input_stencil_values_V_val_V_dout     |  in |   16|   ap_fifo  |  hw_input_stencil_values_V_val_V |    pointer   |
+|hw_input_stencil_values_V_val_V_empty_n  |  in |    1|   ap_fifo  |  hw_input_stencil_values_V_val_V |    pointer   |
+|hw_input_stencil_values_V_val_V_read     | out |    1|   ap_fifo  |  hw_input_stencil_values_V_val_V |    pointer   |
+|hw_output_stencil_values_V_val_V_din     | out |   16|   ap_fifo  | hw_output_stencil_values_V_val_V |    pointer   |
+|hw_output_stencil_values_V_val_V_full_n  |  in |    1|   ap_fifo  | hw_output_stencil_values_V_val_V |    pointer   |
+|hw_output_stencil_values_V_val_V_write   | out |    1|   ap_fifo  | hw_output_stencil_values_V_val_V |    pointer   |
+|tlast_values_V_val_V_din                 | out |    1|   ap_fifo  |       tlast_values_V_val_V       |    pointer   |
+|tlast_values_V_val_V_full_n              |  in |    1|   ap_fifo  |       tlast_values_V_val_V       |    pointer   |
+|tlast_values_V_val_V_write               | out |    1|   ap_fifo  |       tlast_values_V_val_V       |    pointer   |
++-----------------------------------------+-----+-----+------------+----------------------------------+--------------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 11
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 4 
+3 --> 3 2 
+4 --> 5 
+5 --> 6 4 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 5 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.23>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1* %tlast_values_V_val_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 12 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %hw_output_stencil_values_V_val_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 13 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %hw_input_stencil_values_V_val_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 14 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (1.23ns)   --->   "%hw_input_global_wrap = alloca [4096 x i16], align 2" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:356]   --->   Operation 15 'alloca' 'hw_input_global_wrap' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+ST_1 : Operation 16 [1/1] (0.65ns)   --->   "br label %hw_input_global_wrapper_stencil_cache.exit" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:391]   --->   Operation 16 'br' <Predicate = true> <Delay = 0.65>
+
+State 2 <SV = 1> <Delay = 0.81>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%hw_input_global_wrap_1 = phi i7 [ 0, %arrayctor.loop.i.i.i.i3.preheader ], [ %c3, %hw_input_global_wrapper_stencil_cache.exit.loopexit ]"   --->   Operation 17 'phi' 'hw_input_global_wrap_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.81ns)   --->   "%icmp_ln391 = icmp eq i7 %hw_input_global_wrap_1, -64" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:391]   --->   Operation 18 'icmp' 'icmp_ln391' <Predicate = true> <Delay = 0.81> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 64, i64 64, i64 64)"   --->   Operation 19 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.77ns)   --->   "%c3 = add i7 %hw_input_global_wrap_1, 1" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:391]   --->   Operation 20 'add' 'c3' <Predicate = true> <Delay = 0.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "br i1 %icmp_ln391, label %.preheader1.preheader, label %.preheader2.preheader" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:391]   --->   Operation 21 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%tmp_2 = call i13 @_ssdm_op_BitConcatenate.i13.i7.i6(i7 %hw_input_global_wrap_1, i6 0)" [/home/nyengele/aha/clockwork/hw_classes.h:190->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:113->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:126->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:259->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:273->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393]   --->   Operation 22 'bitconcatenate' 'tmp_2' <Predicate = (!icmp_ln391)> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%zext_ln392 = zext i13 %tmp_2 to i14" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:392]   --->   Operation 23 'zext' 'zext_ln392' <Predicate = (!icmp_ln391)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.65ns)   --->   "br label %.preheader2" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:392]   --->   Operation 24 'br' <Predicate = (!icmp_ln391)> <Delay = 0.65>
+ST_2 : Operation 25 [1/1] (0.65ns)   --->   "br label %.preheader1" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:84->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:285->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:396]   --->   Operation 25 'br' <Predicate = (icmp_ln391)> <Delay = 0.65>
+
+State 3 <SV = 2> <Delay = 3.07>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%hw_input_global_wrap_2 = phi i7 [ %c5, %"extract<0, 15>.exit" ], [ 0, %.preheader2.preheader ]"   --->   Operation 26 'phi' 'hw_input_global_wrap_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (0.81ns)   --->   "%icmp_ln392 = icmp eq i7 %hw_input_global_wrap_2, -64" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:392]   --->   Operation 27 'icmp' 'icmp_ln392' <Predicate = true> <Delay = 0.81> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%empty_7 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 64, i64 64, i64 64)"   --->   Operation 28 'speclooptripcount' 'empty_7' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.77ns)   --->   "%c5 = add i7 %hw_input_global_wrap_2, 1" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:392]   --->   Operation 29 'add' 'c5' <Predicate = true> <Delay = 0.77> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "br i1 %icmp_ln392, label %hw_input_global_wrapper_stencil_cache.exit.loopexit, label %"extract<0, 15>.exit"" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:392]   --->   Operation 30 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (1.83ns)   --->   "%tmp_val_V = call i16 @_ssdm_op_Read.ap_fifo.volatile.i16P(i16* %hw_input_stencil_values_V_val_V)" [/home/nyengele/aha/clockwork/hw_classes.h:381->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:270->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393]   --->   Operation 31 'read' 'tmp_val_V' <Predicate = (!icmp_ln392)> <Delay = 1.83> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%zext_ln321 = zext i7 %hw_input_global_wrap_2 to i14" [/home/nyengele/aha/clockwork/hw_classes.h:190->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:113->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:126->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:259->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:273->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393]   --->   Operation 32 'zext' 'zext_ln321' <Predicate = (!icmp_ln392)> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (0.82ns)   --->   "%add_ln321 = add i14 %zext_ln392, %zext_ln321" [/home/nyengele/aha/clockwork/hw_classes.h:190->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:113->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:126->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:259->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:273->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393]   --->   Operation 33 'add' 'add_ln321' <Predicate = (!icmp_ln392)> <Delay = 0.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%zext_ln321_1 = zext i14 %add_ln321 to i64" [/home/nyengele/aha/clockwork/hw_classes.h:190->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:113->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:126->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:259->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:273->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393]   --->   Operation 34 'zext' 'zext_ln321_1' <Predicate = (!icmp_ln392)> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%hw_input_global_wrap_3 = getelementptr [4096 x i16]* %hw_input_global_wrap, i64 0, i64 %zext_ln321_1" [/home/nyengele/aha/clockwork/hw_classes.h:190->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:113->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:126->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:259->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:273->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393]   --->   Operation 35 'getelementptr' 'hw_input_global_wrap_3' <Predicate = (!icmp_ln392)> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (1.23ns)   --->   "store i16 %tmp_val_V, i16* %hw_input_global_wrap_3, align 2" [/home/nyengele/aha/clockwork/hw_classes.h:190->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:113->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:126->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:259->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:273->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:393]   --->   Operation 36 'store' <Predicate = (!icmp_ln392)> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "br label %.preheader2" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:392]   --->   Operation 37 'br' <Predicate = (!icmp_ln392)> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "br label %hw_input_global_wrapper_stencil_cache.exit"   --->   Operation 38 'br' <Predicate = (icmp_ln392)> <Delay = 0.00>
+
+State 4 <SV = 2> <Delay = 0.78>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%hw_output_s0_y_v33_a = phi i6 [ %c3_1, %.preheader1.loopexit ], [ 0, %.preheader1.preheader ]"   --->   Operation 39 'phi' 'hw_output_s0_y_v33_a' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 40 [1/1] (0.78ns)   --->   "%icmp_ln394 = icmp eq i6 %hw_output_s0_y_v33_a, -2" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:394]   --->   Operation 40 'icmp' 'icmp_ln394' <Predicate = true> <Delay = 0.78> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%empty_8 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 62, i64 62, i64 62)"   --->   Operation 41 'speclooptripcount' 'empty_8' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 42 [1/1] (0.78ns)   --->   "%c3_1 = add i6 %hw_output_s0_y_v33_a, 1" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:196->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:240->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 42 'add' 'c3_1' <Predicate = true> <Delay = 0.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "br i1 %icmp_ln394, label %0, label %.preheader.preheader" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:394]   --->   Operation 43 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 44 [1/1] (0.78ns)   --->   "%add_ln142 = add i6 %hw_output_s0_y_v33_a, 2" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:142->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:246->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 44 'add' 'add_ln142' <Predicate = (!icmp_ln394)> <Delay = 0.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 45 [1/1] (0.65ns)   --->   "br label %.preheader" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:84->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:285->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:396]   --->   Operation 45 'br' <Predicate = (!icmp_ln394)> <Delay = 0.65>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "ret void" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:406]   --->   Operation 46 'ret' <Predicate = (icmp_ln394)> <Delay = 0.00>
+
+State 5 <SV = 3> <Delay = 1.23>
+ST_5 : Operation 47 [1/1] (0.00ns)   --->   "%hw_output_s0_x_v32_a = phi i6 [ %c5_1, %.preheader20 ], [ 0, %.preheader.preheader ]"   --->   Operation 47 'phi' 'hw_output_s0_x_v32_a' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 48 [1/1] (0.78ns)   --->   "%icmp_ln395 = icmp eq i6 %hw_output_s0_x_v32_a, -2" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:395]   --->   Operation 48 'icmp' 'icmp_ln395' <Predicate = true> <Delay = 0.78> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 49 [1/1] (0.00ns)   --->   "%empty_9 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 62, i64 62, i64 62)"   --->   Operation 49 'speclooptripcount' 'empty_9' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 50 [1/1] (0.78ns)   --->   "%c5_1 = add i6 %hw_output_s0_x_v32_a, 1" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:178->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:236->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 50 'add' 'c5_1' <Predicate = true> <Delay = 0.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 51 [1/1] (0.00ns)   --->   "br i1 %icmp_ln395, label %.preheader1.loopexit, label %.preheader20" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:395]   --->   Operation 51 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_3 = call i12 @_ssdm_op_BitConcatenate.i12.i6.i6(i6 %hw_output_s0_y_v33_a, i6 %hw_output_s0_x_v32_a)" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:169->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:234->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 52 'bitconcatenate' 'tmp_3' <Predicate = (!icmp_ln395)> <Delay = 0.00>
+ST_5 : Operation 53 [1/1] (0.00ns)   --->   "%zext_ln201 = zext i12 %tmp_3 to i64" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:169->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:234->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 53 'zext' 'zext_ln201' <Predicate = (!icmp_ln395)> <Delay = 0.00>
+ST_5 : Operation 54 [1/1] (0.00ns)   --->   "%hw_input_global_wrap_4 = getelementptr [4096 x i16]* %hw_input_global_wrap, i64 0, i64 %zext_ln201" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:169->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:234->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 54 'getelementptr' 'hw_input_global_wrap_4' <Predicate = (!icmp_ln395)> <Delay = 0.00>
+ST_5 : Operation 55 [2/2] (1.23ns)   --->   "%hw_input_global_wrap_7 = load i16* %hw_input_global_wrap_4, align 2" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:169->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:234->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 55 'load' 'hw_input_global_wrap_7' <Predicate = (!icmp_ln395)> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+ST_5 : Operation 56 [1/1] (0.00ns)   --->   "br label %.preheader1"   --->   Operation 56 'br' <Predicate = (icmp_ln395)> <Delay = 0.00>
+
+State 6 <SV = 4> <Delay = 2.01>
+ST_6 : Operation 57 [1/2] (1.23ns)   --->   "%hw_input_global_wrap_7 = load i16* %hw_input_global_wrap_4, align 2" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:169->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:234->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 57 'load' 'hw_input_global_wrap_7' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+ST_6 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_6 = call i12 @_ssdm_op_BitConcatenate.i12.i6.i6(i6 %hw_output_s0_y_v33_a, i6 %c5_1)" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:178->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:236->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 58 'bitconcatenate' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 59 [1/1] (0.00ns)   --->   "%zext_ln201_3 = zext i12 %tmp_6 to i64" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:178->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:236->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 59 'zext' 'zext_ln201_3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 60 [1/1] (0.00ns)   --->   "%hw_input_global_wrap_8 = getelementptr [4096 x i16]* %hw_input_global_wrap, i64 0, i64 %zext_ln201_3" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:178->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:236->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 60 'getelementptr' 'hw_input_global_wrap_8' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 61 [2/2] (1.23ns)   --->   "%hw_input_global_wrap_11 = load i16* %hw_input_global_wrap_8, align 2" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:178->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:236->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 61 'load' 'hw_input_global_wrap_11' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+ST_6 : Operation 62 [1/1] (0.78ns)   --->   "%add_ln187 = add i6 2, %hw_output_s0_x_v32_a" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:187->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:238->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 62 'add' 'add_ln187' <Predicate = true> <Delay = 0.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_9 = call i12 @_ssdm_op_BitConcatenate.i12.i6.i6(i6 %hw_output_s0_y_v33_a, i6 %add_ln187)" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:187->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:238->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 63 'bitconcatenate' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 64 [1/1] (0.00ns)   --->   "%zext_ln201_6 = zext i12 %tmp_9 to i64" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:187->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:238->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 64 'zext' 'zext_ln201_6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 65 [1/1] (0.00ns)   --->   "%hw_input_global_wrap_12 = getelementptr [4096 x i16]* %hw_input_global_wrap, i64 0, i64 %zext_ln201_6" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:187->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:238->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 65 'getelementptr' 'hw_input_global_wrap_12' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 66 [2/2] (1.23ns)   --->   "%hw_input_global_wrap_15 = load i16* %hw_input_global_wrap_12, align 2" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:187->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:238->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 66 'load' 'hw_input_global_wrap_15' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+
+State 7 <SV = 5> <Delay = 1.23>
+ST_7 : Operation 67 [1/1] (0.00ns)   --->   "%tmp_4 = call i12 @_ssdm_op_BitConcatenate.i12.i6.i6(i6 %c3_1, i6 %hw_output_s0_x_v32_a)" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:196->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:240->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 67 'bitconcatenate' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 68 [1/1] (0.00ns)   --->   "%zext_ln201_1 = zext i12 %tmp_4 to i64" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:196->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:240->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 68 'zext' 'zext_ln201_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 69 [1/1] (0.00ns)   --->   "%hw_input_global_wrap_5 = getelementptr [4096 x i16]* %hw_input_global_wrap, i64 0, i64 %zext_ln201_1" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:196->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:240->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 69 'getelementptr' 'hw_input_global_wrap_5' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 70 [1/1] (0.00ns)   --->   "%tmp_7 = call i12 @_ssdm_op_BitConcatenate.i12.i6.i6(i6 %c3_1, i6 %c5_1)" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:205->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:242->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 70 'bitconcatenate' 'tmp_7' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 71 [1/1] (0.00ns)   --->   "%zext_ln201_4 = zext i12 %tmp_7 to i64" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:205->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:242->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 71 'zext' 'zext_ln201_4' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 72 [1/1] (0.00ns)   --->   "%hw_input_global_wrap_9 = getelementptr [4096 x i16]* %hw_input_global_wrap, i64 0, i64 %zext_ln201_4" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:205->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:242->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 72 'getelementptr' 'hw_input_global_wrap_9' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 73 [1/2] (1.23ns)   --->   "%hw_input_global_wrap_11 = load i16* %hw_input_global_wrap_8, align 2" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:178->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:236->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 73 'load' 'hw_input_global_wrap_11' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+ST_7 : Operation 74 [1/2] (1.23ns)   --->   "%hw_input_global_wrap_15 = load i16* %hw_input_global_wrap_12, align 2" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:187->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:238->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 74 'load' 'hw_input_global_wrap_15' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+ST_7 : Operation 75 [2/2] (1.23ns)   --->   "%hw_input_global_wrap_16 = load i16* %hw_input_global_wrap_5, align 2" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:196->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:240->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 75 'load' 'hw_input_global_wrap_16' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+ST_7 : Operation 76 [2/2] (1.23ns)   --->   "%hw_input_global_wrap_17 = load i16* %hw_input_global_wrap_9, align 2" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:205->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:242->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 76 'load' 'hw_input_global_wrap_17' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+ST_7 : Operation 77 [1/1] (0.00ns)   --->   "%empty_11 = trunc i16 %hw_input_global_wrap_11 to i14" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:178->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:236->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 77 'trunc' 'empty_11' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 6> <Delay = 4.12>
+ST_8 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_5 = call i12 @_ssdm_op_BitConcatenate.i12.i6.i6(i6 %add_ln142, i6 %hw_output_s0_x_v32_a)" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:142->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:246->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 78 'bitconcatenate' 'tmp_5' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 79 [1/1] (0.00ns)   --->   "%zext_ln201_2 = zext i12 %tmp_5 to i64" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:142->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:246->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 79 'zext' 'zext_ln201_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 80 [1/1] (0.00ns)   --->   "%hw_input_global_wrap_6 = getelementptr [4096 x i16]* %hw_input_global_wrap, i64 0, i64 %zext_ln201_2" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:142->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:246->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 80 'getelementptr' 'hw_input_global_wrap_6' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 81 [1/1] (0.00ns)   --->   "%tmp_s = call i12 @_ssdm_op_BitConcatenate.i12.i6.i6(i6 %c3_1, i6 %add_ln187)" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:133->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:244->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 81 'bitconcatenate' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 82 [1/1] (0.00ns)   --->   "%zext_ln201_7 = zext i12 %tmp_s to i64" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:133->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:244->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 82 'zext' 'zext_ln201_7' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 83 [1/1] (0.00ns)   --->   "%hw_input_global_wrap_13 = getelementptr [4096 x i16]* %hw_input_global_wrap, i64 0, i64 %zext_ln201_7" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:133->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:244->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 83 'getelementptr' 'hw_input_global_wrap_13' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 84 [1/2] (1.23ns)   --->   "%hw_input_global_wrap_16 = load i16* %hw_input_global_wrap_5, align 2" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:196->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:240->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 84 'load' 'hw_input_global_wrap_16' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+ST_8 : Operation 85 [1/2] (1.23ns)   --->   "%hw_input_global_wrap_17 = load i16* %hw_input_global_wrap_9, align 2" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:205->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:242->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 85 'load' 'hw_input_global_wrap_17' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+ST_8 : Operation 86 [2/2] (1.23ns)   --->   "%hw_input_global_wrap_18 = load i16* %hw_input_global_wrap_13, align 2" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:133->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:244->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 86 'load' 'hw_input_global_wrap_18' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+ST_8 : Operation 87 [2/2] (1.23ns)   --->   "%hw_input_global_wrap_19 = load i16* %hw_input_global_wrap_6, align 2" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:142->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:246->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 87 'load' 'hw_input_global_wrap_19' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+ST_8 : Operation 88 [1/1] (0.00ns) (grouped into LUT with out node p_267)   --->   "%shl_ln40 = shl i16 %hw_input_global_wrap_16, 3" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:40->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 88 'shl' 'shl_ln40' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 89 [1/1] (0.85ns) (out node of the LUT)   --->   "%p_267 = sub i16 %shl_ln40, %hw_input_global_wrap_16" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:40->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 89 'sub' 'p_267' <Predicate = true> <Delay = 0.85> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 90 [1/1] (0.49ns) (grouped into DSP with root node add_ln58_4)   --->   "%p_269 = mul i16 19, %hw_input_global_wrap_17" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:42->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 90 'mul' 'p_269' <Predicate = true> <Delay = 0.49> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 4> <II = 1> <Delay = 0.43> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 91 [1/1] (2.03ns) (root node of the DSP)   --->   "%add_ln58_4 = add i16 %p_267, %p_269" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:58->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 91 'add' 'add_ln58_4' <Predicate = true> <Delay = 2.03> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 4> <II = 1> <Delay = 0.43> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+
+State 9 <SV = 7> <Delay = 2.09>
+ST_9 : Operation 92 [1/1] (0.00ns)   --->   "%tmp_8 = call i12 @_ssdm_op_BitConcatenate.i12.i6.i6(i6 %add_ln142, i6 %c5_1)" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:160->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:250->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 92 'bitconcatenate' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 93 [1/1] (0.00ns)   --->   "%zext_ln201_5 = zext i12 %tmp_8 to i64" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:160->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:250->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 93 'zext' 'zext_ln201_5' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 94 [1/1] (0.00ns)   --->   "%hw_input_global_wrap_10 = getelementptr [4096 x i16]* %hw_input_global_wrap, i64 0, i64 %zext_ln201_5" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:160->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:250->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 94 'getelementptr' 'hw_input_global_wrap_10' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 95 [1/1] (0.00ns)   --->   "%tmp_1 = call i12 @_ssdm_op_BitConcatenate.i12.i6.i6(i6 %add_ln142, i6 %add_ln187)" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:151->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:248->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 95 'bitconcatenate' 'tmp_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 96 [1/1] (0.00ns)   --->   "%zext_ln201_8 = zext i12 %tmp_1 to i64" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:151->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:248->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 96 'zext' 'zext_ln201_8' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 97 [1/1] (0.00ns)   --->   "%hw_input_global_wrap_14 = getelementptr [4096 x i16]* %hw_input_global_wrap, i64 0, i64 %zext_ln201_8" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:151->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:248->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 97 'getelementptr' 'hw_input_global_wrap_14' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 98 [1/2] (1.23ns)   --->   "%hw_input_global_wrap_18 = load i16* %hw_input_global_wrap_13, align 2" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:133->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:244->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 98 'load' 'hw_input_global_wrap_18' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+ST_9 : Operation 99 [1/2] (1.23ns)   --->   "%hw_input_global_wrap_19 = load i16* %hw_input_global_wrap_6, align 2" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:142->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:246->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 99 'load' 'hw_input_global_wrap_19' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+ST_9 : Operation 100 [2/2] (1.23ns)   --->   "%hw_input_global_wrap_20 = load i16* %hw_input_global_wrap_14, align 2" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:151->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:248->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 100 'load' 'hw_input_global_wrap_20' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+ST_9 : Operation 101 [2/2] (1.23ns)   --->   "%hw_input_global_wrap_21 = load i16* %hw_input_global_wrap_10, align 2" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:160->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:250->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 101 'load' 'hw_input_global_wrap_21' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+ST_9 : Operation 102 [1/1] (0.00ns)   --->   "%shl_ln34 = shl i16 %hw_input_global_wrap_7, 4" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:34->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 102 'shl' 'shl_ln34' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 103 [1/1] (0.00ns) (grouped into LUT with out node p_265)   --->   "%shl_ln38 = shl i16 %hw_input_global_wrap_15, 3" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:38->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 103 'shl' 'shl_ln38' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 104 [1/1] (0.00ns) (grouped into LUT with out node p_265)   --->   "%shl_ln38_1 = shl i16 %hw_input_global_wrap_15, 1" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:38->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 104 'shl' 'shl_ln38_1' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 105 [1/1] (0.85ns) (out node of the LUT)   --->   "%p_265 = sub i16 %shl_ln38, %shl_ln38_1" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:38->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 105 'sub' 'p_265' <Predicate = true> <Delay = 0.85> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 106 [1/1] (0.00ns)   --->   "%shl_ln45 = shl i16 %hw_input_global_wrap_19, 2" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:45->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 106 'shl' 'shl_ln45' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 107 [1/1] (0.00ns)   --->   "%empty_10 = trunc i16 %hw_input_global_wrap_18 to i14" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:133->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:244->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 107 'trunc' 'empty_10' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 108 [1/1] (0.83ns)   --->   "%tmp_i231 = add i14 %empty_10, %empty_11" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:133->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:244->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 108 'add' 'tmp_i231' <Predicate = true> <Delay = 0.83> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 109 [1/1] (0.85ns)   --->   "%add_ln58 = add i16 %hw_input_global_wrap_19, %hw_input_global_wrap_7" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:58->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 109 'add' 'add_ln58' <Predicate = true> <Delay = 0.85> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 110 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln58_1 = add i16 %shl_ln34, %p_265" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:58->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 110 'add' 'add_ln58_1' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 111 [1/1] (0.68ns) (root node of TernaryAdder)   --->   "%add_ln58_2 = add i16 %add_ln58_1, %shl_ln45" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:58->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 111 'add' 'add_ln58_2' <Predicate = true> <Delay = 0.68> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 10 <SV = 8> <Delay = 4.12>
+ST_10 : Operation 112 [1/2] (1.23ns)   --->   "%hw_input_global_wrap_20 = load i16* %hw_input_global_wrap_14, align 2" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:151->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:248->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 112 'load' 'hw_input_global_wrap_20' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+ST_10 : Operation 113 [1/2] (1.23ns)   --->   "%hw_input_global_wrap_21 = load i16* %hw_input_global_wrap_10, align 2" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:160->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:250->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 113 'load' 'hw_input_global_wrap_21' <Predicate = true> <Delay = 1.23> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.23> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 4096> <RAM>
+ST_10 : Operation 114 [1/1] (0.00ns) (grouped into LUT with out node p_274)   --->   "%shl_ln47 = shl i16 %hw_input_global_wrap_20, 4" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:47->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 114 'shl' 'shl_ln47' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 115 [1/1] (0.85ns) (out node of the LUT)   --->   "%p_274 = sub i16 %shl_ln47, %hw_input_global_wrap_20" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:47->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 115 'sub' 'p_274' <Predicate = true> <Delay = 0.85> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 116 [1/1] (0.49ns) (grouped into DSP with root node add_ln58_5)   --->   "%p_276 = mul i16 21, %hw_input_global_wrap_21" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:49->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 116 'mul' 'p_276' <Predicate = true> <Delay = 0.49> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 4> <II = 1> <Delay = 0.43> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 117 [1/1] (2.03ns) (root node of the DSP)   --->   "%add_ln58_5 = add i16 %p_274, %p_276" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:58->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 117 'add' 'add_ln58_5' <Predicate = true> <Delay = 2.03> <Core = "DSP48">   --->   Core 88 'DSP48' <Latency = 4> <II = 1> <Delay = 0.43> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 2> <OutPorts = 1> <Sync> <CReg>
+
+State 11 <SV = 9> <Delay = 3.21>
+ST_11 : Operation 118 [1/1] (0.00ns)   --->   "%tmp1_i = call i16 @_ssdm_op_BitConcatenate.i16.i14.i2(i14 %tmp_i231, i2 0)" [/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/clockwork/hw_classes.h:201->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:107->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:133->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:244->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:302->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 118 'bitconcatenate' 'tmp1_i' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 119 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln58_3 = add i16 %add_ln58_2, %add_ln58" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:58->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 119 'add' 'add_ln58_3' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 120 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln58_6 = add i16 %add_ln58_5, %tmp1_i" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:58->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 120 'add' 'add_ln58_6' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 121 [1/1] (0.68ns) (root node of TernaryAdder)   --->   "%add_ln58_7 = add i16 %add_ln58_6, %add_ln58_4" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:58->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 121 'add' 'add_ln58_7' <Predicate = true> <Delay = 0.68> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 122 [1/1] (0.68ns) (root node of TernaryAdder)   --->   "%p_285 = add i16 %add_ln58_7, %add_ln58_3" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/conv_3_3_compute.h:58->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:307->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:397]   --->   Operation 122 'add' 'p_285' <Predicate = true> <Delay = 0.68> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 123 [1/1] (1.83ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i16P(i16* %hw_output_stencil_values_V_val_V, i16 %p_285)" [/home/nyengele/aha/clockwork/hw_classes.h:377->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:327->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:398]   --->   Operation 123 'write' <Predicate = true> <Delay = 1.83> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_11 : Operation 124 [1/1] (1.83ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i1P(i1* %tlast_values_V_val_V, i1 false)" [/home/nyengele/aha/clockwork/hw_classes.h:377->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:339->/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:399]   --->   Operation 124 'write' <Predicate = true> <Delay = 1.83> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 1.83> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 1> <Depth = 2> <FIFO>
+ST_11 : Operation 125 [1/1] (0.00ns)   --->   "br label %.preheader" [/home/nyengele/aha/fpga_builder/apps/conv_3_3/bin/clockwork/unoptimized_conv_3_3.cpp:395]   --->   Operation 125 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 0
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ hw_input_stencil_values_V_val_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ hw_output_stencil_values_V_val_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+Port [ tlast_values_V_val_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=3; pingpong=0; private_global=0; IO mode=ap_fifo:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+specinterface_ln0       (specinterface    ) [ 000000000000]
+specinterface_ln0       (specinterface    ) [ 000000000000]
+specinterface_ln0       (specinterface    ) [ 000000000000]
+hw_input_global_wrap    (alloca           ) [ 001111111111]
+br_ln391                (br               ) [ 011100000000]
+hw_input_global_wrap_1  (phi              ) [ 001000000000]
+icmp_ln391              (icmp             ) [ 001100000000]
+empty                   (speclooptripcount) [ 000000000000]
+c3                      (add              ) [ 011100000000]
+br_ln391                (br               ) [ 000000000000]
+tmp_2                   (bitconcatenate   ) [ 000000000000]
+zext_ln392              (zext             ) [ 000100000000]
+br_ln392                (br               ) [ 001100000000]
+br_ln84                 (br               ) [ 001111111111]
+hw_input_global_wrap_2  (phi              ) [ 000100000000]
+icmp_ln392              (icmp             ) [ 001100000000]
+empty_7                 (speclooptripcount) [ 000000000000]
+c5                      (add              ) [ 001100000000]
+br_ln392                (br               ) [ 000000000000]
+tmp_val_V               (read             ) [ 000000000000]
+zext_ln321              (zext             ) [ 000000000000]
+add_ln321               (add              ) [ 000000000000]
+zext_ln321_1            (zext             ) [ 000000000000]
+hw_input_global_wrap_3  (getelementptr    ) [ 000000000000]
+store_ln190             (store            ) [ 000000000000]
+br_ln392                (br               ) [ 001100000000]
+br_ln0                  (br               ) [ 011100000000]
+hw_output_s0_y_v33_a    (phi              ) [ 000011111111]
+icmp_ln394              (icmp             ) [ 000011111111]
+empty_8                 (speclooptripcount) [ 000000000000]
+c3_1                    (add              ) [ 001011111111]
+br_ln394                (br               ) [ 000000000000]
+add_ln142               (add              ) [ 000001111111]
+br_ln84                 (br               ) [ 000011111111]
+ret_ln406               (ret              ) [ 000000000000]
+hw_output_s0_x_v32_a    (phi              ) [ 000001111000]
+icmp_ln395              (icmp             ) [ 000011111111]
+empty_9                 (speclooptripcount) [ 000000000000]
+c5_1                    (add              ) [ 000011111111]
+br_ln395                (br               ) [ 000000000000]
+tmp_3                   (bitconcatenate   ) [ 000000000000]
+zext_ln201              (zext             ) [ 000000000000]
+hw_input_global_wrap_4  (getelementptr    ) [ 000000100000]
+br_ln0                  (br               ) [ 001011111111]
+hw_input_global_wrap_7  (load             ) [ 000000011100]
+tmp_6                   (bitconcatenate   ) [ 000000000000]
+zext_ln201_3            (zext             ) [ 000000000000]
+hw_input_global_wrap_8  (getelementptr    ) [ 000000010000]
+add_ln187               (add              ) [ 000000011100]
+tmp_9                   (bitconcatenate   ) [ 000000000000]
+zext_ln201_6            (zext             ) [ 000000000000]
+hw_input_global_wrap_12 (getelementptr    ) [ 000000010000]
+tmp_4                   (bitconcatenate   ) [ 000000000000]
+zext_ln201_1            (zext             ) [ 000000000000]
+hw_input_global_wrap_5  (getelementptr    ) [ 000000001000]
+tmp_7                   (bitconcatenate   ) [ 000000000000]
+zext_ln201_4            (zext             ) [ 000000000000]
+hw_input_global_wrap_9  (getelementptr    ) [ 000000001000]
+hw_input_global_wrap_11 (load             ) [ 000000000000]
+hw_input_global_wrap_15 (load             ) [ 000000001100]
+empty_11                (trunc            ) [ 000000001100]
+tmp_5                   (bitconcatenate   ) [ 000000000000]
+zext_ln201_2            (zext             ) [ 000000000000]
+hw_input_global_wrap_6  (getelementptr    ) [ 000000000100]
+tmp_s                   (bitconcatenate   ) [ 000000000000]
+zext_ln201_7            (zext             ) [ 000000000000]
+hw_input_global_wrap_13 (getelementptr    ) [ 000000000100]
+hw_input_global_wrap_16 (load             ) [ 000000000000]
+hw_input_global_wrap_17 (load             ) [ 000000000000]
+shl_ln40                (shl              ) [ 000000000000]
+p_267                   (sub              ) [ 000000000000]
+p_269                   (mul              ) [ 000000000000]
+add_ln58_4              (add              ) [ 000000000111]
+tmp_8                   (bitconcatenate   ) [ 000000000000]
+zext_ln201_5            (zext             ) [ 000000000000]
+hw_input_global_wrap_10 (getelementptr    ) [ 000000000010]
+tmp_1                   (bitconcatenate   ) [ 000000000000]
+zext_ln201_8            (zext             ) [ 000000000000]
+hw_input_global_wrap_14 (getelementptr    ) [ 000000000010]
+hw_input_global_wrap_18 (load             ) [ 000000000000]
+hw_input_global_wrap_19 (load             ) [ 000000000000]
+shl_ln34                (shl              ) [ 000000000000]
+shl_ln38                (shl              ) [ 000000000000]
+shl_ln38_1              (shl              ) [ 000000000000]
+p_265                   (sub              ) [ 000000000000]
+shl_ln45                (shl              ) [ 000000000000]
+empty_10                (trunc            ) [ 000000000000]
+tmp_i231                (add              ) [ 000000000011]
+add_ln58                (add              ) [ 000000000011]
+add_ln58_1              (add              ) [ 000000000000]
+add_ln58_2              (add              ) [ 000000000011]
+hw_input_global_wrap_20 (load             ) [ 000000000000]
+hw_input_global_wrap_21 (load             ) [ 000000000000]
+shl_ln47                (shl              ) [ 000000000000]
+p_274                   (sub              ) [ 000000000000]
+p_276                   (mul              ) [ 000000000000]
+add_ln58_5              (add              ) [ 000000000001]
+tmp1_i                  (bitconcatenate   ) [ 000000000000]
+add_ln58_3              (add              ) [ 000000000000]
+add_ln58_6              (add              ) [ 000000000000]
+add_ln58_7              (add              ) [ 000000000000]
+p_285                   (add              ) [ 000000000000]
+write_ln377             (write            ) [ 000000000000]
+write_ln377             (write            ) [ 000000000000]
+br_ln395                (br               ) [ 000011111111]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="hw_input_stencil_values_V_val_V">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="hw_input_stencil_values_V_val_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="hw_output_stencil_values_V_val_V">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="hw_output_stencil_values_V_val_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="tlast_values_V_val_V">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="tlast_values_V_val_V"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1001" name="const_6">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecInterface"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1001" name="const_8">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="ap_fifo_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1001" name="const_10">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1001" name="const_12">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1001" name="const_14">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1001" name="const_16">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1001" name="const_18">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1001" name="const_20">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="1"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1001" name="const_22">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1001" name="const_24">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLoopTripCount"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1001" name="const_26">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1001" name="const_28">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_BitConcatenate.i13.i7.i6"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_fifo.volatile.i16P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_BitConcatenate.i12.i6.i6"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1001" name="const_48">
+<pin_list>
+<pin id="49" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="50" class="1001" name="const_50">
+<pin_list>
+<pin id="51" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="52" class="1001" name="const_52">
+<pin_list>
+<pin id="53" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="54" class="1001" name="const_54">
+<pin_list>
+<pin id="55" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="56" class="1001" name="const_56">
+<pin_list>
+<pin id="57" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="58" class="1001" name="const_58">
+<pin_list>
+<pin id="59" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="60" class="1001" name="const_60">
+<pin_list>
+<pin id="61" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_BitConcatenate.i16.i14.i2"/></StgValue>
+</bind>
+</comp>
+
+<comp id="62" class="1001" name="const_62">
+<pin_list>
+<pin id="63" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="64" class="1001" name="const_64">
+<pin_list>
+<pin id="65" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i16P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="66" class="1001" name="const_66">
+<pin_list>
+<pin id="67" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Write.ap_fifo.volatile.i1P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="68" class="1001" name="const_68">
+<pin_list>
+<pin id="69" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="70" class="1004" name="hw_input_global_wrap_alloca_fu_70">
+<pin_list>
+<pin id="71" dir="0" index="0" bw="1" slack="0"/>
+<pin id="72" dir="1" index="1" bw="16" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="alloca(26) " fcode="alloca"/>
+<opset="hw_input_global_wrap/1 "/>
+</bind>
+</comp>
+
+<comp id="74" class="1004" name="tmp_val_V_read_fu_74">
+<pin_list>
+<pin id="75" dir="0" index="0" bw="16" slack="0"/>
+<pin id="76" dir="0" index="1" bw="16" slack="0"/>
+<pin id="77" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="tmp_val_V/3 "/>
+</bind>
+</comp>
+
+<comp id="80" class="1004" name="write_ln377_write_fu_80">
+<pin_list>
+<pin id="81" dir="0" index="0" bw="0" slack="0"/>
+<pin id="82" dir="0" index="1" bw="16" slack="0"/>
+<pin id="83" dir="0" index="2" bw="16" slack="0"/>
+<pin id="84" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln377/11 "/>
+</bind>
+</comp>
+
+<comp id="87" class="1004" name="write_ln377_write_fu_87">
+<pin_list>
+<pin id="88" dir="0" index="0" bw="0" slack="0"/>
+<pin id="89" dir="0" index="1" bw="1" slack="0"/>
+<pin id="90" dir="0" index="2" bw="1" slack="0"/>
+<pin id="91" dir="1" index="3" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="write(1151) " fcode="write"/>
+<opset="write_ln377/11 "/>
+</bind>
+</comp>
+
+<comp id="95" class="1004" name="hw_input_global_wrap_3_gep_fu_95">
+<pin_list>
+<pin id="96" dir="0" index="0" bw="16" slack="2147483647"/>
+<pin id="97" dir="0" index="1" bw="1" slack="0"/>
+<pin id="98" dir="0" index="2" bw="14" slack="0"/>
+<pin id="99" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="hw_input_global_wrap_3/3 "/>
+</bind>
+</comp>
+
+<comp id="101" class="1004" name="grp_access_fu_101">
+<pin_list>
+<pin id="102" dir="0" index="0" bw="12" slack="0"/>
+<pin id="103" dir="0" index="1" bw="16" slack="0"/>
+<pin id="104" dir="0" index="2" bw="0" slack="0"/>
+<pin id="128" dir="0" index="4" bw="12" slack="2147483647"/>
+<pin id="129" dir="0" index="5" bw="16" slack="2147483647"/>
+<pin id="130" dir="0" index="6" bw="0" slack="2147483647"/>
+<pin id="105" dir="1" index="3" bw="16" slack="0"/>
+<pin id="131" dir="1" index="7" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="load(27) store(28) " fcode="load"/>
+<opset="store_ln190/3 hw_input_global_wrap_7/5 hw_input_global_wrap_11/6 hw_input_global_wrap_15/6 hw_input_global_wrap_16/7 hw_input_global_wrap_17/7 hw_input_global_wrap_18/8 hw_input_global_wrap_19/8 hw_input_global_wrap_20/9 hw_input_global_wrap_21/9 "/>
+</bind>
+</comp>
+
+<comp id="108" class="1004" name="hw_input_global_wrap_4_gep_fu_108">
+<pin_list>
+<pin id="109" dir="0" index="0" bw="16" slack="2147483647"/>
+<pin id="110" dir="0" index="1" bw="1" slack="0"/>
+<pin id="111" dir="0" index="2" bw="12" slack="0"/>
+<pin id="112" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="hw_input_global_wrap_4/5 "/>
+</bind>
+</comp>
+
+<comp id="115" class="1004" name="hw_input_global_wrap_8_gep_fu_115">
+<pin_list>
+<pin id="116" dir="0" index="0" bw="16" slack="2147483647"/>
+<pin id="117" dir="0" index="1" bw="1" slack="0"/>
+<pin id="118" dir="0" index="2" bw="12" slack="0"/>
+<pin id="119" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="hw_input_global_wrap_8/6 "/>
+</bind>
+</comp>
+
+<comp id="122" class="1004" name="hw_input_global_wrap_12_gep_fu_122">
+<pin_list>
+<pin id="123" dir="0" index="0" bw="16" slack="2147483647"/>
+<pin id="124" dir="0" index="1" bw="1" slack="0"/>
+<pin id="125" dir="0" index="2" bw="12" slack="0"/>
+<pin id="126" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="hw_input_global_wrap_12/6 "/>
+</bind>
+</comp>
+
+<comp id="133" class="1004" name="hw_input_global_wrap_5_gep_fu_133">
+<pin_list>
+<pin id="134" dir="0" index="0" bw="16" slack="2147483647"/>
+<pin id="135" dir="0" index="1" bw="1" slack="0"/>
+<pin id="136" dir="0" index="2" bw="12" slack="0"/>
+<pin id="137" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="hw_input_global_wrap_5/7 "/>
+</bind>
+</comp>
+
+<comp id="139" class="1004" name="hw_input_global_wrap_9_gep_fu_139">
+<pin_list>
+<pin id="140" dir="0" index="0" bw="16" slack="2147483647"/>
+<pin id="141" dir="0" index="1" bw="1" slack="0"/>
+<pin id="142" dir="0" index="2" bw="12" slack="0"/>
+<pin id="143" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="hw_input_global_wrap_9/7 "/>
+</bind>
+</comp>
+
+<comp id="147" class="1004" name="hw_input_global_wrap_6_gep_fu_147">
+<pin_list>
+<pin id="148" dir="0" index="0" bw="16" slack="2147483647"/>
+<pin id="149" dir="0" index="1" bw="1" slack="0"/>
+<pin id="150" dir="0" index="2" bw="12" slack="0"/>
+<pin id="151" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="hw_input_global_wrap_6/8 "/>
+</bind>
+</comp>
+
+<comp id="153" class="1004" name="hw_input_global_wrap_13_gep_fu_153">
+<pin_list>
+<pin id="154" dir="0" index="0" bw="16" slack="2147483647"/>
+<pin id="155" dir="0" index="1" bw="1" slack="0"/>
+<pin id="156" dir="0" index="2" bw="12" slack="0"/>
+<pin id="157" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="hw_input_global_wrap_13/8 "/>
+</bind>
+</comp>
+
+<comp id="161" class="1004" name="hw_input_global_wrap_10_gep_fu_161">
+<pin_list>
+<pin id="162" dir="0" index="0" bw="16" slack="2147483647"/>
+<pin id="163" dir="0" index="1" bw="1" slack="0"/>
+<pin id="164" dir="0" index="2" bw="12" slack="0"/>
+<pin id="165" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="hw_input_global_wrap_10/9 "/>
+</bind>
+</comp>
+
+<comp id="167" class="1004" name="hw_input_global_wrap_14_gep_fu_167">
+<pin_list>
+<pin id="168" dir="0" index="0" bw="16" slack="2147483647"/>
+<pin id="169" dir="0" index="1" bw="1" slack="0"/>
+<pin id="170" dir="0" index="2" bw="12" slack="0"/>
+<pin id="171" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="getelementptr(29) " fcode="getelementptr"/>
+<opset="hw_input_global_wrap_14/9 "/>
+</bind>
+</comp>
+
+<comp id="175" class="1005" name="hw_input_global_wrap_1_reg_175">
+<pin_list>
+<pin id="176" dir="0" index="0" bw="7" slack="1"/>
+<pin id="177" dir="1" index="1" bw="7" slack="1"/>
+</pin_list>
+<bind>
+<opset="hw_input_global_wrap_1 (phireg) "/>
+</bind>
+</comp>
+
+<comp id="179" class="1004" name="hw_input_global_wrap_1_phi_fu_179">
+<pin_list>
+<pin id="180" dir="0" index="0" bw="1" slack="1"/>
+<pin id="181" dir="0" index="1" bw="0" slack="2147483647"/>
+<pin id="182" dir="0" index="2" bw="7" slack="0"/>
+<pin id="183" dir="0" index="3" bw="0" slack="2147483647"/>
+<pin id="184" dir="1" index="4" bw="7" slack="0"/>
+</pin_list>
+<bind>
+<opcode="phi(47) " fcode="phi"/>
+<opset="hw_input_global_wrap_1/2 "/>
+</bind>
+</comp>
+
+<comp id="186" class="1005" name="hw_input_global_wrap_2_reg_186">
+<pin_list>
+<pin id="187" dir="0" index="0" bw="7" slack="1"/>
+<pin id="188" dir="1" index="1" bw="7" slack="1"/>
+</pin_list>
+<bind>
+<opset="hw_input_global_wrap_2 (phireg) "/>
+</bind>
+</comp>
+
+<comp id="190" class="1004" name="hw_input_global_wrap_2_phi_fu_190">
+<pin_list>
+<pin id="191" dir="0" index="0" bw="7" slack="0"/>
+<pin id="192" dir="0" index="1" bw="0" slack="2147483647"/>
+<pin id="193" dir="0" index="2" bw="1" slack="1"/>
+<pin id="194" dir="0" index="3" bw="0" slack="2147483647"/>
+<pin id="195" dir="1" index="4" bw="7" slack="0"/>
+</pin_list>
+<bind>
+<opcode="phi(47) " fcode="phi"/>
+<opset="hw_input_global_wrap_2/3 "/>
+</bind>
+</comp>
+
+<comp id="197" class="1005" name="hw_output_s0_y_v33_a_reg_197">
+<pin_list>
+<pin id="198" dir="0" index="0" bw="6" slack="1"/>
+<pin id="199" dir="1" index="1" bw="6" slack="1"/>
+</pin_list>
+<bind>
+<opset="hw_output_s0_y_v33_a (phireg) "/>
+</bind>
+</comp>
+
+<comp id="201" class="1004" name="hw_output_s0_y_v33_a_phi_fu_201">
+<pin_list>
+<pin id="202" dir="0" index="0" bw="6" slack="0"/>
+<pin id="203" dir="0" index="1" bw="0" slack="2147483647"/>
+<pin id="204" dir="0" index="2" bw="1" slack="1"/>
+<pin id="205" dir="0" index="3" bw="0" slack="2147483647"/>
+<pin id="206" dir="1" index="4" bw="6" slack="0"/>
+</pin_list>
+<bind>
+<opcode="phi(47) " fcode="phi"/>
+<opset="hw_output_s0_y_v33_a/4 "/>
+</bind>
+</comp>
+
+<comp id="209" class="1005" name="hw_output_s0_x_v32_a_reg_209">
+<pin_list>
+<pin id="210" dir="0" index="0" bw="6" slack="1"/>
+<pin id="211" dir="1" index="1" bw="6" slack="1"/>
+</pin_list>
+<bind>
+<opset="hw_output_s0_x_v32_a (phireg) "/>
+</bind>
+</comp>
+
+<comp id="213" class="1004" name="hw_output_s0_x_v32_a_phi_fu_213">
+<pin_list>
+<pin id="214" dir="0" index="0" bw="6" slack="0"/>
+<pin id="215" dir="0" index="1" bw="0" slack="2147483647"/>
+<pin id="216" dir="0" index="2" bw="1" slack="1"/>
+<pin id="217" dir="0" index="3" bw="0" slack="2147483647"/>
+<pin id="218" dir="1" index="4" bw="6" slack="0"/>
+</pin_list>
+<bind>
+<opcode="phi(47) " fcode="phi"/>
+<opset="hw_output_s0_x_v32_a/5 "/>
+</bind>
+</comp>
+
+<comp id="221" class="1004" name="icmp_ln391_fu_221">
+<pin_list>
+<pin id="222" dir="0" index="0" bw="7" slack="0"/>
+<pin id="223" dir="0" index="1" bw="7" slack="0"/>
+<pin id="224" dir="1" index="2" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln391/2 "/>
+</bind>
+</comp>
+
+<comp id="227" class="1004" name="c3_fu_227">
+<pin_list>
+<pin id="228" dir="0" index="0" bw="7" slack="0"/>
+<pin id="229" dir="0" index="1" bw="1" slack="0"/>
+<pin id="230" dir="1" index="2" bw="7" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="c3/2 "/>
+</bind>
+</comp>
+
+<comp id="233" class="1004" name="tmp_2_fu_233">
+<pin_list>
+<pin id="234" dir="0" index="0" bw="13" slack="0"/>
+<pin id="235" dir="0" index="1" bw="7" slack="0"/>
+<pin id="236" dir="0" index="2" bw="1" slack="0"/>
+<pin id="237" dir="1" index="3" bw="13" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="tmp_2/2 "/>
+</bind>
+</comp>
+
+<comp id="241" class="1004" name="zext_ln392_fu_241">
+<pin_list>
+<pin id="242" dir="0" index="0" bw="13" slack="0"/>
+<pin id="243" dir="1" index="1" bw="14" slack="1"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln392/2 "/>
+</bind>
+</comp>
+
+<comp id="245" class="1004" name="icmp_ln392_fu_245">
+<pin_list>
+<pin id="246" dir="0" index="0" bw="7" slack="0"/>
+<pin id="247" dir="0" index="1" bw="7" slack="0"/>
+<pin id="248" dir="1" index="2" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln392/3 "/>
+</bind>
+</comp>
+
+<comp id="251" class="1004" name="c5_fu_251">
+<pin_list>
+<pin id="252" dir="0" index="0" bw="7" slack="0"/>
+<pin id="253" dir="0" index="1" bw="1" slack="0"/>
+<pin id="254" dir="1" index="2" bw="7" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="c5/3 "/>
+</bind>
+</comp>
+
+<comp id="257" class="1004" name="zext_ln321_fu_257">
+<pin_list>
+<pin id="258" dir="0" index="0" bw="7" slack="0"/>
+<pin id="259" dir="1" index="1" bw="14" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln321/3 "/>
+</bind>
+</comp>
+
+<comp id="261" class="1004" name="add_ln321_fu_261">
+<pin_list>
+<pin id="262" dir="0" index="0" bw="13" slack="1"/>
+<pin id="263" dir="0" index="1" bw="7" slack="0"/>
+<pin id="264" dir="1" index="2" bw="14" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln321/3 "/>
+</bind>
+</comp>
+
+<comp id="266" class="1004" name="zext_ln321_1_fu_266">
+<pin_list>
+<pin id="267" dir="0" index="0" bw="14" slack="0"/>
+<pin id="268" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln321_1/3 "/>
+</bind>
+</comp>
+
+<comp id="271" class="1004" name="icmp_ln394_fu_271">
+<pin_list>
+<pin id="272" dir="0" index="0" bw="6" slack="0"/>
+<pin id="273" dir="0" index="1" bw="6" slack="0"/>
+<pin id="274" dir="1" index="2" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln394/4 "/>
+</bind>
+</comp>
+
+<comp id="277" class="1004" name="c3_1_fu_277">
+<pin_list>
+<pin id="278" dir="0" index="0" bw="6" slack="0"/>
+<pin id="279" dir="0" index="1" bw="1" slack="0"/>
+<pin id="280" dir="1" index="2" bw="6" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="c3_1/4 "/>
+</bind>
+</comp>
+
+<comp id="283" class="1004" name="add_ln142_fu_283">
+<pin_list>
+<pin id="284" dir="0" index="0" bw="6" slack="0"/>
+<pin id="285" dir="0" index="1" bw="3" slack="0"/>
+<pin id="286" dir="1" index="2" bw="6" slack="4"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln142/4 "/>
+</bind>
+</comp>
+
+<comp id="289" class="1004" name="icmp_ln395_fu_289">
+<pin_list>
+<pin id="290" dir="0" index="0" bw="6" slack="0"/>
+<pin id="291" dir="0" index="1" bw="6" slack="0"/>
+<pin id="292" dir="1" index="2" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="icmp(45) " fcode="icmp"/>
+<opset="icmp_ln395/5 "/>
+</bind>
+</comp>
+
+<comp id="295" class="1004" name="c5_1_fu_295">
+<pin_list>
+<pin id="296" dir="0" index="0" bw="6" slack="0"/>
+<pin id="297" dir="0" index="1" bw="1" slack="0"/>
+<pin id="298" dir="1" index="2" bw="6" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="c5_1/5 "/>
+</bind>
+</comp>
+
+<comp id="301" class="1004" name="tmp_3_fu_301">
+<pin_list>
+<pin id="302" dir="0" index="0" bw="12" slack="0"/>
+<pin id="303" dir="0" index="1" bw="6" slack="1"/>
+<pin id="304" dir="0" index="2" bw="6" slack="0"/>
+<pin id="305" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="tmp_3/5 "/>
+</bind>
+</comp>
+
+<comp id="309" class="1004" name="zext_ln201_fu_309">
+<pin_list>
+<pin id="310" dir="0" index="0" bw="12" slack="0"/>
+<pin id="311" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln201/5 "/>
+</bind>
+</comp>
+
+<comp id="314" class="1004" name="tmp_6_fu_314">
+<pin_list>
+<pin id="315" dir="0" index="0" bw="12" slack="0"/>
+<pin id="316" dir="0" index="1" bw="6" slack="2"/>
+<pin id="317" dir="0" index="2" bw="6" slack="1"/>
+<pin id="318" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="tmp_6/6 "/>
+</bind>
+</comp>
+
+<comp id="321" class="1004" name="zext_ln201_3_fu_321">
+<pin_list>
+<pin id="322" dir="0" index="0" bw="12" slack="0"/>
+<pin id="323" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln201_3/6 "/>
+</bind>
+</comp>
+
+<comp id="326" class="1004" name="add_ln187_fu_326">
+<pin_list>
+<pin id="327" dir="0" index="0" bw="3" slack="0"/>
+<pin id="328" dir="0" index="1" bw="6" slack="1"/>
+<pin id="329" dir="1" index="2" bw="6" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln187/6 "/>
+</bind>
+</comp>
+
+<comp id="332" class="1004" name="tmp_9_fu_332">
+<pin_list>
+<pin id="333" dir="0" index="0" bw="12" slack="0"/>
+<pin id="334" dir="0" index="1" bw="6" slack="2"/>
+<pin id="335" dir="0" index="2" bw="6" slack="0"/>
+<pin id="336" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="tmp_9/6 "/>
+</bind>
+</comp>
+
+<comp id="340" class="1004" name="zext_ln201_6_fu_340">
+<pin_list>
+<pin id="341" dir="0" index="0" bw="12" slack="0"/>
+<pin id="342" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln201_6/6 "/>
+</bind>
+</comp>
+
+<comp id="345" class="1004" name="tmp_4_fu_345">
+<pin_list>
+<pin id="346" dir="0" index="0" bw="12" slack="0"/>
+<pin id="347" dir="0" index="1" bw="6" slack="3"/>
+<pin id="348" dir="0" index="2" bw="6" slack="2"/>
+<pin id="349" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="tmp_4/7 "/>
+</bind>
+</comp>
+
+<comp id="352" class="1004" name="zext_ln201_1_fu_352">
+<pin_list>
+<pin id="353" dir="0" index="0" bw="12" slack="0"/>
+<pin id="354" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln201_1/7 "/>
+</bind>
+</comp>
+
+<comp id="357" class="1004" name="tmp_7_fu_357">
+<pin_list>
+<pin id="358" dir="0" index="0" bw="12" slack="0"/>
+<pin id="359" dir="0" index="1" bw="6" slack="3"/>
+<pin id="360" dir="0" index="2" bw="6" slack="2"/>
+<pin id="361" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="tmp_7/7 "/>
+</bind>
+</comp>
+
+<comp id="363" class="1004" name="zext_ln201_4_fu_363">
+<pin_list>
+<pin id="364" dir="0" index="0" bw="12" slack="0"/>
+<pin id="365" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln201_4/7 "/>
+</bind>
+</comp>
+
+<comp id="368" class="1004" name="empty_11_fu_368">
+<pin_list>
+<pin id="369" dir="0" index="0" bw="16" slack="0"/>
+<pin id="370" dir="1" index="1" bw="14" slack="2"/>
+</pin_list>
+<bind>
+<opcode="trunc(33) " fcode="trunc"/>
+<opset="empty_11/7 "/>
+</bind>
+</comp>
+
+<comp id="372" class="1004" name="tmp_5_fu_372">
+<pin_list>
+<pin id="373" dir="0" index="0" bw="12" slack="0"/>
+<pin id="374" dir="0" index="1" bw="6" slack="4"/>
+<pin id="375" dir="0" index="2" bw="6" slack="3"/>
+<pin id="376" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="tmp_5/8 "/>
+</bind>
+</comp>
+
+<comp id="379" class="1004" name="zext_ln201_2_fu_379">
+<pin_list>
+<pin id="380" dir="0" index="0" bw="12" slack="0"/>
+<pin id="381" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln201_2/8 "/>
+</bind>
+</comp>
+
+<comp id="384" class="1004" name="tmp_s_fu_384">
+<pin_list>
+<pin id="385" dir="0" index="0" bw="12" slack="0"/>
+<pin id="386" dir="0" index="1" bw="6" slack="4"/>
+<pin id="387" dir="0" index="2" bw="6" slack="2"/>
+<pin id="388" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="tmp_s/8 "/>
+</bind>
+</comp>
+
+<comp id="390" class="1004" name="zext_ln201_7_fu_390">
+<pin_list>
+<pin id="391" dir="0" index="0" bw="12" slack="0"/>
+<pin id="392" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln201_7/8 "/>
+</bind>
+</comp>
+
+<comp id="395" class="1004" name="shl_ln40_fu_395">
+<pin_list>
+<pin id="396" dir="0" index="0" bw="16" slack="0"/>
+<pin id="397" dir="0" index="1" bw="3" slack="0"/>
+<pin id="398" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="shl(20) " fcode="shl"/>
+<opset="shl_ln40/8 "/>
+</bind>
+</comp>
+
+<comp id="401" class="1004" name="p_267_fu_401">
+<pin_list>
+<pin id="402" dir="0" index="0" bw="16" slack="0"/>
+<pin id="403" dir="0" index="1" bw="16" slack="0"/>
+<pin id="404" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sub(10) " fcode="sub"/>
+<opset="p_267/8 "/>
+</bind>
+</comp>
+
+<comp id="407" class="1004" name="tmp_8_fu_407">
+<pin_list>
+<pin id="408" dir="0" index="0" bw="12" slack="0"/>
+<pin id="409" dir="0" index="1" bw="6" slack="5"/>
+<pin id="410" dir="0" index="2" bw="6" slack="4"/>
+<pin id="411" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="tmp_8/9 "/>
+</bind>
+</comp>
+
+<comp id="413" class="1004" name="zext_ln201_5_fu_413">
+<pin_list>
+<pin id="414" dir="0" index="0" bw="12" slack="0"/>
+<pin id="415" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln201_5/9 "/>
+</bind>
+</comp>
+
+<comp id="418" class="1004" name="tmp_1_fu_418">
+<pin_list>
+<pin id="419" dir="0" index="0" bw="12" slack="0"/>
+<pin id="420" dir="0" index="1" bw="6" slack="5"/>
+<pin id="421" dir="0" index="2" bw="6" slack="3"/>
+<pin id="422" dir="1" index="3" bw="12" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="tmp_1/9 "/>
+</bind>
+</comp>
+
+<comp id="424" class="1004" name="zext_ln201_8_fu_424">
+<pin_list>
+<pin id="425" dir="0" index="0" bw="12" slack="0"/>
+<pin id="426" dir="1" index="1" bw="64" slack="0"/>
+</pin_list>
+<bind>
+<opcode="zext(34) " fcode="zext"/>
+<opset="zext_ln201_8/9 "/>
+</bind>
+</comp>
+
+<comp id="429" class="1004" name="shl_ln34_fu_429">
+<pin_list>
+<pin id="430" dir="0" index="0" bw="16" slack="3"/>
+<pin id="431" dir="0" index="1" bw="4" slack="0"/>
+<pin id="432" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="shl(20) " fcode="shl"/>
+<opset="shl_ln34/9 "/>
+</bind>
+</comp>
+
+<comp id="434" class="1004" name="shl_ln38_fu_434">
+<pin_list>
+<pin id="435" dir="0" index="0" bw="16" slack="2"/>
+<pin id="436" dir="0" index="1" bw="3" slack="0"/>
+<pin id="437" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="shl(20) " fcode="shl"/>
+<opset="shl_ln38/9 "/>
+</bind>
+</comp>
+
+<comp id="439" class="1004" name="shl_ln38_1_fu_439">
+<pin_list>
+<pin id="440" dir="0" index="0" bw="16" slack="2"/>
+<pin id="441" dir="0" index="1" bw="1" slack="0"/>
+<pin id="442" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="shl(20) " fcode="shl"/>
+<opset="shl_ln38_1/9 "/>
+</bind>
+</comp>
+
+<comp id="444" class="1004" name="p_265_fu_444">
+<pin_list>
+<pin id="445" dir="0" index="0" bw="16" slack="0"/>
+<pin id="446" dir="0" index="1" bw="16" slack="0"/>
+<pin id="447" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sub(10) " fcode="sub"/>
+<opset="p_265/9 "/>
+</bind>
+</comp>
+
+<comp id="450" class="1004" name="shl_ln45_fu_450">
+<pin_list>
+<pin id="451" dir="0" index="0" bw="16" slack="0"/>
+<pin id="452" dir="0" index="1" bw="3" slack="0"/>
+<pin id="453" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="shl(20) " fcode="shl"/>
+<opset="shl_ln45/9 "/>
+</bind>
+</comp>
+
+<comp id="456" class="1004" name="empty_10_fu_456">
+<pin_list>
+<pin id="457" dir="0" index="0" bw="16" slack="0"/>
+<pin id="458" dir="1" index="1" bw="14" slack="0"/>
+</pin_list>
+<bind>
+<opcode="trunc(33) " fcode="trunc"/>
+<opset="empty_10/9 "/>
+</bind>
+</comp>
+
+<comp id="460" class="1004" name="tmp_i231_fu_460">
+<pin_list>
+<pin id="461" dir="0" index="0" bw="14" slack="0"/>
+<pin id="462" dir="0" index="1" bw="14" slack="2"/>
+<pin id="463" dir="1" index="2" bw="14" slack="2"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="tmp_i231/9 "/>
+</bind>
+</comp>
+
+<comp id="465" class="1004" name="add_ln58_fu_465">
+<pin_list>
+<pin id="466" dir="0" index="0" bw="16" slack="0"/>
+<pin id="467" dir="0" index="1" bw="16" slack="3"/>
+<pin id="468" dir="1" index="2" bw="16" slack="2"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln58/9 "/>
+</bind>
+</comp>
+
+<comp id="470" class="1004" name="add_ln58_1_fu_470">
+<pin_list>
+<pin id="471" dir="0" index="0" bw="16" slack="0"/>
+<pin id="472" dir="0" index="1" bw="16" slack="0"/>
+<pin id="473" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln58_1/9 "/>
+</bind>
+</comp>
+
+<comp id="476" class="1004" name="add_ln58_2_fu_476">
+<pin_list>
+<pin id="477" dir="0" index="0" bw="16" slack="0"/>
+<pin id="478" dir="0" index="1" bw="16" slack="0"/>
+<pin id="479" dir="1" index="2" bw="16" slack="2"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln58_2/9 "/>
+</bind>
+</comp>
+
+<comp id="482" class="1004" name="shl_ln47_fu_482">
+<pin_list>
+<pin id="483" dir="0" index="0" bw="16" slack="0"/>
+<pin id="484" dir="0" index="1" bw="4" slack="0"/>
+<pin id="485" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="shl(20) " fcode="shl"/>
+<opset="shl_ln47/10 "/>
+</bind>
+</comp>
+
+<comp id="488" class="1004" name="p_274_fu_488">
+<pin_list>
+<pin id="489" dir="0" index="0" bw="16" slack="0"/>
+<pin id="490" dir="0" index="1" bw="16" slack="0"/>
+<pin id="491" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="sub(10) " fcode="sub"/>
+<opset="p_274/10 "/>
+</bind>
+</comp>
+
+<comp id="494" class="1004" name="tmp1_i_fu_494">
+<pin_list>
+<pin id="495" dir="0" index="0" bw="16" slack="0"/>
+<pin id="496" dir="0" index="1" bw="14" slack="2"/>
+<pin id="497" dir="0" index="2" bw="1" slack="0"/>
+<pin id="498" dir="1" index="3" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
+<opset="tmp1_i/11 "/>
+</bind>
+</comp>
+
+<comp id="501" class="1004" name="add_ln58_3_fu_501">
+<pin_list>
+<pin id="502" dir="0" index="0" bw="16" slack="2"/>
+<pin id="503" dir="0" index="1" bw="16" slack="2"/>
+<pin id="504" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln58_3/11 "/>
+</bind>
+</comp>
+
+<comp id="505" class="1004" name="add_ln58_6_fu_505">
+<pin_list>
+<pin id="506" dir="0" index="0" bw="16" slack="1"/>
+<pin id="507" dir="0" index="1" bw="16" slack="0"/>
+<pin id="508" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln58_6/11 "/>
+</bind>
+</comp>
+
+<comp id="510" class="1004" name="add_ln58_7_fu_510">
+<pin_list>
+<pin id="511" dir="0" index="0" bw="16" slack="0"/>
+<pin id="512" dir="0" index="1" bw="16" slack="3"/>
+<pin id="513" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="add_ln58_7/11 "/>
+</bind>
+</comp>
+
+<comp id="515" class="1004" name="p_285_fu_515">
+<pin_list>
+<pin id="516" dir="0" index="0" bw="16" slack="0"/>
+<pin id="517" dir="0" index="1" bw="16" slack="0"/>
+<pin id="518" dir="1" index="2" bw="16" slack="0"/>
+</pin_list>
+<bind>
+<opcode="add(8) " fcode="add"/>
+<opset="p_285/11 "/>
+</bind>
+</comp>
+
+<comp id="522" class="1007" name="grp_fu_522">
+<pin_list>
+<pin id="523" dir="0" index="0" bw="16" slack="0"/>
+<pin id="524" dir="0" index="1" bw="16" slack="0"/>
+<pin id="525" dir="0" index="2" bw="16" slack="0"/>
+<pin id="526" dir="1" index="3" bw="16" slack="3"/>
+</pin_list>
+<bind>
+<opcode="muladd(1172) " fcode="muladd"/>
+<opset="p_269/8 add_ln58_4/8 "/>
+</bind>
+</comp>
+
+<comp id="530" class="1007" name="grp_fu_530">
+<pin_list>
+<pin id="531" dir="0" index="0" bw="16" slack="0"/>
+<pin id="532" dir="0" index="1" bw="16" slack="0"/>
+<pin id="533" dir="0" index="2" bw="16" slack="0"/>
+<pin id="534" dir="1" index="3" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opcode="muladd(1172) " fcode="muladd"/>
+<opset="p_276/10 add_ln58_5/10 "/>
+</bind>
+</comp>
+
+<comp id="541" class="1005" name="c3_reg_541">
+<pin_list>
+<pin id="542" dir="0" index="0" bw="7" slack="0"/>
+<pin id="543" dir="1" index="1" bw="7" slack="0"/>
+</pin_list>
+<bind>
+<opset="c3 "/>
+</bind>
+</comp>
+
+<comp id="546" class="1005" name="zext_ln392_reg_546">
+<pin_list>
+<pin id="547" dir="0" index="0" bw="14" slack="1"/>
+<pin id="548" dir="1" index="1" bw="14" slack="1"/>
+</pin_list>
+<bind>
+<opset="zext_ln392 "/>
+</bind>
+</comp>
+
+<comp id="554" class="1005" name="c5_reg_554">
+<pin_list>
+<pin id="555" dir="0" index="0" bw="7" slack="0"/>
+<pin id="556" dir="1" index="1" bw="7" slack="0"/>
+</pin_list>
+<bind>
+<opset="c5 "/>
+</bind>
+</comp>
+
+<comp id="562" class="1005" name="c3_1_reg_562">
+<pin_list>
+<pin id="563" dir="0" index="0" bw="6" slack="0"/>
+<pin id="564" dir="1" index="1" bw="6" slack="0"/>
+</pin_list>
+<bind>
+<opset="c3_1 "/>
+</bind>
+</comp>
+
+<comp id="570" class="1005" name="add_ln142_reg_570">
+<pin_list>
+<pin id="571" dir="0" index="0" bw="6" slack="4"/>
+<pin id="572" dir="1" index="1" bw="6" slack="4"/>
+</pin_list>
+<bind>
+<opset="add_ln142 "/>
+</bind>
+</comp>
+
+<comp id="580" class="1005" name="c5_1_reg_580">
+<pin_list>
+<pin id="581" dir="0" index="0" bw="6" slack="0"/>
+<pin id="582" dir="1" index="1" bw="6" slack="0"/>
+</pin_list>
+<bind>
+<opset="c5_1 "/>
+</bind>
+</comp>
+
+<comp id="588" class="1005" name="hw_input_global_wrap_4_reg_588">
+<pin_list>
+<pin id="589" dir="0" index="0" bw="12" slack="1"/>
+<pin id="590" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="hw_input_global_wrap_4 "/>
+</bind>
+</comp>
+
+<comp id="593" class="1005" name="hw_input_global_wrap_7_reg_593">
+<pin_list>
+<pin id="594" dir="0" index="0" bw="16" slack="3"/>
+<pin id="595" dir="1" index="1" bw="16" slack="3"/>
+</pin_list>
+<bind>
+<opset="hw_input_global_wrap_7 "/>
+</bind>
+</comp>
+
+<comp id="599" class="1005" name="hw_input_global_wrap_8_reg_599">
+<pin_list>
+<pin id="600" dir="0" index="0" bw="12" slack="1"/>
+<pin id="601" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="hw_input_global_wrap_8 "/>
+</bind>
+</comp>
+
+<comp id="604" class="1005" name="add_ln187_reg_604">
+<pin_list>
+<pin id="605" dir="0" index="0" bw="6" slack="2"/>
+<pin id="606" dir="1" index="1" bw="6" slack="2"/>
+</pin_list>
+<bind>
+<opset="add_ln187 "/>
+</bind>
+</comp>
+
+<comp id="610" class="1005" name="hw_input_global_wrap_12_reg_610">
+<pin_list>
+<pin id="611" dir="0" index="0" bw="12" slack="1"/>
+<pin id="612" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="hw_input_global_wrap_12 "/>
+</bind>
+</comp>
+
+<comp id="615" class="1005" name="hw_input_global_wrap_5_reg_615">
+<pin_list>
+<pin id="616" dir="0" index="0" bw="12" slack="1"/>
+<pin id="617" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="hw_input_global_wrap_5 "/>
+</bind>
+</comp>
+
+<comp id="620" class="1005" name="hw_input_global_wrap_9_reg_620">
+<pin_list>
+<pin id="621" dir="0" index="0" bw="12" slack="1"/>
+<pin id="622" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="hw_input_global_wrap_9 "/>
+</bind>
+</comp>
+
+<comp id="625" class="1005" name="hw_input_global_wrap_15_reg_625">
+<pin_list>
+<pin id="626" dir="0" index="0" bw="16" slack="2"/>
+<pin id="627" dir="1" index="1" bw="16" slack="2"/>
+</pin_list>
+<bind>
+<opset="hw_input_global_wrap_15 "/>
+</bind>
+</comp>
+
+<comp id="631" class="1005" name="empty_11_reg_631">
+<pin_list>
+<pin id="632" dir="0" index="0" bw="14" slack="2"/>
+<pin id="633" dir="1" index="1" bw="14" slack="2"/>
+</pin_list>
+<bind>
+<opset="empty_11 "/>
+</bind>
+</comp>
+
+<comp id="636" class="1005" name="hw_input_global_wrap_6_reg_636">
+<pin_list>
+<pin id="637" dir="0" index="0" bw="12" slack="1"/>
+<pin id="638" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="hw_input_global_wrap_6 "/>
+</bind>
+</comp>
+
+<comp id="641" class="1005" name="hw_input_global_wrap_13_reg_641">
+<pin_list>
+<pin id="642" dir="0" index="0" bw="12" slack="1"/>
+<pin id="643" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="hw_input_global_wrap_13 "/>
+</bind>
+</comp>
+
+<comp id="646" class="1005" name="add_ln58_4_reg_646">
+<pin_list>
+<pin id="647" dir="0" index="0" bw="16" slack="3"/>
+<pin id="648" dir="1" index="1" bw="16" slack="3"/>
+</pin_list>
+<bind>
+<opset="add_ln58_4 "/>
+</bind>
+</comp>
+
+<comp id="651" class="1005" name="hw_input_global_wrap_10_reg_651">
+<pin_list>
+<pin id="652" dir="0" index="0" bw="12" slack="1"/>
+<pin id="653" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="hw_input_global_wrap_10 "/>
+</bind>
+</comp>
+
+<comp id="656" class="1005" name="hw_input_global_wrap_14_reg_656">
+<pin_list>
+<pin id="657" dir="0" index="0" bw="12" slack="1"/>
+<pin id="658" dir="1" index="1" bw="12" slack="1"/>
+</pin_list>
+<bind>
+<opset="hw_input_global_wrap_14 "/>
+</bind>
+</comp>
+
+<comp id="661" class="1005" name="tmp_i231_reg_661">
+<pin_list>
+<pin id="662" dir="0" index="0" bw="14" slack="2"/>
+<pin id="663" dir="1" index="1" bw="14" slack="2"/>
+</pin_list>
+<bind>
+<opset="tmp_i231 "/>
+</bind>
+</comp>
+
+<comp id="666" class="1005" name="add_ln58_reg_666">
+<pin_list>
+<pin id="667" dir="0" index="0" bw="16" slack="2"/>
+<pin id="668" dir="1" index="1" bw="16" slack="2"/>
+</pin_list>
+<bind>
+<opset="add_ln58 "/>
+</bind>
+</comp>
+
+<comp id="671" class="1005" name="add_ln58_2_reg_671">
+<pin_list>
+<pin id="672" dir="0" index="0" bw="16" slack="2"/>
+<pin id="673" dir="1" index="1" bw="16" slack="2"/>
+</pin_list>
+<bind>
+<opset="add_ln58_2 "/>
+</bind>
+</comp>
+
+<comp id="676" class="1005" name="add_ln58_5_reg_676">
+<pin_list>
+<pin id="677" dir="0" index="0" bw="16" slack="1"/>
+<pin id="678" dir="1" index="1" bw="16" slack="1"/>
+</pin_list>
+<bind>
+<opset="add_ln58_5 "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="73"><net_src comp="18" pin="0"/><net_sink comp="70" pin=0"/></net>
+
+<net id="78"><net_src comp="34" pin="0"/><net_sink comp="74" pin=0"/></net>
+
+<net id="79"><net_src comp="0" pin="0"/><net_sink comp="74" pin=1"/></net>
+
+<net id="85"><net_src comp="64" pin="0"/><net_sink comp="80" pin=0"/></net>
+
+<net id="86"><net_src comp="2" pin="0"/><net_sink comp="80" pin=1"/></net>
+
+<net id="92"><net_src comp="66" pin="0"/><net_sink comp="87" pin=0"/></net>
+
+<net id="93"><net_src comp="4" pin="0"/><net_sink comp="87" pin=1"/></net>
+
+<net id="94"><net_src comp="68" pin="0"/><net_sink comp="87" pin=2"/></net>
+
+<net id="100"><net_src comp="36" pin="0"/><net_sink comp="95" pin=1"/></net>
+
+<net id="106"><net_src comp="74" pin="2"/><net_sink comp="101" pin=1"/></net>
+
+<net id="107"><net_src comp="95" pin="3"/><net_sink comp="101" pin=0"/></net>
+
+<net id="113"><net_src comp="36" pin="0"/><net_sink comp="108" pin=1"/></net>
+
+<net id="114"><net_src comp="108" pin="3"/><net_sink comp="101" pin=0"/></net>
+
+<net id="120"><net_src comp="36" pin="0"/><net_sink comp="115" pin=1"/></net>
+
+<net id="121"><net_src comp="115" pin="3"/><net_sink comp="101" pin=0"/></net>
+
+<net id="127"><net_src comp="36" pin="0"/><net_sink comp="122" pin=1"/></net>
+
+<net id="132"><net_src comp="122" pin="3"/><net_sink comp="101" pin=2"/></net>
+
+<net id="138"><net_src comp="36" pin="0"/><net_sink comp="133" pin=1"/></net>
+
+<net id="144"><net_src comp="36" pin="0"/><net_sink comp="139" pin=1"/></net>
+
+<net id="145"><net_src comp="133" pin="3"/><net_sink comp="101" pin=2"/></net>
+
+<net id="146"><net_src comp="139" pin="3"/><net_sink comp="101" pin=0"/></net>
+
+<net id="152"><net_src comp="36" pin="0"/><net_sink comp="147" pin=1"/></net>
+
+<net id="158"><net_src comp="36" pin="0"/><net_sink comp="153" pin=1"/></net>
+
+<net id="159"><net_src comp="153" pin="3"/><net_sink comp="101" pin=2"/></net>
+
+<net id="160"><net_src comp="147" pin="3"/><net_sink comp="101" pin=0"/></net>
+
+<net id="166"><net_src comp="36" pin="0"/><net_sink comp="161" pin=1"/></net>
+
+<net id="172"><net_src comp="36" pin="0"/><net_sink comp="167" pin=1"/></net>
+
+<net id="173"><net_src comp="167" pin="3"/><net_sink comp="101" pin=2"/></net>
+
+<net id="174"><net_src comp="161" pin="3"/><net_sink comp="101" pin=0"/></net>
+
+<net id="178"><net_src comp="20" pin="0"/><net_sink comp="175" pin=0"/></net>
+
+<net id="185"><net_src comp="175" pin="1"/><net_sink comp="179" pin=0"/></net>
+
+<net id="189"><net_src comp="20" pin="0"/><net_sink comp="186" pin=0"/></net>
+
+<net id="196"><net_src comp="186" pin="1"/><net_sink comp="190" pin=2"/></net>
+
+<net id="200"><net_src comp="32" pin="0"/><net_sink comp="197" pin=0"/></net>
+
+<net id="207"><net_src comp="197" pin="1"/><net_sink comp="201" pin=2"/></net>
+
+<net id="208"><net_src comp="201" pin="4"/><net_sink comp="197" pin=0"/></net>
+
+<net id="212"><net_src comp="32" pin="0"/><net_sink comp="209" pin=0"/></net>
+
+<net id="219"><net_src comp="209" pin="1"/><net_sink comp="213" pin=2"/></net>
+
+<net id="220"><net_src comp="213" pin="4"/><net_sink comp="209" pin=0"/></net>
+
+<net id="225"><net_src comp="179" pin="4"/><net_sink comp="221" pin=0"/></net>
+
+<net id="226"><net_src comp="22" pin="0"/><net_sink comp="221" pin=1"/></net>
+
+<net id="231"><net_src comp="179" pin="4"/><net_sink comp="227" pin=0"/></net>
+
+<net id="232"><net_src comp="28" pin="0"/><net_sink comp="227" pin=1"/></net>
+
+<net id="238"><net_src comp="30" pin="0"/><net_sink comp="233" pin=0"/></net>
+
+<net id="239"><net_src comp="179" pin="4"/><net_sink comp="233" pin=1"/></net>
+
+<net id="240"><net_src comp="32" pin="0"/><net_sink comp="233" pin=2"/></net>
+
+<net id="244"><net_src comp="233" pin="3"/><net_sink comp="241" pin=0"/></net>
+
+<net id="249"><net_src comp="190" pin="4"/><net_sink comp="245" pin=0"/></net>
+
+<net id="250"><net_src comp="22" pin="0"/><net_sink comp="245" pin=1"/></net>
+
+<net id="255"><net_src comp="190" pin="4"/><net_sink comp="251" pin=0"/></net>
+
+<net id="256"><net_src comp="28" pin="0"/><net_sink comp="251" pin=1"/></net>
+
+<net id="260"><net_src comp="190" pin="4"/><net_sink comp="257" pin=0"/></net>
+
+<net id="265"><net_src comp="257" pin="1"/><net_sink comp="261" pin=1"/></net>
+
+<net id="269"><net_src comp="261" pin="2"/><net_sink comp="266" pin=0"/></net>
+
+<net id="270"><net_src comp="266" pin="1"/><net_sink comp="95" pin=2"/></net>
+
+<net id="275"><net_src comp="201" pin="4"/><net_sink comp="271" pin=0"/></net>
+
+<net id="276"><net_src comp="38" pin="0"/><net_sink comp="271" pin=1"/></net>
+
+<net id="281"><net_src comp="201" pin="4"/><net_sink comp="277" pin=0"/></net>
+
+<net id="282"><net_src comp="42" pin="0"/><net_sink comp="277" pin=1"/></net>
+
+<net id="287"><net_src comp="201" pin="4"/><net_sink comp="283" pin=0"/></net>
+
+<net id="288"><net_src comp="44" pin="0"/><net_sink comp="283" pin=1"/></net>
+
+<net id="293"><net_src comp="213" pin="4"/><net_sink comp="289" pin=0"/></net>
+
+<net id="294"><net_src comp="38" pin="0"/><net_sink comp="289" pin=1"/></net>
+
+<net id="299"><net_src comp="213" pin="4"/><net_sink comp="295" pin=0"/></net>
+
+<net id="300"><net_src comp="42" pin="0"/><net_sink comp="295" pin=1"/></net>
+
+<net id="306"><net_src comp="46" pin="0"/><net_sink comp="301" pin=0"/></net>
+
+<net id="307"><net_src comp="197" pin="1"/><net_sink comp="301" pin=1"/></net>
+
+<net id="308"><net_src comp="213" pin="4"/><net_sink comp="301" pin=2"/></net>
+
+<net id="312"><net_src comp="301" pin="3"/><net_sink comp="309" pin=0"/></net>
+
+<net id="313"><net_src comp="309" pin="1"/><net_sink comp="108" pin=2"/></net>
+
+<net id="319"><net_src comp="46" pin="0"/><net_sink comp="314" pin=0"/></net>
+
+<net id="320"><net_src comp="197" pin="1"/><net_sink comp="314" pin=1"/></net>
+
+<net id="324"><net_src comp="314" pin="3"/><net_sink comp="321" pin=0"/></net>
+
+<net id="325"><net_src comp="321" pin="1"/><net_sink comp="115" pin=2"/></net>
+
+<net id="330"><net_src comp="44" pin="0"/><net_sink comp="326" pin=0"/></net>
+
+<net id="331"><net_src comp="209" pin="1"/><net_sink comp="326" pin=1"/></net>
+
+<net id="337"><net_src comp="46" pin="0"/><net_sink comp="332" pin=0"/></net>
+
+<net id="338"><net_src comp="197" pin="1"/><net_sink comp="332" pin=1"/></net>
+
+<net id="339"><net_src comp="326" pin="2"/><net_sink comp="332" pin=2"/></net>
+
+<net id="343"><net_src comp="332" pin="3"/><net_sink comp="340" pin=0"/></net>
+
+<net id="344"><net_src comp="340" pin="1"/><net_sink comp="122" pin=2"/></net>
+
+<net id="350"><net_src comp="46" pin="0"/><net_sink comp="345" pin=0"/></net>
+
+<net id="351"><net_src comp="209" pin="1"/><net_sink comp="345" pin=2"/></net>
+
+<net id="355"><net_src comp="345" pin="3"/><net_sink comp="352" pin=0"/></net>
+
+<net id="356"><net_src comp="352" pin="1"/><net_sink comp="133" pin=2"/></net>
+
+<net id="362"><net_src comp="46" pin="0"/><net_sink comp="357" pin=0"/></net>
+
+<net id="366"><net_src comp="357" pin="3"/><net_sink comp="363" pin=0"/></net>
+
+<net id="367"><net_src comp="363" pin="1"/><net_sink comp="139" pin=2"/></net>
+
+<net id="371"><net_src comp="101" pin="3"/><net_sink comp="368" pin=0"/></net>
+
+<net id="377"><net_src comp="46" pin="0"/><net_sink comp="372" pin=0"/></net>
+
+<net id="378"><net_src comp="209" pin="1"/><net_sink comp="372" pin=2"/></net>
+
+<net id="382"><net_src comp="372" pin="3"/><net_sink comp="379" pin=0"/></net>
+
+<net id="383"><net_src comp="379" pin="1"/><net_sink comp="147" pin=2"/></net>
+
+<net id="389"><net_src comp="46" pin="0"/><net_sink comp="384" pin=0"/></net>
+
+<net id="393"><net_src comp="384" pin="3"/><net_sink comp="390" pin=0"/></net>
+
+<net id="394"><net_src comp="390" pin="1"/><net_sink comp="153" pin=2"/></net>
+
+<net id="399"><net_src comp="101" pin="7"/><net_sink comp="395" pin=0"/></net>
+
+<net id="400"><net_src comp="48" pin="0"/><net_sink comp="395" pin=1"/></net>
+
+<net id="405"><net_src comp="395" pin="2"/><net_sink comp="401" pin=0"/></net>
+
+<net id="406"><net_src comp="101" pin="7"/><net_sink comp="401" pin=1"/></net>
+
+<net id="412"><net_src comp="46" pin="0"/><net_sink comp="407" pin=0"/></net>
+
+<net id="416"><net_src comp="407" pin="3"/><net_sink comp="413" pin=0"/></net>
+
+<net id="417"><net_src comp="413" pin="1"/><net_sink comp="161" pin=2"/></net>
+
+<net id="423"><net_src comp="46" pin="0"/><net_sink comp="418" pin=0"/></net>
+
+<net id="427"><net_src comp="418" pin="3"/><net_sink comp="424" pin=0"/></net>
+
+<net id="428"><net_src comp="424" pin="1"/><net_sink comp="167" pin=2"/></net>
+
+<net id="433"><net_src comp="52" pin="0"/><net_sink comp="429" pin=1"/></net>
+
+<net id="438"><net_src comp="48" pin="0"/><net_sink comp="434" pin=1"/></net>
+
+<net id="443"><net_src comp="54" pin="0"/><net_sink comp="439" pin=1"/></net>
+
+<net id="448"><net_src comp="434" pin="2"/><net_sink comp="444" pin=0"/></net>
+
+<net id="449"><net_src comp="439" pin="2"/><net_sink comp="444" pin=1"/></net>
+
+<net id="454"><net_src comp="101" pin="3"/><net_sink comp="450" pin=0"/></net>
+
+<net id="455"><net_src comp="56" pin="0"/><net_sink comp="450" pin=1"/></net>
+
+<net id="459"><net_src comp="101" pin="7"/><net_sink comp="456" pin=0"/></net>
+
+<net id="464"><net_src comp="456" pin="1"/><net_sink comp="460" pin=0"/></net>
+
+<net id="469"><net_src comp="101" pin="3"/><net_sink comp="465" pin=0"/></net>
+
+<net id="474"><net_src comp="429" pin="2"/><net_sink comp="470" pin=0"/></net>
+
+<net id="475"><net_src comp="444" pin="2"/><net_sink comp="470" pin=1"/></net>
+
+<net id="480"><net_src comp="470" pin="2"/><net_sink comp="476" pin=0"/></net>
+
+<net id="481"><net_src comp="450" pin="2"/><net_sink comp="476" pin=1"/></net>
+
+<net id="486"><net_src comp="101" pin="7"/><net_sink comp="482" pin=0"/></net>
+
+<net id="487"><net_src comp="52" pin="0"/><net_sink comp="482" pin=1"/></net>
+
+<net id="492"><net_src comp="482" pin="2"/><net_sink comp="488" pin=0"/></net>
+
+<net id="493"><net_src comp="101" pin="7"/><net_sink comp="488" pin=1"/></net>
+
+<net id="499"><net_src comp="60" pin="0"/><net_sink comp="494" pin=0"/></net>
+
+<net id="500"><net_src comp="62" pin="0"/><net_sink comp="494" pin=2"/></net>
+
+<net id="509"><net_src comp="494" pin="3"/><net_sink comp="505" pin=1"/></net>
+
+<net id="514"><net_src comp="505" pin="2"/><net_sink comp="510" pin=0"/></net>
+
+<net id="519"><net_src comp="510" pin="2"/><net_sink comp="515" pin=0"/></net>
+
+<net id="520"><net_src comp="501" pin="2"/><net_sink comp="515" pin=1"/></net>
+
+<net id="521"><net_src comp="515" pin="2"/><net_sink comp="80" pin=2"/></net>
+
+<net id="527"><net_src comp="50" pin="0"/><net_sink comp="522" pin=0"/></net>
+
+<net id="528"><net_src comp="101" pin="3"/><net_sink comp="522" pin=1"/></net>
+
+<net id="529"><net_src comp="401" pin="2"/><net_sink comp="522" pin=2"/></net>
+
+<net id="535"><net_src comp="58" pin="0"/><net_sink comp="530" pin=0"/></net>
+
+<net id="536"><net_src comp="101" pin="3"/><net_sink comp="530" pin=1"/></net>
+
+<net id="537"><net_src comp="488" pin="2"/><net_sink comp="530" pin=2"/></net>
+
+<net id="544"><net_src comp="227" pin="2"/><net_sink comp="541" pin=0"/></net>
+
+<net id="545"><net_src comp="541" pin="1"/><net_sink comp="179" pin=2"/></net>
+
+<net id="549"><net_src comp="241" pin="1"/><net_sink comp="546" pin=0"/></net>
+
+<net id="550"><net_src comp="546" pin="1"/><net_sink comp="261" pin=0"/></net>
+
+<net id="557"><net_src comp="251" pin="2"/><net_sink comp="554" pin=0"/></net>
+
+<net id="558"><net_src comp="554" pin="1"/><net_sink comp="190" pin=0"/></net>
+
+<net id="565"><net_src comp="277" pin="2"/><net_sink comp="562" pin=0"/></net>
+
+<net id="566"><net_src comp="562" pin="1"/><net_sink comp="201" pin=0"/></net>
+
+<net id="567"><net_src comp="562" pin="1"/><net_sink comp="345" pin=1"/></net>
+
+<net id="568"><net_src comp="562" pin="1"/><net_sink comp="357" pin=1"/></net>
+
+<net id="569"><net_src comp="562" pin="1"/><net_sink comp="384" pin=1"/></net>
+
+<net id="573"><net_src comp="283" pin="2"/><net_sink comp="570" pin=0"/></net>
+
+<net id="574"><net_src comp="570" pin="1"/><net_sink comp="372" pin=1"/></net>
+
+<net id="575"><net_src comp="570" pin="1"/><net_sink comp="407" pin=1"/></net>
+
+<net id="576"><net_src comp="570" pin="1"/><net_sink comp="418" pin=1"/></net>
+
+<net id="583"><net_src comp="295" pin="2"/><net_sink comp="580" pin=0"/></net>
+
+<net id="584"><net_src comp="580" pin="1"/><net_sink comp="213" pin=0"/></net>
+
+<net id="585"><net_src comp="580" pin="1"/><net_sink comp="314" pin=2"/></net>
+
+<net id="586"><net_src comp="580" pin="1"/><net_sink comp="357" pin=2"/></net>
+
+<net id="587"><net_src comp="580" pin="1"/><net_sink comp="407" pin=2"/></net>
+
+<net id="591"><net_src comp="108" pin="3"/><net_sink comp="588" pin=0"/></net>
+
+<net id="592"><net_src comp="588" pin="1"/><net_sink comp="101" pin=0"/></net>
+
+<net id="596"><net_src comp="101" pin="3"/><net_sink comp="593" pin=0"/></net>
+
+<net id="597"><net_src comp="593" pin="1"/><net_sink comp="429" pin=0"/></net>
+
+<net id="598"><net_src comp="593" pin="1"/><net_sink comp="465" pin=1"/></net>
+
+<net id="602"><net_src comp="115" pin="3"/><net_sink comp="599" pin=0"/></net>
+
+<net id="603"><net_src comp="599" pin="1"/><net_sink comp="101" pin=0"/></net>
+
+<net id="607"><net_src comp="326" pin="2"/><net_sink comp="604" pin=0"/></net>
+
+<net id="608"><net_src comp="604" pin="1"/><net_sink comp="384" pin=2"/></net>
+
+<net id="609"><net_src comp="604" pin="1"/><net_sink comp="418" pin=2"/></net>
+
+<net id="613"><net_src comp="122" pin="3"/><net_sink comp="610" pin=0"/></net>
+
+<net id="614"><net_src comp="610" pin="1"/><net_sink comp="101" pin=2"/></net>
+
+<net id="618"><net_src comp="133" pin="3"/><net_sink comp="615" pin=0"/></net>
+
+<net id="619"><net_src comp="615" pin="1"/><net_sink comp="101" pin=2"/></net>
+
+<net id="623"><net_src comp="139" pin="3"/><net_sink comp="620" pin=0"/></net>
+
+<net id="624"><net_src comp="620" pin="1"/><net_sink comp="101" pin=0"/></net>
+
+<net id="628"><net_src comp="101" pin="7"/><net_sink comp="625" pin=0"/></net>
+
+<net id="629"><net_src comp="625" pin="1"/><net_sink comp="434" pin=0"/></net>
+
+<net id="630"><net_src comp="625" pin="1"/><net_sink comp="439" pin=0"/></net>
+
+<net id="634"><net_src comp="368" pin="1"/><net_sink comp="631" pin=0"/></net>
+
+<net id="635"><net_src comp="631" pin="1"/><net_sink comp="460" pin=1"/></net>
+
+<net id="639"><net_src comp="147" pin="3"/><net_sink comp="636" pin=0"/></net>
+
+<net id="640"><net_src comp="636" pin="1"/><net_sink comp="101" pin=0"/></net>
+
+<net id="644"><net_src comp="153" pin="3"/><net_sink comp="641" pin=0"/></net>
+
+<net id="645"><net_src comp="641" pin="1"/><net_sink comp="101" pin=2"/></net>
+
+<net id="649"><net_src comp="522" pin="3"/><net_sink comp="646" pin=0"/></net>
+
+<net id="650"><net_src comp="646" pin="1"/><net_sink comp="510" pin=1"/></net>
+
+<net id="654"><net_src comp="161" pin="3"/><net_sink comp="651" pin=0"/></net>
+
+<net id="655"><net_src comp="651" pin="1"/><net_sink comp="101" pin=0"/></net>
+
+<net id="659"><net_src comp="167" pin="3"/><net_sink comp="656" pin=0"/></net>
+
+<net id="660"><net_src comp="656" pin="1"/><net_sink comp="101" pin=2"/></net>
+
+<net id="664"><net_src comp="460" pin="2"/><net_sink comp="661" pin=0"/></net>
+
+<net id="665"><net_src comp="661" pin="1"/><net_sink comp="494" pin=1"/></net>
+
+<net id="669"><net_src comp="465" pin="2"/><net_sink comp="666" pin=0"/></net>
+
+<net id="670"><net_src comp="666" pin="1"/><net_sink comp="501" pin=1"/></net>
+
+<net id="674"><net_src comp="476" pin="2"/><net_sink comp="671" pin=0"/></net>
+
+<net id="675"><net_src comp="671" pin="1"/><net_sink comp="501" pin=0"/></net>
+
+<net id="679"><net_src comp="530" pin="3"/><net_sink comp="676" pin=0"/></net>
+
+<net id="680"><net_src comp="676" pin="1"/><net_sink comp="505" pin=0"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: hw_output_stencil_values_V_val_V | {11 }
+	Port: tlast_values_V_val_V | {11 }
+ - Input state : 
+	Port: unoptimized_conv_3_3 : hw_input_stencil_values_V_val_V | {3 }
+  - Chain level:
+	State 1
+	State 2
+		icmp_ln391 : 1
+		c3 : 1
+		br_ln391 : 2
+		tmp_2 : 1
+		zext_ln392 : 2
+	State 3
+		icmp_ln392 : 1
+		c5 : 1
+		br_ln392 : 2
+		zext_ln321 : 1
+		add_ln321 : 2
+		zext_ln321_1 : 3
+		hw_input_global_wrap_3 : 4
+		store_ln190 : 5
+	State 4
+		icmp_ln394 : 1
+		c3_1 : 1
+		br_ln394 : 2
+		add_ln142 : 1
+	State 5
+		icmp_ln395 : 1
+		c5_1 : 1
+		br_ln395 : 2
+		tmp_3 : 1
+		zext_ln201 : 2
+		hw_input_global_wrap_4 : 3
+		hw_input_global_wrap_7 : 4
+	State 6
+		zext_ln201_3 : 1
+		hw_input_global_wrap_8 : 2
+		hw_input_global_wrap_11 : 3
+		tmp_9 : 1
+		zext_ln201_6 : 2
+		hw_input_global_wrap_12 : 3
+		hw_input_global_wrap_15 : 4
+	State 7
+		zext_ln201_1 : 1
+		hw_input_global_wrap_5 : 2
+		zext_ln201_4 : 1
+		hw_input_global_wrap_9 : 2
+		hw_input_global_wrap_16 : 3
+		hw_input_global_wrap_17 : 3
+		empty_11 : 1
+	State 8
+		zext_ln201_2 : 1
+		hw_input_global_wrap_6 : 2
+		zext_ln201_7 : 1
+		hw_input_global_wrap_13 : 2
+		hw_input_global_wrap_18 : 3
+		hw_input_global_wrap_19 : 3
+		shl_ln40 : 1
+		p_267 : 1
+		p_269 : 1
+		add_ln58_4 : 2
+	State 9
+		zext_ln201_5 : 1
+		hw_input_global_wrap_10 : 2
+		zext_ln201_8 : 1
+		hw_input_global_wrap_14 : 2
+		hw_input_global_wrap_20 : 3
+		hw_input_global_wrap_21 : 3
+		shl_ln45 : 1
+		empty_10 : 1
+		tmp_i231 : 2
+		add_ln58 : 1
+		add_ln58_1 : 1
+		add_ln58_2 : 2
+	State 10
+		shl_ln47 : 1
+		p_274 : 1
+		p_276 : 1
+		add_ln58_5 : 2
+	State 11
+		add_ln58_6 : 1
+		add_ln58_7 : 2
+		p_285 : 3
+		write_ln377 : 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|-------------------------|---------|---------|---------|
+| Operation|     Functional Unit     |  DSP48E |    FF   |   LUT   |
+|----------|-------------------------|---------|---------|---------|
+|          |        c3_fu_227        |    0    |    0    |    15   |
+|          |        c5_fu_251        |    0    |    0    |    15   |
+|          |     add_ln321_fu_261    |    0    |    0    |    20   |
+|          |       c3_1_fu_277       |    0    |    0    |    15   |
+|          |     add_ln142_fu_283    |    0    |    0    |    15   |
+|          |       c5_1_fu_295       |    0    |    0    |    15   |
+|          |     add_ln187_fu_326    |    0    |    0    |    15   |
+|    add   |     tmp_i231_fu_460     |    0    |    0    |    21   |
+|          |     add_ln58_fu_465     |    0    |    0    |    23   |
+|          |    add_ln58_1_fu_470    |    0    |    0    |    16   |
+|          |    add_ln58_2_fu_476    |    0    |    0    |    16   |
+|          |    add_ln58_3_fu_501    |    0    |    0    |    16   |
+|          |    add_ln58_6_fu_505    |    0    |    0    |    16   |
+|          |    add_ln58_7_fu_510    |    0    |    0    |    16   |
+|          |       p_285_fu_515      |    0    |    0    |    16   |
+|----------|-------------------------|---------|---------|---------|
+|          |       p_267_fu_401      |    0    |    0    |    23   |
+|    sub   |       p_265_fu_444      |    0    |    0    |    23   |
+|          |       p_274_fu_488      |    0    |    0    |    23   |
+|----------|-------------------------|---------|---------|---------|
+|          |    icmp_ln391_fu_221    |    0    |    0    |    11   |
+|   icmp   |    icmp_ln392_fu_245    |    0    |    0    |    11   |
+|          |    icmp_ln394_fu_271    |    0    |    0    |    11   |
+|          |    icmp_ln395_fu_289    |    0    |    0    |    11   |
+|----------|-------------------------|---------|---------|---------|
+|  muladd  |        grp_fu_522       |    1    |    0    |    0    |
+|          |        grp_fu_530       |    1    |    0    |    0    |
+|----------|-------------------------|---------|---------|---------|
+|   read   |   tmp_val_V_read_fu_74  |    0    |    0    |    0    |
+|----------|-------------------------|---------|---------|---------|
+|   write  | write_ln377_write_fu_80 |    0    |    0    |    0    |
+|          | write_ln377_write_fu_87 |    0    |    0    |    0    |
+|----------|-------------------------|---------|---------|---------|
+|          |       tmp_2_fu_233      |    0    |    0    |    0    |
+|          |       tmp_3_fu_301      |    0    |    0    |    0    |
+|          |       tmp_6_fu_314      |    0    |    0    |    0    |
+|          |       tmp_9_fu_332      |    0    |    0    |    0    |
+|          |       tmp_4_fu_345      |    0    |    0    |    0    |
+|bitconcatenate|       tmp_7_fu_357      |    0    |    0    |    0    |
+|          |       tmp_5_fu_372      |    0    |    0    |    0    |
+|          |       tmp_s_fu_384      |    0    |    0    |    0    |
+|          |       tmp_8_fu_407      |    0    |    0    |    0    |
+|          |       tmp_1_fu_418      |    0    |    0    |    0    |
+|          |      tmp1_i_fu_494      |    0    |    0    |    0    |
+|----------|-------------------------|---------|---------|---------|
+|          |    zext_ln392_fu_241    |    0    |    0    |    0    |
+|          |    zext_ln321_fu_257    |    0    |    0    |    0    |
+|          |   zext_ln321_1_fu_266   |    0    |    0    |    0    |
+|          |    zext_ln201_fu_309    |    0    |    0    |    0    |
+|          |   zext_ln201_3_fu_321   |    0    |    0    |    0    |
+|   zext   |   zext_ln201_6_fu_340   |    0    |    0    |    0    |
+|          |   zext_ln201_1_fu_352   |    0    |    0    |    0    |
+|          |   zext_ln201_4_fu_363   |    0    |    0    |    0    |
+|          |   zext_ln201_2_fu_379   |    0    |    0    |    0    |
+|          |   zext_ln201_7_fu_390   |    0    |    0    |    0    |
+|          |   zext_ln201_5_fu_413   |    0    |    0    |    0    |
+|          |   zext_ln201_8_fu_424   |    0    |    0    |    0    |
+|----------|-------------------------|---------|---------|---------|
+|   trunc  |     empty_11_fu_368     |    0    |    0    |    0    |
+|          |     empty_10_fu_456     |    0    |    0    |    0    |
+|----------|-------------------------|---------|---------|---------|
+|          |     shl_ln40_fu_395     |    0    |    0    |    0    |
+|          |     shl_ln34_fu_429     |    0    |    0    |    0    |
+|    shl   |     shl_ln38_fu_434     |    0    |    0    |    0    |
+|          |    shl_ln38_1_fu_439    |    0    |    0    |    0    |
+|          |     shl_ln45_fu_450     |    0    |    0    |    0    |
+|          |     shl_ln47_fu_482     |    0    |    0    |    0    |
+|----------|-------------------------|---------|---------|---------|
+|   Total  |                         |    2    |    0    |   363   |
+|----------|-------------------------|---------|---------|---------|
+
+Memories:
++--------------------+--------+--------+--------+--------+
+|                    |  BRAM  |   FF   |   LUT  |  URAM  |
++--------------------+--------+--------+--------+--------+
+|hw_input_global_wrap|    4   |    0   |    0   |    0   |
++--------------------+--------+--------+--------+--------+
+|        Total       |    4   |    0   |    0   |    0   |
++--------------------+--------+--------+--------+--------+
+
+* Register list:
++-------------------------------+--------+
+|                               |   FF   |
++-------------------------------+--------+
+|       add_ln142_reg_570       |    6   |
+|       add_ln187_reg_604       |    6   |
+|       add_ln58_2_reg_671      |   16   |
+|       add_ln58_4_reg_646      |   16   |
+|       add_ln58_5_reg_676      |   16   |
+|        add_ln58_reg_666       |   16   |
+|          c3_1_reg_562         |    6   |
+|           c3_reg_541          |    7   |
+|          c5_1_reg_580         |    6   |
+|           c5_reg_554          |    7   |
+|        empty_11_reg_631       |   14   |
+|hw_input_global_wrap_10_reg_651|   12   |
+|hw_input_global_wrap_12_reg_610|   12   |
+|hw_input_global_wrap_13_reg_641|   12   |
+|hw_input_global_wrap_14_reg_656|   12   |
+|hw_input_global_wrap_15_reg_625|   16   |
+| hw_input_global_wrap_1_reg_175|    7   |
+| hw_input_global_wrap_2_reg_186|    7   |
+| hw_input_global_wrap_4_reg_588|   12   |
+| hw_input_global_wrap_5_reg_615|   12   |
+| hw_input_global_wrap_6_reg_636|   12   |
+| hw_input_global_wrap_7_reg_593|   16   |
+| hw_input_global_wrap_8_reg_599|   12   |
+| hw_input_global_wrap_9_reg_620|   12   |
+|  hw_output_s0_x_v32_a_reg_209 |    6   |
+|  hw_output_s0_y_v33_a_reg_197 |    6   |
+|        tmp_i231_reg_661       |   14   |
+|       zext_ln392_reg_546      |   14   |
++-------------------------------+--------+
+|             Total             |   310  |
++-------------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|------------------------------|------|------|------|--------||---------||---------|
+|             Comp             |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|------------------------------|------|------|------|--------||---------||---------|
+|       grp_access_fu_101      |  p0  |  11  |  12  |   132  ||    50   |
+|       grp_access_fu_101      |  p2  |   8  |   0  |    0   ||    41   |
+| hw_output_s0_y_v33_a_reg_197 |  p0  |   2  |   6  |   12   ||    9    |
+| hw_output_s0_x_v32_a_reg_209 |  p0  |   2  |   6  |   12   ||    9    |
+|------------------------------|------|------|------|--------||---------||---------|
+|             Total            |      |      |      |   156  ||  3.0477 ||   109   |
+|------------------------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+--------+
+|           |  BRAM  | DSP48E |  Delay |   FF   |   LUT  |  URAM  |
++-----------+--------+--------+--------+--------+--------+--------+
+|  Function |    -   |    2   |    -   |    0   |   363  |    -   |
+|   Memory  |    4   |    -   |    -   |    0   |    0   |    0   |
+|Multiplexer|    -   |    -   |    3   |    -   |   109  |    -   |
+|  Register |    -   |    -   |    -   |   310  |    -   |    -   |
++-----------+--------+--------+--------+--------+--------+--------+
+|   Total   |    4   |    2   |    3   |   310  |   472  |    0   |
++-----------+--------+--------+--------+--------+--------+--------+

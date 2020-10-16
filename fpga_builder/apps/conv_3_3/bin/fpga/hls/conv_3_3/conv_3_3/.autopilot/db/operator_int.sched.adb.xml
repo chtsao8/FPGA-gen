@@ -1,0 +1,69 @@
+<stg><name>operator int</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="1" op_0_bw="1" op_1_bw="1">
+<![CDATA[
+:0  %p_read_2 = call i1 @_ssdm_op_Read.ap_auto.i1(i1 %p_read)
+
+]]></Node>
+<StgValue><ssdm name="p_read_2"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="0" op_0_bw="0" op_1_bw="1" op_2_bw="1">
+<![CDATA[
+:1  call void @_ssdm_op_Write.ap_auto.volatile.i1P(i1* %hw_uint_1_val_V, i1 %p_read_2)
+
+]]></Node>
+<StgValue><ssdm name="write_ln221"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="5" bw="0">
+<![CDATA[
+:2  ret void
+
+]]></Node>
+<StgValue><ssdm name="ret_ln221"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

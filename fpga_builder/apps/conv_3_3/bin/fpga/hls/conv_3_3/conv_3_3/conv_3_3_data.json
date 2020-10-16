@@ -1,0 +1,593 @@
+{
+  "Top": "unoptimized_conv_3_3_rdai",
+  "RtlTop": "unoptimized_conv_3_3_rdai",
+  "RtlPrefix": "",
+  "SourceLanguage": "cpp",
+  "ResetStyle": "control",
+  "GenerateBdFiles": "1",
+  "HostMachineBits": "64",
+  "Target": {
+    "Family": "zynquplus",
+    "Device": "xczu7ev",
+    "Package": "-ffvc1156",
+    "Speed": "-2-e"
+  },
+  "HlsSolution": {"Config": [
+      "config_schedule -effort=medium",
+      "config_schedule -relax_ii_for_timing=0",
+      "config_export -description=conv_3_3",
+      "config_export -display_name=conv_3_3",
+      "config_export -format=ip_catalog",
+      "config_export -ipname=conv_3_3",
+      "config_export -library=halide_hardware",
+      "config_export -rtl=verilog",
+      "config_export -vendor=aha",
+      "config_export -version=1.0"
+    ]},
+  "Args": {
+    "arg_in0": {
+      "index": "0",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "hls_packed_struct<16>",
+        "structImpl": "flat-field",
+        "dataPack": true,
+        "fields": {
+          "data": {
+            "order": "0",
+            "dataType": "ap_uint"
+          },
+          "tlast": {
+            "order": "1",
+            "dataType": "ap_uint"
+          }
+        }
+      }
+    },
+    "arg_out": {
+      "index": "1",
+      "type": {
+        "kinds": ["struct"],
+        "dataType": "hls_packed_struct<16>",
+        "structImpl": "flat-field",
+        "dataPack": true,
+        "fields": {
+          "data": {
+            "order": "0",
+            "dataType": "ap_uint"
+          },
+          "tlast": {
+            "order": "1",
+            "dataType": "ap_uint"
+          }
+        }
+      }
+    }
+  },
+  "Return": {
+    
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "5",
+    "IsCombLogic": "0",
+    "II": "x",
+    "Latency": "31258",
+    "Uncertainty": "0.625"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 5.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "aha",
+    "Library": "halide_hardware",
+    "Name": "conv_3_3",
+    "Version": "1.0",
+    "DisplayName": "conv_3_3",
+    "Revision": "",
+    "Description": "conv_3_3",
+    "Taxonomy": "\/VIVADO_HLS_IP",
+    "AutoFamilySupport": ""
+  },
+  "Files": {
+    "CSource": ["\/home\/nyengele\/aha\/fpga_builder\/apps\/conv_3_3\/bin\/clockwork\/unoptimized_conv_3_3.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/Block_proc75.vhd",
+      "impl\/vhdl\/Block_proc7476.vhd",
+      "impl\/vhdl\/fifo_w1_d2_A.vhd",
+      "impl\/vhdl\/fifo_w16_d2_A.vhd",
+      "impl\/vhdl\/operator_int.vhd",
+      "impl\/vhdl\/operator_int_1.vhd",
+      "impl\/vhdl\/read_1.vhd",
+      "impl\/vhdl\/read_r.vhd",
+      "impl\/vhdl\/regslice_core.vhd",
+      "impl\/vhdl\/start_for_read_1_U0.vhd",
+      "impl\/vhdl\/start_for_read_U0.vhd",
+      "impl\/vhdl\/start_for_unoptimdEe.vhd",
+      "impl\/vhdl\/unoptimized_conv_3_3.vhd",
+      "impl\/vhdl\/unoptimized_conv_bkb.vhd",
+      "impl\/vhdl\/unoptimized_conv_cud.vhd",
+      "impl\/vhdl\/write_r.vhd",
+      "impl\/vhdl\/unoptimized_conv_3_3_rdai.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/Block_proc75.v",
+      "impl\/verilog\/Block_proc7476.v",
+      "impl\/verilog\/fifo_w1_d2_A.v",
+      "impl\/verilog\/fifo_w16_d2_A.v",
+      "impl\/verilog\/operator_int.v",
+      "impl\/verilog\/operator_int_1.v",
+      "impl\/verilog\/read_1.v",
+      "impl\/verilog\/read_r.v",
+      "impl\/verilog\/regslice_core.v",
+      "impl\/verilog\/start_for_read_1_U0.v",
+      "impl\/verilog\/start_for_read_U0.v",
+      "impl\/verilog\/start_for_unoptimdEe.v",
+      "impl\/verilog\/unoptimized_conv_3_3.v",
+      "impl\/verilog\/unoptimized_conv_bkb.v",
+      "impl\/verilog\/unoptimized_conv_cud.v",
+      "impl\/verilog\/write_r.v",
+      "impl\/verilog\/unoptimized_conv_3_3_rdai.v"
+    ],
+    "Misc": ["impl\/misc\/logo.png"],
+    "DesignXml": "\/home\/nyengele\/aha\/fpga_builder\/apps\/conv_3_3\/conv_3_3\/conv_3_3\/.autopilot\/db\/unoptimized_conv_3_3_rdai.design.xml",
+    "DebugDir": "\/home\/nyengele\/aha\/fpga_builder\/apps\/conv_3_3\/conv_3_3\/conv_3_3\/.debug",
+    "ProtoInst": ["\/home\/nyengele\/aha\/fpga_builder\/apps\/conv_3_3\/conv_3_3\/conv_3_3\/.debug\/unoptimized_conv_3_3_rdai.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "IP": []
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "ctype": {"CLK": {"Type": "bool"}},
+      "bundle_name": "ap_clk",
+      "bundle_role": "default",
+      "buses": "arg_in0 arg_out",
+      "reset": "ap_rst_n"
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "polarity": "ACTIVE_LOW",
+      "ctype": {"RST": {"Type": "bool"}},
+      "bundle_name": "ap_rst_n",
+      "bundle_role": "default"
+    },
+    "arg_in0": {
+      "type": "axi4stream",
+      "mode": "slave",
+      "port_prefix": "arg_in0",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "integer unsigned",
+          "Width": "16"
+        },
+        "TLAST": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"}
+      },
+      "port_width": {
+        "TDATA": "16",
+        "TLAST": "1"
+      }
+    },
+    "arg_out": {
+      "type": "axi4stream",
+      "mode": "master",
+      "port_prefix": "arg_out",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "integer unsigned",
+          "Width": "16"
+        },
+        "TLAST": {
+          "Type": "integer unsigned",
+          "Width": "1"
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"}
+      },
+      "port_width": {
+        "TDATA": "16",
+        "TLAST": "1"
+      }
+    }
+  },
+  "RtlPorts": {
+    "arg_in0_TDATA": {
+      "dir": "in",
+      "width": "16"
+    },
+    "arg_in0_TLAST": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "arg_in0_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "arg_in0_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "arg_out_TDATA": {
+      "dir": "out",
+      "width": "16"
+    },
+    "arg_out_TLAST": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "arg_out_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "arg_out_TREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "unoptimized_conv_3_3_rdai",
+      "Instances": [
+        {
+          "ModuleName": "unoptimized_conv_3_3",
+          "InstanceName": "unoptimized_conv_3_3_U0"
+        },
+        {
+          "ModuleName": "Block_proc7476",
+          "InstanceName": "Block_proc7476_U0"
+        },
+        {
+          "ModuleName": "write_r",
+          "InstanceName": "write_U0"
+        },
+        {
+          "ModuleName": "operator_int_1",
+          "InstanceName": "operator_int_1_U0"
+        },
+        {
+          "ModuleName": "operator_int",
+          "InstanceName": "operator_int_U0"
+        },
+        {
+          "ModuleName": "Block_proc75",
+          "InstanceName": "Block_proc75_U0"
+        },
+        {
+          "ModuleName": "read_1",
+          "InstanceName": "read_1_U0"
+        },
+        {
+          "ModuleName": "read_r",
+          "InstanceName": "read_U0"
+        }
+      ]
+    },
+    "Info": {
+      "Block_proc75": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
+      "write_r": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
+      "unoptimized_conv_3_3": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "read_1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
+      "operator_int_1": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
+      "read_r": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
+      "operator_int": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
+      "Block_proc7476": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "unoptimized_conv_3_3_rdai": {
+        "FunctionProtocol": "ap_ctrl_none",
+        "isTaskLevelControl": "1",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }
+    },
+    "Metrics": {
+      "Block_proc75": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "5.00",
+          "Uncertainty": "0.62",
+          "Estimate": "0.000"
+        },
+        "Area": {
+          "FF": "18",
+          "LUT": "29",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "write_r": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "5.00",
+          "Uncertainty": "0.62",
+          "Estimate": "1.838"
+        },
+        "Area": {
+          "FF": "3",
+          "LUT": "29",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "unoptimized_conv_3_3": {
+        "Latency": {
+          "LatencyBest": "31258",
+          "LatencyAvg": "31258",
+          "LatencyWorst": "31258",
+          "PipelineII": "31258",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "5.00",
+          "Uncertainty": "0.62",
+          "Estimate": "4.129"
+        },
+        "Loops": [
+          {
+            "Name": "Loop 1",
+            "TripCount": "64",
+            "Latency": "4224",
+            "PipelineII": "",
+            "PipelineDepth": "66",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "64",
+                "Latency": "64",
+                "PipelineII": "",
+                "PipelineDepth": "1"
+              }]
+          },
+          {
+            "Name": "Loop 2",
+            "TripCount": "62",
+            "Latency": "27032",
+            "PipelineII": "",
+            "PipelineDepth": "436",
+            "Loops": [{
+                "Name": "Loop 2.1",
+                "TripCount": "62",
+                "Latency": "434",
+                "PipelineII": "",
+                "PipelineDepth": "7"
+              }]
+          }
+        ],
+        "Area": {
+          "BRAM_18K": "4",
+          "DSP48E": "2",
+          "FF": "200",
+          "LUT": "569",
+          "URAM": "0"
+        }
+      },
+      "read_1": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "5.00",
+          "Uncertainty": "0.62",
+          "Estimate": "1.838"
+        },
+        "Area": {
+          "FF": "18",
+          "LUT": "29",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "operator_int_1": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "5.00",
+          "Uncertainty": "0.62",
+          "Estimate": "0.000"
+        },
+        "Area": {
+          "FF": "18",
+          "LUT": "20",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "read_r": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "5.00",
+          "Uncertainty": "0.62",
+          "Estimate": "1.838"
+        },
+        "Area": {
+          "FF": "3",
+          "LUT": "29",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "operator_int": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "5.00",
+          "Uncertainty": "0.62",
+          "Estimate": "0.000"
+        },
+        "Area": {
+          "FF": "3",
+          "LUT": "20",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "Block_proc7476": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "1",
+          "LatencyWorst": "1",
+          "PipelineII": "1",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "5.00",
+          "Uncertainty": "0.62",
+          "Estimate": "0.000"
+        },
+        "Area": {
+          "FF": "3",
+          "LUT": "35",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "unoptimized_conv_3_3_rdai": {
+        "Latency": {
+          "LatencyBest": "31258",
+          "LatencyAvg": "31258",
+          "LatencyWorst": "31258",
+          "PipelineII": "31259",
+          "PipelineDepth": "",
+          "PipelineType": "dataflow"
+        },
+        "Timing": {
+          "Target": "5.00",
+          "Uncertainty": "0.62",
+          "Estimate": "4.129"
+        },
+        "Area": {
+          "BRAM_18K": "4",
+          "DSP48E": "2",
+          "FF": "306",
+          "LUT": "952",
+          "URAM": "0"
+        }
+      }
+    }
+  },
+  "Sdx": {
+    "Target": "none",
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "XO": "",
+    "KernelName": "unoptimized_conv_3_3_rdai",
+    "EnableXoSwEmu": "1"
+  },
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2020-10-13 14:40:50 PDT",
+    "ToolName": "vivado_hls",
+    "ToolVersion": "2020.1"
+  }
+}
