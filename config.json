@@ -6,9 +6,9 @@
 	  "xcel_top_fn"			: "unoptimized_conv_3_3",
 	  "xcel_clock_period"	: "5",
 	  "xcel_ip_inputs"		: [
-			{ "name" : "in_0", "width" : 8 }
+			{ "name" : "arg_in0", "width" : 8 }
 	  ],
-	  "xcel_ip_output"		: { "name" : "out", "width" : 16 },
+	  "xcel_ip_output"		: { "name" : "arg_out", "width" : 16 },
 	  "xcel_rdai_vlnv"		: {"name" : "addone_8x16", "library" : "halide_hardware" , "vendor" : "aha", "version" : "1.0"},
 	  "xlnx_chip_part"		: "{xc7k160tfbg484-2}",
 	  "xlnx_board_part"		: "board part number for xlnx FPGA",

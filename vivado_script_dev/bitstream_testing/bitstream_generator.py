@@ -80,6 +80,8 @@ ip_lib  = config["config"]["xcel_ip_vlnv"]["library"]
 ip_vend = config["config"]["xcel_ip_vlnv"]["vendor"]
 ip_ver  = config["config"]["xcel_ip_vlnv"]["version"]
 vivado_handoff_dir = config["config"]["vivado_handoff_dir"]
+input0_name = config["config"]["xcel_ip_inputs"][0]["name"]
+output_name = config["config"]["xcel_ip_output"]["name"]
 
 num_inputs = len(config["config"]["xcel_ip_inputs"])
 # for i in range(num_inputs):
@@ -104,10 +106,10 @@ DMA_S2MM = "[get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]"
 DMA_MM2S = "[get_bd_intf_pins axi_dma_0/M_AXIS_MM2S]"
 DWIDTH0_S_AXIS = "[get_bd_intf_pins axis_dwidth_converter_0/S_AXIS]"
 DWIDTH1_S_AXIS = "[get_bd_intf_pins axis_dwidth_converter_1/S_AXIS]"
-xcel_arg_1_in = "[get_bd_intf_pins " + ip_name + "_0/arg_in0]"
+xcel_arg_1_in = "[get_bd_intf_pins " + ip_name + "_0/" + input0_name + "]"
 
 gen_io_connect = Template('''\n
-  connect_bd_intf_net -intf_net ${ip_name}_0_arg_0 [get_bd_intf_pins ${ip_name}_0/arg_out] ${xcel_arg0_out}
+  connect_bd_intf_net -intf_net ${ip_name}_0_arg_0 [get_bd_intf_pins ${ip_name}_0/${output_name}] ${xcel_arg0_out}
   connect_bd_intf_net -intf_net axi_dma_0_M_AXIS_MM2S ${dma_MM2S_in} ${dma_MM2S_out}''')
 
 DWIDTH_M_CONNECT = Template("\n  connect_bd_intf_net -intf_net axis_dwidth_converter_${num}_M_AXIS ${dwidth_in} [get_bd_intf_pins axis_dwidth_converter_${num}/M_AXIS]")
@@ -117,7 +119,7 @@ gen_dwidth_port = Template(" [get_bd_pins axis_dwidth_converter_${num}/${type}]"
 if input_size != DMA_PORT_WIDTH and output_size == DMA_PORT_WIDTH:
   dwidth_converter_0 = gen_dwidth_converter.render(in_size=input_size>>3, out_size=4, num=0)
   dwidth_converter_1 = ""
-  io_connect = gen_io_connect.render(ip_name=ip_name, xcel_arg0_out=DMA_S2MM,
+  io_connect = gen_io_connect.render(ip_name=ip_name, output_name=output_name, xcel_arg0_out=DMA_S2MM,
                                      dma_MM2S_in=DMA_MM2S, dma_MM2S_out=DWIDTH0_S_AXIS)
   dwidth_connect0 = DWIDTH_M_CONNECT.render(dwidth_in=xcel_arg_1_in, num=0)
   dwidth_connect1 = ""
@@ -128,7 +130,7 @@ if input_size != DMA_PORT_WIDTH and output_size == DMA_PORT_WIDTH:
 elif input_size == DMA_PORT_WIDTH and output_size != DMA_PORT_WIDTH:
   dwidth_converter_0 = gen_dwidth_converter.render(in_size=4, out_size=output_size>>3, num=0)
   dwidth_converter_1 = ""
-  io_connect = gen_io_connect.render(ip_name=ip_name, xcel_arg0_out=DWIDTH0_S_AXIS,
+  io_connect = gen_io_connect.render(ip_name=ip_name, output_name=output_name, xcel_arg0_out=DWIDTH0_S_AXIS,
                                      dma_MM2S_in=xcel_arg_1_in, dma_MM2S_out=DMA_MM2S)
   dwidth_connect0 = DWIDTH_M_CONNECT.render(dwidth_in=DMA_S2MM, num=0)
   dwidth_connect1 = ""
@@ -139,7 +141,7 @@ elif input_size == DMA_PORT_WIDTH and output_size != DMA_PORT_WIDTH:
 elif input_size != DMA_PORT_WIDTH and output_size != DMA_PORT_WIDTH:
   dwidth_converter_0 = gen_dwidth_converter.render(in_size=input_size>>3, out_size=4, num=0)
   dwidth_converter_1 = gen_dwidth_converter.render(in_size=4, out_size=output_size>>3, num=1)
-  io_connect = gen_io_connect.render(ip_name=ip_name, xcel_arg0_out=DWIDTH1_S_AXIS,
+  io_connect = gen_io_connect.render(ip_name=ip_name, output_name=output_name, xcel_arg0_out=DWIDTH1_S_AXIS,
                                      dma_MM2S_in=DMA_MM2S, dma_MM2S_out=DWIDTH0_S_AXIS)
   dwidth_connect0 = DWIDTH_M_CONNECT.render(dwidth_in=xcel_arg_1_in, num=0)
   dwidth_connect1 = DWIDTH_M_CONNECT.render(dwidth_in=DMA_S2MM, num=1)

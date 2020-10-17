@@ -4,7 +4,7 @@
 # Project Paths
 ###############################################################################
 
-HALIDE_SRC_PATH                 = /home/nyengele/aha/h2h
+HALIDE_SRC_PATH                 = /home/charles/Documents/aha/Halide-to-Hardware
 COREIR_SRC_PATH                 = $(HALIDE_SRC_PATH)/../coreir
 BUFFER_MAPPING_SRC_PATH         = $(HALIDE_SRC_PATH)/../BufferMapping
 CLOCKWORK_SRC_PATH              = $(HALIDE_SRC_PATH)/../clockwork

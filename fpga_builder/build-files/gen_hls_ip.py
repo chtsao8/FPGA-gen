@@ -41,7 +41,7 @@ if args.config == None or args.output == None or args.clockwork == None or args.
     sys.exit(1)
 if str(args.config)[-4:] != "json":
     print("Config file must be in .json format.")
-    print(colored("usage: gen_ip.py [-h] [-c CONFIG] [-o OUTPUT] [-i CLOCKWORK]", "green"))
+    print(colored("usage: gen_ip.py [-h] [-c CONFIG] [-o OUTPUT] [-s SOURCE] [-i CLOCKWORK]", "green"))
     sys.exit(1)
 else:
     config_init = open(args.config, "r")
@@ -49,7 +49,7 @@ else:
 
 if str(args.output)[-3:] != "tcl":
     print("Output file must be in .tcl format.")
-    print(colored("usage: gen_ip.py [-h] [-c CONFIG] [-o OUTPUT] [-i CLOCKWORK]", "green"))
+    print(colored("usage: gen_ip.py [-h] [-c CONFIG] [-o OUTPUT] [-s SOURCE] [-i CLOCKWORK]", "green"))
     sys.exit(1)
 
 proj_name          = config["config"]["name"]
