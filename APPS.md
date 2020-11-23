@@ -11,9 +11,9 @@ Copy your desired application from the above location to `FPGA-gen/fpga_builder/
 Each app contains three primary files for the halide-to-hardware flow:
   1. `Makefile`
   2. `process.cpp`
-  3. `<app-name>_generator.cpp` 
-  
-The `Makefile` should be created/updated with the following format:
+  3. `<APP_NAME>_generator.cpp` 
+
+The `Makefile` should be created/updated with the following format (replace APP_NAME with the name of your application):
 <pre><code># Usage:
 # MAKE targets:
 #       generator:              create Halide generator
@@ -52,7 +52,7 @@ HL_TARGET                       = arm-64-linux
 
 include ../../build-files/Makefile.targets.inc</code></pre>
 
-`process.cpp` should be created/modified with the following format:
+`process.cpp` should be created/modified with the following format (replace APP_NAME with the name of your application):
 <pre><code>#include <cstdio>
 #include "hardware_process_helper.h"
 #include "halide_image_io.h"
@@ -152,3 +152,10 @@ int main( int argc, char **argv ) {
   return processor.process_command(argc, argv);
   
 }</code></pre>
+
+Lastly, ensure that `<APP_NAME>_generator.cpp` explicitly labels its inputs and outputs like so:
+<pre><code>Func hw_input("hw_input")
+Func hw_output("hw_output")</code></pre>
+If the application's input/output names differ from the above, at least ensure that their name declarations match the above ("hw_input/output").
+
+Once these modifications have been made, you can follow [these instructions](README.md) to use the FPGA flow on your newly converted app.
